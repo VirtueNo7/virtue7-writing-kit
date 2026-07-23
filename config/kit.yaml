@@ -1,0 +1,38 @@
+kit:
+  name: "Virtue7 Writing Kit"
+  version: "0.1.0"
+  mode: "guided"
+  model_neutral: true
+  entrypoint: "00_START_HERE.md"
+
+publisher:
+  display_name: "Virtue7"
+  include_in_generated_books: false
+
+output_defaults:
+  white_label: true
+  attribution: false
+  language: "Ask the user"
+  locale: "Ask or infer only with permission"
+  spelling: "Follow selected locale"
+  canonical_format: "Markdown with YAML front matter"
+  approval_required: true
+
+interaction:
+  questions_per_turn: 1
+  use_reversible_defaults: true
+  show_internal_architecture: false
+  maintain_session_state: true
+
+research:
+  browsing_default: "ask"
+  nonfiction_invention: "prohibited"
+  fictional_invention: "allowed only when the project is explicitly fictional"
+  quotations: "exact wording and source required"
+  uncertainty: "preserve"
+
+demo:
+  subject: "Elias Vale"
+  occupation: "Master Builder"
+  fictional: true
+  external_research: false

@@ -1,0 +1,271 @@
+{
+  "bundle": "virtue7-writing-kit",
+  "version": "0.1.0",
+  "files": [
+    {
+      "path": ".github/workflows/validate.yml",
+      "sha256": "4115b8b9b8b1dceb55d7976112a813c0ed4a2ea4b23b027dad4e167707b4c074",
+      "bytes": 278
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "939322532ee6446a2e9580a78cfe61c51df85f06b15872e536727785ff67c37e",
+      "bytes": 79
+    },
+    {
+      "path": "00_START_HERE.md",
+      "sha256": "3beba5a578c8cb0909783d5003a33a4c3d834bbf9bb8c9c5625fd44e0a0d23e2",
+      "bytes": 4048
+    },
+    {
+      "path": "BUNDLE_MANIFEST.yaml",
+      "sha256": "5af79964bcd144413751b5f655a7fdc67f55cacf9985986c41b060230b541fb8",
+      "bytes": 1471
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "bffb049db959561581f24a36de73605f2f7106efdf4da223c81a7f331a752b41",
+      "bytes": 509
+    },
+    {
+      "path": "GITHUB_RELEASE_CHECKLIST.md",
+      "sha256": "37bdcb7b13747d575c8959b071ae0ee1d10268bc384c6eeb4d5b222dda958e76",
+      "bytes": 778
+    },
+    {
+      "path": "LICENSE.md",
+      "sha256": "0f1714d5ac85b3c65ff82e311448fcf3a15a01a050aada836d08b2f9c96a7a38",
+      "bytes": 501
+    },
+    {
+      "path": "MASTER_PROMPT.md",
+      "sha256": "cc2dadd1ff5c1f5e31c11e261342e79b62ee345ead9e76c69d593aaaca434095",
+      "bytes": 3904
+    },
+    {
+      "path": "QUICK_COMMANDS.md",
+      "sha256": "9280035f9e2bfa9abaef8c8d95e13b0729ab61f3bfac31db99415c9f8b83a0f8",
+      "bytes": 1181
+    },
+    {
+      "path": "README.md",
+      "sha256": "b353da1cd6a7e86043ecb8f8bba3e162ba4690c78430a95459cf7893c0043a5b",
+      "bytes": 1956
+    },
+    {
+      "path": "VERSION",
+      "sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67",
+      "bytes": 6
+    },
+    {
+      "path": "architecture/01-content-system.md",
+      "sha256": "6540e4034f53bd799dc0973c6ddc3e378853aac3f3d4723857cfba26c85d9caf",
+      "bytes": 1817
+    },
+    {
+      "path": "architecture/02-canonical-kernel.md",
+      "sha256": "27a6f3559542db440b48478011cd2431a5f4c93eb66f2aa4a3a99700ac34eb00",
+      "bytes": 1578
+    },
+    {
+      "path": "architecture/03-content-units.md",
+      "sha256": "5ab22a2c950ef51186d2a1391ee626cdfc932e26cd92ac027bef1bd08eb86108",
+      "bytes": 1568
+    },
+    {
+      "path": "architecture/04-expansion-and-compression.md",
+      "sha256": "2e7c4077e1f14d767b6142a900154a51a8fa93f7d750811cdcd278cd37ca46c7",
+      "bytes": 1772
+    },
+    {
+      "path": "architecture/05-projection-contracts.md",
+      "sha256": "d41942609624848118a5354c9d0afa3658d4a5867ea29a6e5866f1f40d290864",
+      "bytes": 1579
+    },
+    {
+      "path": "architecture/06-round-trip-validation.md",
+      "sha256": "b260952430177d4c9fccf88431d7a28a5ef5926000069cf93fdab0609a916bfb",
+      "bytes": 1610
+    },
+    {
+      "path": "architecture/07-governance.md",
+      "sha256": "592069cedc48aeab9c2d9e279e27c731aa3566dd60be84fdd0e4e7ec78c7c411",
+      "bytes": 1139
+    },
+    {
+      "path": "config/kit.yaml",
+      "sha256": "29e06566d1616a154b584eb71173e0627b7af7e954b280b5bbbc2aeed7bc9588",
+      "bytes": 922
+    },
+    {
+      "path": "config/quality-rules.yaml",
+      "sha256": "976df2dc440691c5e1e7665cee9fff1df5f1c080f9dfa6ddc40002ff5cf10b8d",
+      "bytes": 2049
+    },
+    {
+      "path": "config/resolutions.yaml",
+      "sha256": "dc3f7a63929badad69eab8545756026f221b3afe1bd324d83302a863ecf27d37",
+      "bytes": 1978
+    },
+    {
+      "path": "config/writing-modes.yaml",
+      "sha256": "c9e98486bf343892c2636dc28e24e86f8dc8d04dae40b53ec30313f05b579882",
+      "bytes": 825
+    },
+    {
+      "path": "demo/master-builder/00_START_TEST.md",
+      "sha256": "ca31518c023a3114d4f6ef8ff5505768577dabc1215235d2e4ba12e5a0470a8b",
+      "bytes": 1404
+    },
+    {
+      "path": "demo/master-builder/chronology.md",
+      "sha256": "7c4b4d6633639d742a4b9537c1a5fe8e966b5806159cdd1134c88c905ebc6c80",
+      "bytes": 4287
+    },
+    {
+      "path": "demo/master-builder/expected-invariants.yaml",
+      "sha256": "6120f97624830755169fa0fcfddb558c15eb685f56f6ca12ad128056576a5fcb",
+      "bytes": 1513
+    },
+    {
+      "path": "demo/master-builder/interpretation-boundaries.md",
+      "sha256": "447158695b1bd64b5ccc26bdbed422a8ec7b559cf11a6a12c6a5fb379c03e7a2",
+      "bytes": 1618
+    },
+    {
+      "path": "demo/master-builder/people.md",
+      "sha256": "3031261fd75533bad20f556805ec644ad777527e16cee2a677aa202914cae6b0",
+      "bytes": 1852
+    },
+    {
+      "path": "demo/master-builder/projects.md",
+      "sha256": "f1a14f0800d7e5778e77627c49435d2b923911b93f42279122d7e48d2342f161",
+      "bytes": 2845
+    },
+    {
+      "path": "demo/master-builder/source-records.md",
+      "sha256": "c989bb6696264a7f64ad6a3be7654992f62dadda7239cccb086c49c36e3eb720",
+      "bytes": 3620
+    },
+    {
+      "path": "demo/master-builder/subject-profile.yaml",
+      "sha256": "d4f1c1cc94cb3e5f8cce64cc3d17eb5912218e445947dc7de1d9d92401549b0f",
+      "bytes": 1678
+    },
+    {
+      "path": "demo/master-builder/validation-checklist.md",
+      "sha256": "f346720d2ab522af2d311a5f9ef54ae2b85526af0df9e7287d9d36f96fa86541",
+      "bytes": 1533
+    },
+    {
+      "path": "docs/whitepaper/IMPLEMENTATION_MAP.md",
+      "sha256": "af6a291301ffc5cb88351b207684b63b27dae8c5e39ed101fa0a2a0f7bec5bbf",
+      "bytes": 1658
+    },
+    {
+      "path": "docs/whitepaper/README.md",
+      "sha256": "fe68a95c347ad5a9bc62be44a5724d669e70785189d64b9a8ca59b3a71eaf626",
+      "bytes": 764
+    },
+    {
+      "path": "docs/whitepaper/compressible-content-architecture_ai-readable.txt",
+      "sha256": "8a063e885f17c300858622d6f3bb382f6b45b294fc4fa87928211f527649cde5",
+      "bytes": 47616
+    },
+    {
+      "path": "docs/whitepaper/compressible-content-architecture_whitepaper.pdf",
+      "sha256": "fcdd544295c0b74415ae096a4ea81ace2090b0116b205caa000765bbb0bcab73",
+      "bytes": 696955
+    },
+    {
+      "path": "outputs/README.md",
+      "sha256": "072c86f308202c526cbb4cee9259b99d4aba1d112a0b117fb33017a5c46abbb6",
+      "bytes": 339
+    },
+    {
+      "path": "scripts/validate_bundle.py",
+      "sha256": "95e65c07b56001d9e41969554f1809fa8e7551b9571e9622af309c5cc05d6f96",
+      "bytes": 1806
+    },
+    {
+      "path": "templates/book-kernel.md",
+      "sha256": "dd9ef9ec37b72e340b7db836d7ca98687f10f640d8bcfad9a6a3d3246ab354e8",
+      "bytes": 1149
+    },
+    {
+      "path": "templates/book-matrix.md",
+      "sha256": "ab9e346eb27fe9b86c869fe517fc7994bafeb78ac3718a6998538802f6ea27ee",
+      "bytes": 517
+    },
+    {
+      "path": "templates/book-plan.md",
+      "sha256": "ba2880ddb0cc7bc05c713f8e7ec51cc70e38a52188ee105656b365e03f5ee533",
+      "bytes": 1246
+    },
+    {
+      "path": "templates/chapter-unit.md",
+      "sha256": "b13b3d4fe4467c625d3767c8eb095a9c99cbb56fe4a06a983df5943f38dfb06e",
+      "bytes": 985
+    },
+    {
+      "path": "templates/claim-record.md",
+      "sha256": "68f6000c16a2223af454ef9e0c05e6f5e2819d62267732812e25a65b011292dd",
+      "bytes": 360
+    },
+    {
+      "path": "templates/publication-package.md",
+      "sha256": "ed5c9738e8d8895c5201806ed559f7340b5c8072cf08f9d42a12271ca98f85f7",
+      "bytes": 525
+    },
+    {
+      "path": "templates/session-state.md",
+      "sha256": "61076f88dbf26fcf07a14fd69bcbf76f1d6e56e0ab4ee3fd110e82ef07ebcad5",
+      "bytes": 606
+    },
+    {
+      "path": "templates/source-record.md",
+      "sha256": "35ec22cf1d2e02f562d4f0601d7696d5805c4238b9f875fa8e71ace5f3cb575a",
+      "bytes": 534
+    },
+    {
+      "path": "versions/README.md",
+      "sha256": "c2722ab54abfef938c2de3dc969c13a168ace43c50fb63817295dfeb14411f39",
+      "bytes": 368
+    },
+    {
+      "path": "workflows/01-new-book.md",
+      "sha256": "c0d22c01d7560c0101715db347cb84092886660d129e0400e309150ecbf129e7",
+      "bytes": 3328
+    },
+    {
+      "path": "workflows/02-master-builder-demo.md",
+      "sha256": "fcbf76284ce4a3d29af9e99e5db82ad643d13a612ee03c70fc1cf607fbdfd692",
+      "bytes": 2439
+    },
+    {
+      "path": "workflows/03-expand.md",
+      "sha256": "44fedbb2d92c3f0669469ac343b9e7ac5ac04b54e431e69b61fc600ecebb15e7",
+      "bytes": 1135
+    },
+    {
+      "path": "workflows/04-collapse.md",
+      "sha256": "490b5a99f659a9eb0b29f2aa9b4df61c9e0985631858a6652a7a56a37f2af58d",
+      "bytes": 1181
+    },
+    {
+      "path": "workflows/05-validate.md",
+      "sha256": "ffecdb3d6f6ef863dd25aecbde94063e867299f338269252549a0a6d2d17527a",
+      "bytes": 1964
+    },
+    {
+      "path": "workflows/06-resume-and-export.md",
+      "sha256": "19a898f357a33dacea72854df5c8551e7669c47807dd7d62dd3504375b046b6b",
+      "bytes": 1198
+    },
+    {
+      "path": "workspace/README.md",
+      "sha256": "c9ae4efe9ac7528e57b64251492fb364f97348792a804d703f341b778d65e829",
+      "bytes": 462
+    }
+  ]
+}

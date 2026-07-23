@@ -1,0 +1,39 @@
+bundle:
+  name: "Virtue7 Writing Kit"
+  version: "0.1.0"
+  purpose: "Portable, guided, expanding and collapsible book-building method"
+  entrypoint: "00_START_HERE.md"
+  generated_output_branding: false
+
+load_order:
+  - "00_START_HERE.md"
+  - "MASTER_PROMPT.md"
+  - "config/kit.yaml"
+  - "config/resolutions.yaml"
+  - "config/quality-rules.yaml"
+  - "architecture/01-content-system.md"
+  - "architecture/02-canonical-kernel.md"
+  - "architecture/03-content-units.md"
+  - "architecture/04-expansion-and-compression.md"
+  - "architecture/05-projection-contracts.md"
+  - "architecture/06-round-trip-validation.md"
+  - "architecture/07-governance.md"
+
+workflow_routes:
+  new_book: "workflows/01-new-book.md"
+  demonstration: "workflows/02-master-builder-demo.md"
+  expand: "workflows/03-expand.md"
+  collapse: "workflows/04-collapse.md"
+  validate: "workflows/05-validate.md"
+  resume_export: "workflows/06-resume-and-export.md"
+
+reference:
+  whitepaper_pdf: "docs/whitepaper/compressible-content-architecture_whitepaper.pdf"
+  whitepaper_text: "docs/whitepaper/compressible-content-architecture_ai-readable.txt"
+  implementation_map: "docs/whitepaper/IMPLEMENTATION_MAP.md"
+
+rules:
+  - "Read only the workflow and templates needed for the chosen path after the core load order."
+  - "Treat approved canonical files as higher authority than generated prose."
+  - "Never infer personal details from the uploader."
+  - "Never leak demonstration content into a user's project."

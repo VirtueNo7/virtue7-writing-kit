@@ -1,0 +1,24 @@
+writing_modes:
+  guided_interview:
+    description: "Build a new book through one essential question at a time"
+    route: "workflows/01-new-book.md"
+
+  zero_input_demo:
+    description: "Demonstrate the complete method using the fictional Master Builder dossier"
+    route: "workflows/02-master-builder-demo.md"
+
+  continuation:
+    description: "Resume from canonical files and SESSION_STATE"
+    route: "workflows/06-resume-and-export.md"
+
+  expansion:
+    description: "Increase resolution without changing the thesis"
+    route: "workflows/03-expand.md"
+
+  compression:
+    description: "Reduce resolution without losing invariant meaning"
+    route: "workflows/04-collapse.md"
+
+  audit:
+    description: "Inspect architecture, sources, prose, consistency, and semantic round trip"
+    route: "workflows/05-validate.md"

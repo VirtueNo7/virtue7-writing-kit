@@ -1,0 +1,48 @@
+resolutions:
+  R0:
+    name: "Kernel"
+    purpose: "Preserve irreducible meaning, mechanism, reader value, and boundaries"
+    typical_output: "One line to one page"
+    must_include: ["transformation_or_question", "mechanism", "reader_value", "boundaries", "invariants"]
+
+  R1:
+    name: "Concept"
+    purpose: "Define the book before designing its full structure"
+    typical_output: "Concept brief"
+    must_include: ["aim", "audience", "promise", "scope", "tone", "non_goals"]
+
+  R2:
+    name: "Matrix"
+    purpose: "Show the complete content system at a glance"
+    typical_output: "Table or structured record"
+    must_include: ["unit_ids", "unit_roles", "relations", "outcomes", "evidence_needs"]
+
+  R3:
+    name: "Plan"
+    purpose: "Define parts, chapters, sequence, research, and validation"
+    typical_output: "Book plan"
+    must_include: ["architecture", "chapter_responsibilities", "representative_unit", "research_plan", "gates"]
+
+  R4:
+    name: "Handbook"
+    purpose: "Provide systematic modular coverage of every unit"
+    typical_output: "Concise reference manuscript"
+    must_include: ["definitions", "mechanisms", "examples", "cautions", "summaries"]
+
+  R5:
+    name: "Representative Chapter"
+    purpose: "Validate voice, evidence, narrative, depth, and reader value before scaling"
+    typical_output: "One publication-quality chapter"
+    must_include: ["teaching", "demonstration", "analysis", "application", "compression"]
+
+  R6:
+    name: "Full Book"
+    purpose: "Create a coherent sustained reading experience"
+    typical_output: "Complete manuscript"
+    must_include: ["whole_book_arc", "chapter_lineage", "source_integrity", "developmental_edit", "release_validation"]
+
+  R7:
+    name: "Adaptations"
+    purpose: "Project the same canonical source into another medium"
+    typical_output: "Course, audio, video, cards, software, or other format"
+    must_include: ["projection_contract", "preserved_invariants", "medium_specific_validation"]

@@ -1,0 +1,42 @@
+quality_rules:
+  architecture:
+    - "The kernel is explicit and smaller than the manuscript."
+    - "Every content unit has a stable identity and responsibility."
+    - "The matrix covers the whole promised scope without obvious duplication."
+    - "The representative unit is approved before full-scale production."
+
+  expansion:
+    - "Every added section clarifies, explains, demonstrates, compares, applies, practises, or adapts."
+    - "Added length without added function is rejected as padding."
+    - "Narrative deepens the framework rather than replacing it."
+
+  compression:
+    - "The same direction, causation, meaning, and boundaries remain recoverable."
+    - "Material qualifications and counterexamples are not silently removed."
+    - "The shortest form does not become a stronger claim than the source supports."
+
+  evidence:
+    - "Facts are traceable to sources or explicitly supplied records."
+    - "Interpretation is labelled as interpretation."
+    - "No invented quotations, citations, dates, dialogue, or certainty."
+    - "Source disagreement and uncertainty are preserved where material."
+
+  narrative:
+    - "Scenes contain a purpose beyond atmosphere."
+    - "People are not flattened into symbols, diagnoses, heroes, or villains."
+    - "The prose is vivid without theatrical excess."
+    - "The chapter earns its conclusion rather than repeating its opening in grander language."
+
+  originality:
+    - "Do not imitate a named author's recognisable voice or proprietary chapter formula."
+    - "Use user-selected qualities rather than stylistic impersonation."
+
+  white_label:
+    - "No Virtue7 branding in generated books unless explicitly requested."
+    - "No demonstration names, events, wording, or metaphors in user projects."
+    - "No assumptions about the uploader's occupation, identity, or history."
+
+  governance:
+    - "Draft, validation, audit, and approval states are visible."
+    - "AI proposes; the human approves canonical changes."
+    - "Version and source lineage accompany approved artifacts."

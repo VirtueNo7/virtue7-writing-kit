@@ -1,0 +1,41 @@
+subject:
+  id: "DEMO-MB-001"
+  name: "Elias Vale"
+  fictional: true
+  born: "1949-03-18"
+  birthplace: "Stonewick, a fictional river town"
+  died: "2023-11-02"
+  occupation:
+    - "Master builder"
+    - "Contractor"
+    - "Restoration specialist"
+    - "Teacher of apprentices"
+
+family:
+  parents:
+    - name: "Jon Vale"
+      occupation: "Dock carpenter"
+    - name: "Mira Vale"
+      occupation: "School secretary"
+  spouse:
+    name: "Ana Vale"
+    occupation: "Bookkeeper and later business partner"
+    marriage_year: 1974
+    died: 2016
+  children:
+    - name: "Nora Vale"
+      occupation: "Civil engineer"
+      born: 1977
+
+central_material:
+  early_strength: "Exceptional spatial judgement and patient hand skills"
+  early_weakness: "Reluctance to challenge clients and senior professionals when schedules or money were at risk"
+  defining_failure: "Signed approval for a rushed material substitution and inspection sequence on the North Quay School annex in 1987"
+  later_practice: "Developed a three-part verification discipline: drawing, material proof, and witnessed site inspection"
+  final_project: "Lantern Hall, a public library and workshop completed with former apprentice Mara Senn"
+  legacy: "A craft tradition joining technical competence with the duty to stop unsafe work"
+
+book_possibilities:
+  central_question: "What turns skill into trustworthy mastery?"
+  governing_relation: "Chronological development organised around work, judgement, failure, correction, and transmission"
+  intended_reader_value: "Understand how a professional life is shaped not only by what a person can make, but by what they are willing to question, stop, repair, and teach"
