@@ -2,7 +2,7 @@
 project_id: "[PROJECT_ID]"
 artifact_id: "KERNEL-001"
 title: "[WORKING_TITLE]"
-version: "0.1.0"
+version: "0.2.0"
 date: "[YYYY-MM-DD]"
 status: "Draft"
 source_lineage: []

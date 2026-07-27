@@ -1,46 +1,43 @@
----
-project_id: "[PROJECT_ID]"
-session_state_version: "0.1.0"
-date: "[YYYY-MM-DD]"
-current_gate: "[Intent|Kernel|Matrix|Plan|Representative Unit|Full Draft|Validation|Release]"
----
+# Session State
 
-# SESSION_STATE
+```yaml
+project_id: ""
+project_title: ""
+kit_version: "0.2.0"
+current_gate: "Intent | References | Kernel | Matrix | Book Plan | Representative Unit | Full Draft | Validation | Release"
+last_approved_gate: ""
+approval_state: "Draft | Approved | Revised"
 
-## Project summary
+canonical:
+  kernel_file: ""
+  matrix_file: ""
+  plan_file: ""
+  approved_invariants: []
 
-[Two to five sentences.]
+references:
+  register_file: ""
+  classified_count: 0
+  unresolved_count: 0
+  excluded_ids: []
+  active_packet_file: ""
 
-## Latest approved kernel
+voice:
+  contract_file: ""
+  contract_state: "Not required | Draft | Approved | Revised"
+  approved_voice_reference_ids: []
+  project_native_canon_ids: []
 
-- Version:
-- One-line kernel:
-- Invariant set:
+evidence:
+  source_register_file: ""
+  unresolved_claim_ids: []
 
-## Approved artifacts
+production:
+  current_unit_id: ""
+  latest_draft_file: ""
+  latest_provenance_file: ""
+  latest_drift_report: ""
 
-- [relative/path] - version - approval date
-
-## Draft artifacts
-
-- [relative/path] - version - current issue
-
-## Decisions made
-
-- 
-
-## Open decisions
-
-- 
-
-## Source and research state
-
-- 
-
-## Validation findings
-
-- 
-
-## Exact next action
-
-[One concrete action.]
+next_action: ""
+unresolved_decisions: []
+files_to_load_next: []
+```

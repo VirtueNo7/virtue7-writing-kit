@@ -1,0 +1,31 @@
+version: 0.2.0
+classification_required: true
+unclassified_reference_action: block
+packet:
+  strategy: minimum_sufficient
+  max_canonical_items: 6
+  max_voice_items: 5
+  max_structural_items: 2
+  max_evidence_items: 8
+  max_inspiration_items: 1
+functions:
+  canonical:
+    may_define_project_meaning: true
+  voice:
+    may_define_voice: true
+    may_prove_facts: false
+  structural:
+    may_define_sequence: true
+    may_supply_distinctive_expression: false
+  evidence:
+    may_support_claims: true
+    may_define_creator_voice: false
+  inspiration:
+    may_supply_neutral_qualities: true
+    may_supply_distinctive_expression: false
+  excluded:
+    may_influence_output: false
+promotion:
+  require_human_approval: true
+  require_drift_pass: true
+  require_provenance: true

@@ -1,7 +1,7 @@
 bundle:
   name: "Virtue7 Writing Kit"
-  version: "0.1.0"
-  purpose: "Portable, guided, expanding and collapsible book-building method"
+  version: "0.2.0"
+  purpose: "Portable, guided, reference-grounded, expanding and collapsible book-building method"
   entrypoint: "00_START_HERE.md"
   generated_output_branding: false
 
@@ -11,6 +11,8 @@ load_order:
   - "config/kit.yaml"
   - "config/resolutions.yaml"
   - "config/quality-rules.yaml"
+  - "config/reference-policy.yaml"
+  - "config/voice-policy.yaml"
   - "architecture/01-content-system.md"
   - "architecture/02-canonical-kernel.md"
   - "architecture/03-content-units.md"
@@ -18,6 +20,8 @@ load_order:
   - "architecture/05-projection-contracts.md"
   - "architecture/06-round-trip-validation.md"
   - "architecture/07-governance.md"
+  - "architecture/08-reference-grounding.md"
+  - "architecture/09-voice-governance.md"
 
 workflow_routes:
   new_book: "workflows/01-new-book.md"
@@ -26,14 +30,20 @@ workflow_routes:
   collapse: "workflows/04-collapse.md"
   validate: "workflows/05-validate.md"
   resume_export: "workflows/06-resume-and-export.md"
+  reference_library: "workflows/07-build-reference-library.md"
+  voice_contract: "workflows/08-build-voice-contract.md"
+  drift_test: "workflows/09-run-drift-test.md"
 
 reference:
   whitepaper_pdf: "docs/whitepaper/compressible-content-architecture_whitepaper.pdf"
   whitepaper_text: "docs/whitepaper/compressible-content-architecture_ai-readable.txt"
   implementation_map: "docs/whitepaper/IMPLEMENTATION_MAP.md"
+  reference_workspace: "workspace/references/"
 
 rules:
   - "Read only the workflow and templates needed for the chosen path after the core load order."
   - "Treat approved canonical files as higher authority than generated prose."
+  - "Treat references according to their assigned roles and allowed uses."
+  - "Use the smallest relevant reference packet before drafting."
   - "Never infer personal details from the uploader."
-  - "Never leak demonstration content into a user's project."
+  - "Never leak demonstration or excluded reference content into a user's project."

@@ -1,20 +1,39 @@
 # Quick Commands
 
-The kit is conversational, but these commands provide a compact shared vocabulary.
+Use these commands after uploading the archive when a platform does not automatically display the menu.
 
-- `BEGIN` - load the kit and show the route menu.
-- `NEW BOOK` - start the guided interview.
-- `RUN DEMO` - begin the fictional Master Builder biography test.
-- `STATUS` - show the latest approved gate, open decisions, and next action.
-- `SHOW KERNEL` - display the current canonical kernel.
-- `SHOW MATRIX` - display the current book matrix.
-- `EXPAND [target] TO [resolution]` - add controlled depth.
-- `COLLAPSE [target] TO [resolution]` - reduce delivery detail while preserving meaning.
-- `VALIDATE [target]` - run the applicable quality and round-trip checks.
-- `SHOW LINEAGE [claim or section]` - show canonical dependencies and sources.
-- `REVISE [artifact]` - revise without automatically approving.
-- `APPROVE [artifact]` - mark an artifact as approved and advance the gate.
-- `EXPORT STATE` - produce an updated portable session-state record.
-- `EXPORT PROJECT` - prepare a file inventory for a downloadable project archive.
+## Start
 
-Resolutions: `R0 Kernel`, `R1 Concept`, `R2 Matrix`, `R3 Plan`, `R4 Handbook`, `R5 Representative Chapter`, `R6 Full Book`, `R7 Adaptations`.
+`Begin`
+
+`Read and run 00_START_HERE.md.`
+
+## Create
+
+`Create a new book from scratch.`
+
+`Build a book from these transcripts and preserve the speaker's authentic voice.`
+
+`Build the reference library before drafting.`
+
+`Create a voice contract from the approved samples.`
+
+## Continue
+
+`Read SESSION_STATE and continue from the last approved gate.`
+
+## Expand and collapse
+
+`Expand this approved unit from R3 Plan to R5 Representative Chapter.`
+
+`Collapse this manuscript to its R2 Matrix without losing the approved invariant set.`
+
+## Validate
+
+`Run the full validation workflow, including reference drift.`
+
+`Check this chapter for meaning, voice, source, contamination, and genericity drift.`
+
+## Demonstration
+
+`Run the built-in Master Builder test without external research.`

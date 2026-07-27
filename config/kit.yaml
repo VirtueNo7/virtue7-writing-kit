@@ -1,6 +1,6 @@
 kit:
   name: "Virtue7 Writing Kit"
-  version: "0.1.0"
+  version: "0.2.0"
   mode: "guided"
   model_neutral: true
   entrypoint: "00_START_HERE.md"
@@ -30,6 +30,20 @@ research:
   fictional_invention: "allowed only when the project is explicitly fictional"
   quotations: "exact wording and source required"
   uncertainty: "preserve"
+
+reference_grounding:
+  enabled: true
+  classify_before_use: true
+  minimum_relevant_packet: true
+  whole_archive_blending: false
+  promote_only_approved_prose: true
+  provenance_level: "unit by default; passage when risk or complexity requires"
+
+voice:
+  contract_required_when_preserving_existing_voice: true
+  evidence_backed_rules: true
+  named_author_imitation: false
+  project_native_canon: true
 
 demo:
   subject: "Elias Vale"

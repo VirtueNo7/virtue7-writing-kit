@@ -40,3 +40,19 @@ quality_rules:
     - "Draft, validation, audit, and approval states are visible."
     - "AI proposes; the human approves canonical changes."
     - "Version and source lineage accompany approved artifacts."
+
+  reference_grounding:
+    - "Every reference has a recorded role, authority, allowed use, and exclusion status."
+    - "Drafting uses the smallest relevant packet rather than an undifferentiated archive."
+    - "Canonical, voice, structural, evidence, and inspiration roles are not silently conflated."
+    - "Conflicting references remain visible until a human canonical decision is recorded."
+
+  voice_fidelity:
+    - "Voice rules are observable and linked to approved examples."
+    - "Approved prose sounds project-specific without copying distinctive wording from references."
+    - "Genericity, contamination, and unsupported stylistic claims are tested explicitly."
+    - "Only approved project prose may enter the living voice canon."
+
+  provenance:
+    - "Each representative or publication-ready unit declares canonical, evidence, voice, and structural dependencies."
+    - "New interpretation and reconstruction are visibly distinguished from established fact or author position."
