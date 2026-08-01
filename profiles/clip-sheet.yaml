@@ -1,0 +1,8 @@
+id: clip_sheet
+name: Clip Sheet
+default_prose_mode: creator_production
+required_inputs: [source_item, rights_status, destinations]
+required_fields: [timecode, hook, complete_meaning, context, in_point, out_point, title_options, destination, rights]
+structure:
+  table_or_repeated_records: required
+quality_gate: quality/profile-gates/creator.md

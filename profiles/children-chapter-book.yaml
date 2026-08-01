@@ -1,0 +1,10 @@
+id: children_chapter_book
+name: Children's Chapter Book
+default_prose_mode: literary_narrative
+required_inputs: [age_range, reading_level, story_promise]
+structure:
+  chapter_headings: permitted
+  body_bullets: forbidden
+  scenes: required
+  vocabulary: age_calibrated
+quality_gate: quality/profile-gates/children.md

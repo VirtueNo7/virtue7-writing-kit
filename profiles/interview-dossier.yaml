@@ -1,0 +1,9 @@
+id: interview_dossier
+name: Interview Dossier
+default_prose_mode: creator_production
+required_inputs: [subject, purpose, source_boundary]
+required_sections: [background, chronology, themes, verified_claims, open_questions, question_arcs, risks]
+structure:
+  headings: required
+  bullets: preferred
+quality_gate: quality/profile-gates/creator.md

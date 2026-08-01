@@ -1,0 +1,5 @@
+format: card_or_software
+must_preserve: [canonical_labels, bounded_prompt, dignity_boundary]
+may_transform: [interaction, state, feedback, brevity]
+forbidden: [diagnosis, public scoring, moral ranking, coercive prompts]
+validation: "The interface invites private reflection and proportionate action."

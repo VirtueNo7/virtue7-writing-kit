@@ -1,0 +1,4 @@
+format: educational_lesson
+must_preserve: [definitions, distinction, mechanism, safe_practice, anti_weaponisation_boundary]
+required: [learning_outcome, scenario, comparison, reflection, voluntary_practice, understanding_check]
+validation: "The learner can explain and apply the distinction without diagnosing another person."

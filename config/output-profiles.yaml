@@ -1,0 +1,17 @@
+version: 0.3.0
+registry:
+  children_picture_book: profiles/children-picture-book.yaml
+  children_chapter_book: profiles/children-chapter-book.yaml
+  narrative_nonfiction: profiles/narrative-nonfiction.yaml
+  essay_article: profiles/essay-article.yaml
+  research_paper: profiles/research-paper.yaml
+  technical_manual: profiles/technical-manual.yaml
+  business_report: profiles/business-report.yaml
+  workbook_guide: profiles/workbook-guide.yaml
+  resume: profiles/resume.yaml
+  cover_letter: profiles/cover-letter.yaml
+  legal_memorandum: profiles/legal-memorandum.yaml
+  creator_episode: profiles/creator-episode.yaml
+  interview_dossier: profiles/interview-dossier.yaml
+  clip_sheet: profiles/clip-sheet.yaml
+  job_search_brief: profiles/job-search-brief.yaml

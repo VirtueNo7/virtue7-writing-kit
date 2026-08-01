@@ -1,0 +1,11 @@
+id: technical_manual
+name: Technical Manual
+default_prose_mode: procedural_instructional
+required_inputs: [user, task, prerequisites, environment]
+required_sections: [purpose, prerequisites, procedure, expected_result, troubleshooting]
+structure:
+  headings: required
+  numbered_steps: required_for_sequence
+  bullets: preferred_for_rules_or_options
+  one_action_per_step: required
+quality_gate: quality/profile-gates/technical.md

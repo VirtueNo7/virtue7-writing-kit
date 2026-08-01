@@ -1,0 +1,10 @@
+unit: pride_to_humility
+expected_kernel: "Pride protects an image and compounds error; humility faces truth and makes correction possible."
+results:
+  kernel: {status: pass, recovered_decision_line: "Protect the image, or face the truth."}
+  handbook: {status: pass, recovered_decision_line: "Protect the image, or face the truth."}
+  children_story: {status: pass, note: "The crown represents image protection; admission enables correction without humiliation."}
+  lesson: {status: pass, note: "Preserves voluntary practice and anti-weaponisation boundary."}
+  video_script: {status: pass, recovered_decision_line: "Protect the image, or face the truth."}
+  card_app: {status: pass, note: "Private reflection; no diagnosis or scoring."}
+  professional_chapter_brief: {status: conditional, note: "Architecture passes; historical stories remain research- and approval-gated."}

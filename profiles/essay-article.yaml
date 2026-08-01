@@ -1,0 +1,9 @@
+id: essay_article
+name: Essay or Article
+default_prose_mode: literary_narrative
+required_inputs: [reader, thesis, intended_effect]
+structure:
+  headings: optional_sparse
+  body_bullets: normally_forbidden
+  argument_progression: required
+quality_gate: quality/profile-gates/narrative.md

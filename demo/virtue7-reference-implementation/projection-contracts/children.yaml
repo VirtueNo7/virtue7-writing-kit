@@ -1,0 +1,5 @@
+format: children_picture_book
+must_preserve: [direction, causal_choice, dignity_boundary]
+may_transform: [characters, setting, vocabulary, length, repetition]
+forbidden_transformations: ["humility becomes obedience", "pride becomes confidence", "moral labels are assigned to a child"]
+validation: "A child can follow the choice and consequence when read aloud."

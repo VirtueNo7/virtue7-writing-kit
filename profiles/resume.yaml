@@ -1,0 +1,11 @@
+id: resume
+name: Resume
+default_prose_mode: professional_application
+required_inputs: [verified_resume_source, target_or_generic_purpose]
+required_sections: [professional_summary, skills, experience, education]
+structure:
+  headings: required
+  evidence_bullets: required
+  first_person: forbidden
+  claims: verified_only
+quality_gate: quality/profile-gates/resume.md

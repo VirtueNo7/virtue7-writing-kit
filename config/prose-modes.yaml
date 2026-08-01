@@ -1,0 +1,58 @@
+version: 0.3.0
+prose_modes:
+  read_aloud_narrative:
+    paragraph_default: "short but developed; dialogue and refrains permitted"
+    sentence_rhythm: "simple, varied, performance-ready"
+    body_lists: forbidden
+    interior_headings: "title only unless chapter book"
+    one_sentence_paragraphs: permitted
+    planning_visibility: hidden
+
+  literary_narrative:
+    paragraph_default: multi_sentence
+    sentence_rhythm: varied
+    body_lists: forbidden
+    interior_headings_per_5000_words: "0-3"
+    one_sentence_paragraph_target: "<=15% unless dramatic necessity"
+    planning_visibility: hidden
+
+  narrative_nonfiction:
+    paragraph_default: multi_sentence
+    sentence_rhythm: varied_and_clear
+    body_lists: rare
+    interior_headings_per_5000_words: "1-5"
+    evidence_boundary: explicit
+    planning_visibility: hidden
+
+  analytical_academic:
+    paragraph_default: claim_evidence_interpretation
+    body_lists: permitted_when_methodologically_useful
+    headings: required_by_profile
+    uncertainty_language: required
+    citation_visibility: required
+
+  procedural_instructional:
+    paragraph_default: concise
+    steps: preferred_or_required
+    body_lists: preferred
+    headings: navigational
+    terminology: consistent
+    outcome_checks: required
+
+  professional_application:
+    paragraph_default: concise
+    bullets: required_for_evidence
+    first_person: normally_avoided_in_resume
+    claims: source_bound
+
+  legal_analytical:
+    paragraph_default: issue_rule_application_conclusion
+    headings: required_by_profile
+    authority_and_jurisdiction: required
+    uncertainty_language: required
+
+  creator_production:
+    paragraph_default: format_dependent
+    beats_and_lists: permitted
+    provenance: required_for_repurposing
+    platform_variants: derived_from_one_content_kernel

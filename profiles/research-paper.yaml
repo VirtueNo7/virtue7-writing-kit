@@ -1,0 +1,10 @@
+id: research_paper
+name: Research Paper
+default_prose_mode: analytical_academic
+required_inputs: [research_question, evidence_standard, citation_style]
+required_sections: [abstract, background_or_literature, method_or_scope, evidence_or_results, interpretation_or_discussion, limitations, conclusion, references]
+structure:
+  headings: required
+  bullets: permitted_when_methodologically_useful
+  citations: required
+quality_gate: quality/profile-gates/research.md

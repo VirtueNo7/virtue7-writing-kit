@@ -1,0 +1,9 @@
+id: creator_episode
+name: Episode, Video, or Newsletter
+default_prose_mode: creator_production
+required_inputs: [content_kernel, audience, medium]
+required_sections: [hook, central_question, development, evidence_or_story, conclusion, next_action]
+structure:
+  beat_sheet: preferred
+  performance_signposting: medium_dependent
+quality_gate: quality/profile-gates/creator.md

@@ -1,0 +1,5 @@
+format: video_or_audio
+must_preserve: [central_question, mechanism, evidence_boundary, conclusion]
+may_transform: [scene_order, narration, sound, visuals, performance]
+required: [cold_open, minimal_definition, pressure, choice, consequence, contrast, decode, ordinary_application, practical_close]
+validation: "Meaning survives time-based delivery and dramatic reconstruction is labelled."

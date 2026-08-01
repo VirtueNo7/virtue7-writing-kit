@@ -1,0 +1,20 @@
+version: 0.3.0
+pipeline:
+  - profile_structure
+  - truth_and_evidence
+  - semantic_finish
+  - profile_final_review
+status_order: [Pass, Revise, Block]
+automatic_repair:
+  enabled: true
+  maximum_silent_passes: 2
+  expose_when: "a material uncertainty, missing authority, missing source, or human decision remains"
+semantic_finish:
+  generic_phrase_warn_per_1000_words: 4
+  generic_phrase_block_per_1000_words: 8
+  repeated_conclusion_warn: true
+  paragraph_information_gain_required: true
+white_label:
+  require_neutral_tokens: true
+  scan_paths_and_content: true
+  prohibited_person_specific_markers: []

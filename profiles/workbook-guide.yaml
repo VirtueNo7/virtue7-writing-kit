@@ -1,0 +1,10 @@
+id: workbook_guide
+name: Workbook or Instructional Guide
+default_prose_mode: procedural_instructional
+required_inputs: [learner, outcome, safety_boundary]
+structure:
+  headings: required
+  exercises: required
+  bullets: permitted
+  completion_checks: required
+quality_gate: quality/profile-gates/technical.md

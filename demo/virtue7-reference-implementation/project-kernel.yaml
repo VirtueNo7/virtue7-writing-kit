@@ -1,0 +1,11 @@
+project: Virtue№7
+version: demo-0.3.0
+purpose: "Provide a human-readable moral direction system that helps readers recognise harmful patterns and practise constructive alternatives."
+unit_relation: "Vice → Virtue"
+governed_mechanism: "A vice creates or facilitates harm and destroys or prevents value; its corresponding virtue destroys or prevents harm and creates or facilitates value."
+boundaries:
+  - "Analyse choices and patterns, not permanent moral identity."
+  - "Do not diagnose, score, shame, or weaponise the framework against people."
+  - "A virtue is not permission for self-erasure, mistreatment, or passivity."
+compression: "Vice → Virtue"
+approval_state: reference_demo

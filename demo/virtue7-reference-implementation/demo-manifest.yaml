@@ -1,0 +1,17 @@
+id: virtue7_reference_implementation
+version: 0.3.0
+entry: demo/virtue7-reference-implementation/DEMO_START.md
+boot_files:
+  - demo/virtue7-reference-implementation/DEMO_START.md
+  - demo/virtue7-reference-implementation/project-kernel.yaml
+  - demo/virtue7-reference-implementation/sevenfold-matrix.yaml
+unit_route:
+  pride_to_humility: demo/virtue7-reference-implementation/units/pride-to-humility.yaml
+projections:
+  handbook: demo/virtue7-reference-implementation/projection-contracts/handbook.yaml
+  professional_chapter: demo/virtue7-reference-implementation/projection-contracts/professional-chapter.yaml
+  children: demo/virtue7-reference-implementation/projection-contracts/children.yaml
+  lesson: demo/virtue7-reference-implementation/projection-contracts/lesson.yaml
+  media: demo/virtue7-reference-implementation/projection-contracts/media.yaml
+  interactive: demo/virtue7-reference-implementation/projection-contracts/interactive.yaml
+validation: demo/virtue7-reference-implementation/validation/round-trip.md

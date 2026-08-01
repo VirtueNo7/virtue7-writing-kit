@@ -1,0 +1,4 @@
+format: handbook
+must_preserve: [definitions, central_conflict, vice_mechanism, virtue_mechanism, boundaries, ordinary_examples, practice, compression]
+may_transform: [heading_order, example_selection, density]
+validation: "The unit is clear and independently useful without narrative atmosphere."

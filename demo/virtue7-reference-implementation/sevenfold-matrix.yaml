@@ -1,0 +1,11 @@
+project: Virtue№7
+pairs:
+  - {vice: Pride, virtue: Humility}
+  - {vice: Greed, virtue: Generosity}
+  - {vice: Lust, virtue: Loving Integrity}
+  - {vice: Envy, virtue: Gratitude}
+  - {vice: Gluttony, virtue: Temperance}
+  - {vice: Wrath, virtue: Patience}
+  - {vice: Sloth, virtue: Diligence}
+rule: "Each pair establishes opposing moral directions, not merely opposite dictionary definitions."
+status: "Reference matrix; exact expanded wording requires project approval."

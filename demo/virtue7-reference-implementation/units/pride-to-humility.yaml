@@ -1,0 +1,32 @@
+id: pride_to_humility
+pair: "Pride → Humility"
+central_conflict: "Will I protect the image, or face the truth?"
+definitions:
+  pride: "The instinct to defend an image of the self when reality, correction, or responsibility threatens it."
+  humility: "The courage to face what is true without mistaking correction for defeat."
+vice_mechanism:
+  - "Protects an image."
+  - "Limits accurate self-examination."
+  - "Prevents correction."
+  - "Permits error to compound."
+virtue_mechanism:
+  - "Permits truth."
+  - "Produces self-awareness."
+  - "Makes correction possible."
+  - "Opens a path toward repair and redemption."
+ordinary_examples:
+  - "Refusing feedback."
+  - "Concealing a mistake."
+  - "Apologising conditionally."
+  - "Listening before defending."
+  - "Changing course after evidence."
+boundaries:
+  - "Humility is not weakness, obedience, humiliation, or accepting mistreatment."
+  - "A story illustrates choices and consequences; it is not a verdict on an entire life."
+historical_story_status: "Unresolved. Select documented principal figures through research and human approval."
+reader_practice: "Identify the image being protected and choose one proportionate correction within twenty-four hours."
+compression_levels:
+  paragraph: "Pride protects an image and prevents accurate correction, allowing errors to compound. Humility faces truth, restores self-examination, and makes repair possible."
+  operational_sentence: "Protecting the image compounds error; facing the truth makes correction possible."
+  decision_line: "Protect the image, or face the truth."
+  kernel_pair: "Pride → Humility"
