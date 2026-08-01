@@ -1,0 +1,18 @@
+packet_id:
+output_profile:
+project_voice:
+voice_evidence:
+  available_transcripts: []
+  approved_project_samples: []
+mechanisms:
+  - role: cadence
+    observations: []
+    transferable_instructions: []
+  - role: structure
+    observations: []
+    transferable_instructions: []
+  - role: clarity
+    observations: []
+    transferable_instructions: []
+identity_imitation: forbidden
+style_distance_review: required

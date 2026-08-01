@@ -1,0 +1,19 @@
+version: 0.3.0
+cases:
+  - {file: 01_childrens_read_aloud.md, profile: children_picture_book, expect: Pass}
+  - {file: 02_interface_clarity_technical_guidance.md, profile: technical_manual, expect: Pass}
+  - {file: 03_strategic_historical_essay.md, profile: essay_article, expect: Pass}
+  - {file: 04_research_brief.md, profile: research_paper, expect: Pass}
+  - {file: 05_california_legal_memo.md, profile: legal_memorandum, expect: Pass}
+  - {file: 06_resume_profile.md, profile: resume, expect: Pass}
+  - {file: 07_job_search_brief.md, profile: job_search_brief, expect: Pass}
+  - {file: 08_fragmented_control.md, profile: essay_article, expect: Block}
+  - {file: 09_child_bullet_drift.md, profile: children_picture_book, expect: Block}
+  - {file: 10_technical_novelized.md, profile: technical_manual, expect: Block}
+  - {file: 11_strategy_outline.md, profile: essay_article, expect: Block}
+  - {file: 12_research_no_sources.md, profile: research_paper, expect: Block}
+  - {file: 13_legal_no_jurisdiction.md, profile: legal_memorandum, expect: Block}
+  - {file: 14_resume_as_paragraphs.md, profile: resume, expect: Block}
+  - {file: 15_job_search_vague.md, profile: job_search_brief, expect: Block}
+  - {file: 16_generic_strategy_sludge.md, profile: essay_article, expect: Block}
+  - {file: 17_freestyle_opening_statement.md, profile: essay_article, expect: Pass}

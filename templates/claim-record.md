@@ -1,18 +1,11 @@
----
-claim_id: "CLM-000"
-unit_id: "U-00"
-status: "Draft"
----
-
 # Claim Record
 
-- Claim:
-- Claim type: fact / synthesis / interpretation / reconstruction / fiction / recommendation
-- Supporting source IDs:
-- Source location:
-- Confidence:
-- Material uncertainty:
-- Counterevidence or disagreement:
-- Allowed wording:
-- Prohibited overstatement:
-- Approval state:
+- Claim ID:
+- Exact claim:
+- Type: fact / quote / interpretation / inference / allegation
+- Source and locator:
+- Date and jurisdiction if relevant:
+- Verification state:
+- Qualifications or conflicts:
+- Rights or publication risk:
+- Approved uses:

@@ -1,0 +1,9 @@
+id: interface_clarity
+reference_role: clarity
+observations:
+  - task-first organisation
+  - direct labels and familiar terminology
+  - visible consequences and system status
+  - accessibility and localisation checks
+  - concise instructions with testable results
+boundary: "Use general interface-writing principles, not proprietary wording or product-specific design rules unless supplied and cited."

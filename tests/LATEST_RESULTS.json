@@ -1,0 +1,283 @@
+[
+  {
+    "file": "01_childrens_read_aloud.md",
+    "profile": "children_picture_book",
+    "expected": "Pass",
+    "actual": "Pass",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "02_interface_clarity_technical_guidance.md",
+    "profile": "technical_manual",
+    "expected": "Pass",
+    "actual": "Pass",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "03_strategic_historical_essay.md",
+    "profile": "essay_article",
+    "expected": "Pass",
+    "actual": "Pass",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "04_research_brief.md",
+    "profile": "research_paper",
+    "expected": "Pass",
+    "actual": "Pass",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "05_california_legal_memo.md",
+    "profile": "legal_memorandum",
+    "expected": "Pass",
+    "actual": "Pass",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "06_resume_profile.md",
+    "profile": "resume",
+    "expected": "Pass",
+    "actual": "Pass",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "07_job_search_brief.md",
+    "profile": "job_search_brief",
+    "expected": "Pass",
+    "actual": "Pass",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "08_fragmented_control.md",
+    "profile": "essay_article",
+    "expected": "Block",
+    "actual": "Block",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Essay is over-sectioned."
+      },
+      {
+        "severity": "Block",
+        "message": "Visible outline scaffolding dominates the prose."
+      },
+      {
+        "severity": "Block",
+        "message": "The essay lacks concrete anchors or specific evidence."
+      }
+    ]
+  },
+  {
+    "file": "09_child_bullet_drift.md",
+    "profile": "children_picture_book",
+    "expected": "Block",
+    "actual": "Block",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Narrative body must not use bullet or numbered lists."
+      },
+      {
+        "severity": "Block",
+        "message": "Length is outside the broad picture-book test range."
+      },
+      {
+        "severity": "Block",
+        "message": "No repeated refrain or participation cue detected."
+      }
+    ]
+  },
+  {
+    "file": "10_technical_novelized.md",
+    "profile": "technical_manual",
+    "expected": "Block",
+    "actual": "Block",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Technical guidance needs navigational headings."
+      },
+      {
+        "severity": "Block",
+        "message": "Technical guidance needs visible rules or ordered steps."
+      }
+    ]
+  },
+  {
+    "file": "11_strategy_outline.md",
+    "profile": "essay_article",
+    "expected": "Block",
+    "actual": "Block",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Essay or strategic narrative should remain continuous prose."
+      },
+      {
+        "severity": "Block",
+        "message": "Essay is over-sectioned."
+      },
+      {
+        "severity": "Block",
+        "message": "Argument needs developed paragraph movement."
+      },
+      {
+        "severity": "Block",
+        "message": "The essay lacks concrete anchors or specific evidence."
+      }
+    ]
+  },
+  {
+    "file": "12_research_no_sources.md",
+    "profile": "research_paper",
+    "expected": "Block",
+    "actual": "Block",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing research section: interpretation/discussion."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing research section: references."
+      },
+      {
+        "severity": "Block",
+        "message": "Insufficient visible source dating."
+      },
+      {
+        "severity": "Block",
+        "message": "Research uncertainty or limitation language is weak."
+      },
+      {
+        "severity": "Block",
+        "message": "Visible source section or source language is missing."
+      }
+    ]
+  },
+  {
+    "file": "13_legal_no_jurisdiction.md",
+    "profile": "legal_memorandum",
+    "expected": "Block",
+    "actual": "Block",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Jurisdiction is not explicit."
+      },
+      {
+        "severity": "Block",
+        "message": "Controlling authority is not identified."
+      },
+      {
+        "severity": "Block",
+        "message": "Fact or uncertainty boundary is weak."
+      },
+      {
+        "severity": "Block",
+        "message": "Informational status is not stated."
+      }
+    ]
+  },
+  {
+    "file": "14_resume_as_paragraphs.md",
+    "profile": "resume",
+    "expected": "Block",
+    "actual": "Block",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing resume section: professional summary."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing resume section: core skills."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing resume section: professional experience."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing resume section: education."
+      },
+      {
+        "severity": "Block",
+        "message": "Resume lacks scannable evidence bullets."
+      },
+      {
+        "severity": "Block",
+        "message": "No quantified achievement detected in this test fixture."
+      }
+    ]
+  },
+  {
+    "file": "15_job_search_vague.md",
+    "profile": "job_search_brief",
+    "expected": "Block",
+    "actual": "Block",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Job brief lacks navigable role grouping."
+      },
+      {
+        "severity": "Block",
+        "message": "Job brief lacks structured decision fields."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing decision field: match rationale."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing decision field: verification needed."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing decision field: recommended action."
+      },
+      {
+        "severity": "Block",
+        "message": "No controlled handoff is present."
+      }
+    ]
+  },
+  {
+    "file": "16_generic_strategy_sludge.md",
+    "profile": "essay_article",
+    "expected": "Block",
+    "actual": "Block",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Generic abstraction density indicates polished but low-information prose."
+      }
+    ]
+  },
+  {
+    "file": "17_freestyle_opening_statement.md",
+    "profile": "essay_article",
+    "expected": "Pass",
+    "actual": "Pass",
+    "ok": true,
+    "findings": []
+  }
+]
