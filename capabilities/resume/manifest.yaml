@@ -1,0 +1,14 @@
+id: resume
+version: 0.3.0
+capability: "capabilities/resume/CAPABILITY.md"
+load_policy: "manifest + one route + one selected profile; optional files only when activated"
+routes:
+  build-source:
+    file: "capabilities/resume/routes/build-source.md"
+  tailor-resume:
+    file: "capabilities/resume/routes/tailor-resume.md"
+  cover-letter:
+    file: "capabilities/resume/routes/cover-letter.md"
+quality_defaults:
+  - quality/UNIVERSAL_GATE.md
+  - quality/SEMANTIC_FINISH_GATE.md

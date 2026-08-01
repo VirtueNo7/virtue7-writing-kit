@@ -1,25 +1,27 @@
 # Changelog
 
-## 0.2.0 - 2026-07-27
+## 0.3.0 — 2026-07-31
 
-- Expanded the project model from `C = (K, U, E, P, Q)` to `C = (K, U, E, R, V, P, Q)`.
-- Added a guided path for books built from existing writing, transcripts, notes, interviews, and archives.
-- Added classified reference roles: canonical, voice, structural, evidence, inspiration, and excluded.
-- Added reference register, reference profile, reference packet, voice contract, passage provenance, and drift report templates.
-- Added reference-grounding and voice-governance architecture layers.
-- Added workflows for building a reference library, building a voice contract, and running drift tests.
-- Added meaning, voice, source, contamination, genericity, and provenance drift checks.
-- Added a living project-native voice canon populated only by approved prose.
-- Updated the boot menu, master prompt, quality rules, bundle manifest, session state, validation script, and documentation.
-- Preserved all v0.1.0 workflows, fictional demonstration assets, whitepaper files, and white-label boundaries.
+- Added Freestyle Writing as the main doorway for direct instructions, notes, dot points, fragments, transcripts, sources, and prior drafts.
+- Added an instruction-driven artifact lifecycle: Draft, revision, approval, export, and release.
+- Added precise revision behaviour that preserves unaffected material and treats the latest human instruction as authoritative.
+- Separated output profile from delivery format, with on-screen, Markdown, TXT, DOCX, PDF, and HTML targets when host tools permit.
+- Added transcript-aware user voice calibration with provenance and instruction-isolation safeguards.
+- Added location-neutral language, spelling, units, date, jurisdiction, and timezone resolution.
+- Replaced book-only routing with a lightweight master capability router.
+- Added adaptive output profiles and profile-specific structure rules.
+- Added first-class Resume, Job Search, Content Creator, Research, Legal, Continuation, and Review capabilities.
+- Added jurisdiction- and date-aware legal foundations without bundling world law at boot.
+- Added technique-based inspiration references with style-distance safeguards and no identity-imitation dependency.
+- Split quality control into structure, evidence, semantic finish, and profile final review.
+- Added executable profile-aware tests for children’s read-aloud, technical, strategic narrative, freestyle, research, legal, resume, and job-search outputs.
+- Added an isolated Virtue№7 reference implementation and semantic round-trip demo.
+- Strengthened white-label, lazy-loading, ZIP hygiene, manifest validation, static documentation, quick commands, and regression fixtures.
 
-## 0.1.0 - 2026-07
+## 0.2.0 — 2026-07-27
 
-- Added model-neutral AI boot sequence.
-- Added guided new-book workflow with approval gates.
-- Added controlled expansion and semantic compression workflows.
-- Added round-trip validation and source-lineage templates.
-- Added a zero-input fictional Master Builder biography demonstration.
-- Added white-label output boundary.
-- Included the compressible content architecture whitepaper in PDF and text forms.
-- Added repository validation script and GitHub Actions workflow.
+- Added classified reference roles, voice contracts, provenance, and drift testing.
+
+## 0.1.0
+
+- Initial release.

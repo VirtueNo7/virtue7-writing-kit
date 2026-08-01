@@ -1,0 +1,14 @@
+id: job-search
+version: 0.3.0
+capability: "capabilities/job-search/CAPABILITY.md"
+load_policy: "manifest + one route + one selected profile; optional files only when activated"
+routes:
+  search:
+    file: "capabilities/job-search/routes/search.md"
+  evaluate:
+    file: "capabilities/job-search/routes/evaluate.md"
+  handoff:
+    file: "capabilities/job-search/routes/handoff.md"
+quality_defaults:
+  - quality/UNIVERSAL_GATE.md
+  - quality/SEMANTIC_FINISH_GATE.md

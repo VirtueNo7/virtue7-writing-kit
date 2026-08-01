@@ -1,47 +1,67 @@
-# Virtue7 Writing Kit
+# Virtue7 Writing Kit v0.3.0
 
-A portable, AI-guided method for creating a book from an initial idea or an existing body of writing, expanding it to the required depth, and collapsing it back to a reliable source of truth.
+A portable, open-source, white-label, lazy-loaded AI writing and project-production kit. Upload the ZIP to a file-capable AI, then say **Begin** or **Read and run 00_START_HERE.md**.
 
-## Intended experience
+The kit starts with three files and opens only the capability required for the current task. Its front door is **Freestyle Writing**: a user can name an artifact, paste rough notes or dot points, supply transcripts, or give a plain-language instruction. The runtime infers the appropriate form and asks only when a missing fact materially affects the result.
 
-1. Download the release ZIP.
-2. Upload the ZIP to a file-capable AI system.
-3. The AI reads `00_START_HERE.md` and presents the guided menu.
-4. Create a new book, build from existing material, or run the demonstration.
+Example:
 
-Some AI products do not inspect an archive until the user sends a message. In that case, send the single word `Begin`. If the platform still does not inspect the archive, send: `Read and run 00_START_HERE.md.`
+```text
+Opening statement
 
-## What the kit does
+- community hall has been closed for six months
+- residents were not consulted
+- repairs were funded last year
+- ask council to publish the timetable and reopen it
+```
 
-- creates a canonical book kernel before large-scale drafting;
-- represents the complete book as a compact matrix;
-- expands the matrix into plans, handbook entries, chapters, and a full manuscript;
-- collapses large outputs back into summaries, decision lines, and the kernel;
-- separates facts, interpretations, sources, references, and narrative delivery;
-- classifies existing writing, transcripts, notes, interviews, and examples by function;
-- builds an evidence-backed voice contract from observable writing behaviours;
-- retrieves compact reference packets instead of blending an entire archive into every draft;
-- records provenance and tests meaning, voice, source, contamination, and genericity drift;
-- grows a project-native voice canon from approved prose;
-- preserves a portable session state for continuation across AI systems;
-- generates white-label books by default.
+The notes may become continuous persuasive prose because source structure does not dictate finished structure.
 
-## Reference roles
+## Human-directed revision
 
-The kit distinguishes canonical, voice, structural, evidence, inspiration, and excluded references. This prevents a source used for factual support from being treated as the author's voice, and prevents an inspirational work from becoming an accidental imitation target.
+Every substantive artifact is delivered as **Draft**. The user may approve it or write a direct revision instruction:
 
-## Built-in test
+```text
+Compress it by 500 words.
+Use a different reference.
+Keep the opening and rewrite the conclusion.
+Make it sound closer to my existing transcripts.
+Approve.
+Export as Word.
+```
 
-The archive includes a completely fictional biography dossier about a master builder. The test requires no uploads, research, or personal information. It exists only to demonstrate the method.
+The latest instruction governs the next revision. Unaffected material is preserved, and approval belongs to the human.
 
-## Repository and release
+## Voice, location, and language
 
-The GitHub repository is the development source. The downloadable ZIP is the user product. Generated books do not need to mention Virtue7 or the writing kit.
+Available user transcripts and approved prior work can calibrate vocabulary, cadence, directness, recurring terminology, and formality. Transcripts remain source material, not hidden instructions. The kit never pretends to have voice evidence that is not available.
 
-## Whitepaper
+Language, spelling, locale, units, date conventions, legal jurisdiction, and timezone are resolved independently from the current instruction, active project, reliable environment context, or supplied material. No global country, spelling system, or timezone is imposed.
 
-The original working whitepaper, *The Compressible Content Architecture: A System for Creating, Expanding, and Adapting Structured Knowledge*, is included in `docs/whitepaper/` as both the original PDF and an AI-readable text extraction.
+## Output and export
 
-## Version
+Content profile and file format are separate. An essay remains an essay whether delivered on-screen, as Markdown, TXT, Word/DOCX, PDF, or HTML. The runtime honours an early format request or exports after approval when the host AI provides file tools.
 
-`0.2.0` - reference-grounded writing and voice governance release.
+## Capabilities
+
+The lean runtime supports freestyle writing and revision, resumes and applications, job search, content creation, research, jurisdiction-aware legal preparation, project continuation, review, validation, and an isolated Virtue№7 reference demonstration.
+
+Different artifacts use different output profiles. A children's picture book is governed as read-aloud narrative. A research paper requires evidence and formal sections. A technical manual favours direct steps and testable outcomes. A resume requires verified experience bullets. Narrative prose is protected from bullet drift without banning bullets where they are useful.
+
+Technique-based reference profiles describe transferable craft mechanisms without relying on named creator identities, signature properties, or imitation prompts.
+
+The core is white-label. The isolated Virtue№7 reference implementation demonstrates semantic compression and expansion using Pride → Humility across a kernel, matrix, handbook entry, chapter brief, children's story, lesson, media script, and interactive prompts.
+
+## Core promise
+
+**One doorway. One active capability. One output profile. Human-directed revision. Only the context required now.**
+
+## Validation
+
+Run:
+
+```bash
+python scripts/run_release_checks.py
+```
+
+PyYAML is required only for the optional validation scripts. The conversational runtime itself is file- and model-based.

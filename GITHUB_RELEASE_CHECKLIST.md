@@ -1,16 +1,17 @@
-# GitHub Release Checklist
+# GitHub Release Checklist — v0.3.0
 
-Before publishing:
-
-- [ ] Replace `[RIGHTS HOLDER]` in `LICENSE.md`.
-- [ ] Select an open-source, source-available, or proprietary licence deliberately.
-- [ ] Confirm repository name and description.
-- [ ] Confirm the whitepaper may be distributed with the release.
-- [ ] Run `python scripts/validate_bundle.py`.
-- [ ] Confirm no personal or recipient-specific information appears anywhere.
-- [ ] Confirm the Master Builder is clearly fictional.
-- [ ] Confirm generated-output branding remains disabled by default.
-- [ ] Create a GitHub release tagged `v0.2.0`.
-- [ ] Attach the ZIP file as the release asset.
-- [ ] Test the release ZIP in at least two file-capable AI systems.
-- [ ] Record differences in archive handling or file-reading behaviour.
+- [ ] `VERSION` is `0.3.0`.
+- [ ] Root folder and ZIP are named `virtue7-writing-kit_v0.3.0`.
+- [ ] `python scripts/run_release_checks.py` passes.
+- [ ] Boot remains exactly three files and below the boot byte limit.
+- [ ] Freestyle accepts direct instructions, notes, dot points, fragments, and available transcripts.
+- [ ] Every substantive artifact returns to Draft until human approval.
+- [ ] Revision instructions preserve unaffected material.
+- [ ] Output profile and file format remain independent.
+- [ ] Locale and timezone are resolved per artifact, not globally assumed.
+- [ ] No person-specific identity records, imitation prompts, signature properties, or residual identity-linked test names appear in the generic bundle.
+- [ ] No `__MACOSX`, `.DS_Store`, `._*`, cache, or compiled files exist.
+- [ ] All profile evaluation cases match expected outcomes.
+- [ ] Virtue№7 demo round-trips to the approved Pride → Humility kernel.
+- [ ] Legal demo contains no unverified jurisdiction rule.
+- [ ] Final ZIP opens with one root directory and contains `FILE_MANIFEST.json`.

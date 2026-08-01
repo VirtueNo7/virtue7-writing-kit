@@ -1,0 +1,77 @@
+bundle:
+  name: "Virtue7 Writing Kit"
+  version: "0.3.0"
+  runtime: "lean-capability-lazy"
+  entrypoint: "00_START_HERE.md"
+
+boot:
+  maximum_files: 3
+  files:
+    - "00_START_HERE.md"
+    - "RUNTIME_MANIFEST.yaml"
+    - "MASTER_PROMPT.md"
+
+capabilities:
+  writing:
+    menu: 1
+    label: "Freestyle writing"
+    triggers: ["write", "draft", "revise", "edit", "opening statement", "speech", "book", "article", "essay", "story", "manual", "from notes", "from dot points", "turn this into", "use my transcript"]
+    manifest: "capabilities/writing/manifest.yaml"
+  resume:
+    menu: 2
+    triggers: ["resume", "résumé", "cv", "cover letter", "job application", "selection criteria", "professional bio"]
+    manifest: "capabilities/resume/manifest.yaml"
+  job_search:
+    menu: 3
+    triggers: ["jobs", "job search", "find work", "open roles", "opportunities", "hiring"]
+    manifest: "capabilities/job-search/manifest.yaml"
+  content_creator:
+    menu: 4
+    triggers: ["content", "podcast", "video", "newsletter", "episode", "clips", "interview dossier", "campaign", "repurpose"]
+    manifest: "capabilities/content-creator/manifest.yaml"
+  research:
+    menu: 5
+    triggers: ["research", "investigate", "analyse", "analyze", "evidence review", "source check"]
+    manifest: "capabilities/research/manifest.yaml"
+  legal:
+    menu: 6
+    triggers: ["legal", "law", "court", "statute", "contract review", "legal memorandum", "legal opening statement", "chronology"]
+    manifest: "capabilities/legal/manifest.yaml"
+  continuation:
+    menu: 7
+    triggers: ["continue project", "resume project", "pick up where we stopped", "load project state", "update project"]
+    manifest: "capabilities/continuation/manifest.yaml"
+  review:
+    menu: 8
+    triggers: ["review", "validate", "audit", "quality check", "release", "demo", "Virtue№7 demo"]
+    manifest: "capabilities/review/manifest.yaml"
+
+routing_precedence:
+  - "Explicit action and object"
+  - "Current artifact state and latest revision instruction"
+  - "Explicit capability command"
+  - "Current approved project state"
+  - "Trigger match"
+  - "Master menu"
+
+loading_rules:
+  maximum_active_capabilities: 1
+  maximum_active_routes: 1
+  maximum_active_profiles: 1
+  maximum_boot_files: 3
+  instructions:
+    - "Read the capability manifest before any capability route."
+    - "Do not recursively inspect directories."
+    - "Load optional files only after their activation condition is true."
+    - "References and examples are dormant by default."
+    - "Pass compact handoff packets between capabilities instead of prior capability history."
+    - "If the selected packet is sufficient, stop loading and begin."
+
+never_preload:
+  - "other capability directories"
+  - "profiles not selected by the active route"
+  - "references/"
+  - "demo/"
+  - "tests/"
+  - "scripts/"
+  - "release history"

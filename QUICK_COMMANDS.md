@@ -1,39 +1,18 @@
 # Quick Commands
 
-Use these commands after uploading the archive when a platform does not automatically display the menu.
-
-## Start
-
-`Begin`
-
-`Read and run 00_START_HERE.md.`
-
-## Create
-
-`Create a new book from scratch.`
-
-`Build a book from these transcripts and preserve the speaker's authentic voice.`
-
-`Build the reference library before drafting.`
-
-`Create a voice contract from the approved samples.`
-
-## Continue
-
-`Read SESSION_STATE and continue from the last approved gate.`
-
-## Expand and collapse
-
-`Expand this approved unit from R3 Plan to R5 Representative Chapter.`
-
-`Collapse this manuscript to its R2 Matrix without losing the approved invariant set.`
-
-## Validate
-
-`Run the full validation workflow, including reference drift.`
-
-`Check this chapter for meaning, voice, source, contamination, and genericity drift.`
-
-## Demonstration
-
-`Run the built-in Master Builder test without external research.`
+- `Begin`
+- `Opening statement` followed by notes or dot points
+- `Turn these notes into a 1,500-word essay`
+- `Use my available transcripts to draft this in my natural language`
+- `Compress this by 500 words`
+- `Replace the second reference and preserve the opening`
+- `Approve`
+- `Export as Word`
+- `Export as PDF`
+- `Tailor my resume to this job`
+- `Jobs`
+- `Turn this transcript into clips and a newsletter`
+- `Prepare a legal memorandum for [jurisdiction]`
+- `Continue project`
+- `Review this draft`
+- `Run the Virtue№7 demo`

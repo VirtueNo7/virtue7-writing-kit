@@ -1,0 +1,21 @@
+version: 0.3.0
+required_resolution:
+  - country
+  - legal_system
+  - subdivision_when_applicable
+  - court_regulator_or_municipality_when_material
+  - matter
+  - operative_date
+  - cross_border_dependencies
+rules:
+  - "Do not infer a jurisdiction from spelling or currency alone."
+  - "Load more than one jurisdiction only when the issue genuinely crosses borders or authority levels."
+  - "If jurisdiction or date remains unresolved, limit work to issue spotting and document organisation."
+manifest_fields:
+  - official_sources
+  - authority_hierarchy
+  - court_structure
+  - citation_convention
+  - terminology
+  - filing_or_procedure_sources
+  - currency_checked_at

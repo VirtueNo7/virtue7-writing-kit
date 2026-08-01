@@ -1,0 +1,14 @@
+id: continuation
+version: 0.3.0
+capability: "capabilities/continuation/CAPABILITY.md"
+load_policy: "manifest + one route + one selected profile; optional files only when activated"
+routes:
+  load-state:
+    file: "capabilities/continuation/routes/load-state.md"
+  next-gate:
+    file: "capabilities/continuation/routes/next-gate.md"
+  controlled-update:
+    file: "capabilities/continuation/routes/controlled-update.md"
+quality_defaults:
+  - quality/UNIVERSAL_GATE.md
+  - quality/SEMANTIC_FINISH_GATE.md
