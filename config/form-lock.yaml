@@ -1,0 +1,26 @@
+version: 0.4.0
+modes:
+  adaptive:
+    purpose: "Use the structure required by the selected output profile."
+    body_lists: profile_controlled
+    headings: profile_controlled
+    fragments: profile_controlled
+  preserve_form:
+    purpose: "Preserve the user's approved paragraph, heading, and list behaviour unless the selected profile requires otherwise."
+    evidence_required: true
+    source_bullets_define_output: false
+  narrative_lock:
+    purpose: "Protect continuous prose from bullet, heading, fragment, and outline drift."
+    default_for: [children_picture_book, children_chapter_book, fiction_short_story, novel_chapter, narrative_nonfiction, essay_article]
+    body_lists: forbidden_unless_explicit
+    numbered_lists: forbidden_unless_explicit
+    fragment_stacks: revise
+    excessive_headings: revise
+    visible_outline_scaffolding: block
+    one_sentence_paragraphs: "Permitted only for deliberate rhythm or emphasis."
+precedence:
+  - explicit_current_instruction
+  - legitimate_output_profile_structure
+  - active_form_lock
+  - approved_voice_evidence
+  - neutral_default
