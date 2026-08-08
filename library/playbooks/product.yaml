@@ -1,0 +1,42 @@
+pack: product
+version: 0.4.0
+playbooks:
+  - id: opportunity-brief
+    title: Frame the Product Opportunity
+    starter: "Turn these signals into a product opportunity brief that separates user evidence, assumptions, constraints, and proposed value."
+    outcome: decision-ready problem framing
+    route: writing/new-output
+    profile: product_brief
+    inputs: [user evidence, business objective, constraints]
+    outputs: [opportunity brief, assumption ledger, research gaps]
+    gates: [evidence, semantic finish, approval]
+    tool_contract: "Native for supplied inputs; analytics and repository retrieval require external tools."
+  - id: requirement-builder
+    title: Build Requirements
+    starter: "Convert this approved opportunity into testable requirements, non-goals, edge cases, dependencies, and acceptance criteria."
+    outcome: implementation-ready requirements without hidden scope
+    route: writing/new-output
+    profile: product_brief
+    inputs: [approved opportunity, users, constraints, system context]
+    outputs: [requirements, non-goals, acceptance criteria, dependency map]
+    gates: [profile structure, consistency, approval]
+    tool_contract: native
+  - id: release-decision
+    title: Prepare a Release Decision
+    starter: "Assemble the release evidence, unresolved risks, rollback conditions, and required approvals into one decision record."
+    outcome: auditable go, hold, or limited-release decision
+    route: review/release-audit
+    profile: meeting_decision_record
+    inputs: [test results, incidents, known limitations, owners]
+    outputs: [decision record, risk register, approval checklist]
+    gates: [evidence, privacy, approval]
+    tool_contract: "Native for supplied evidence; CI, analytics, and deployment actions require external tools."
+  - id: feedback-synthesis
+    title: Synthesize Feedback
+    starter: "Cluster this feedback without losing minority signals, quote representative evidence, and distinguish frequency from severity."
+    outcome: evidence-traceable insight set and decision options
+    route: research/evidence-brief
+    inputs: [feedback corpus, segmentation, decision context]
+    outputs: [theme map, counter-signals, evidence excerpts, next tests]
+    gates: [privacy, evidence, semantic finish]
+    tool_contract: "Native for supplied feedback; data retrieval and quantitative analysis may require external tools."

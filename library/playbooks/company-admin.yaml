@@ -1,0 +1,42 @@
+pack: company_admin
+version: 0.4.0
+playbooks:
+  - id: sop-builder
+    title: Build a Working SOP
+    starter: "Turn this actual process into an SOP with owners, decisions, exceptions, controls, and proof of completion."
+    outcome: usable operating procedure rather than a generic checklist
+    route: writing/new-output
+    profile: standard_operating_procedure
+    inputs: [current process, owners, systems, exceptions, controls]
+    outputs: [SOP, control points, escalation path, change log]
+    gates: [profile structure, privacy, approval]
+    tool_contract: native
+  - id: meeting-to-decisions
+    title: Convert a Meeting into Decisions
+    starter: "Turn these notes into decisions, rationale, owners, deadlines, dependencies, and unresolved questions."
+    outcome: durable decision state with accountable follow-through
+    route: continuation/controlled-update
+    profile: meeting_decision_record
+    inputs: [meeting notes or transcript, participants, project scope]
+    outputs: [decision record, action register, unresolved questions]
+    gates: [privacy, evidence, approval]
+    tool_contract: "Native for supplied notes; recording, transcription, calendar updates, and task creation require external tools."
+  - id: policy-builder
+    title: Draft an Operational Policy
+    starter: "Build a policy from these obligations and operating realities, including scope, responsibilities, controls, exceptions, and review cadence."
+    outcome: governed policy connected to real procedures
+    route: writing/new-output
+    profile: business_report
+    inputs: [purpose, obligations, stakeholders, existing procedures]
+    outputs: [policy draft, control map, implementation questions]
+    gates: [evidence, privacy, approval]
+    tool_contract: "Native for supplied obligations; current legal or regulatory verification requires authoritative live sources and qualified review."
+  - id: incident-record
+    title: Build an Incident Record
+    starter: "Create a neutral incident record from these materials. Separate observed facts, reported statements, impact, response, and open questions."
+    outcome: reliable chronology and follow-up record without premature conclusions
+    route: research/evidence-brief
+    inputs: [authorized incident materials, reporting scope]
+    outputs: [incident chronology, evidence register, action list]
+    gates: [privacy, evidence, approval]
+    tool_contract: native

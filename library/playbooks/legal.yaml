@@ -1,0 +1,46 @@
+pack: legal
+version: 0.4.0
+playbooks:
+  - id: issue-and-authority-map
+    title: Map Issues and Authority
+    starter: "Organize this matter by issue, jurisdiction, controlling authority, disputed facts, and missing evidence."
+    outcome: attorney-reviewable research plan with legal and factual boundaries separated
+    route: legal/prepare-document
+    profile: legal_memorandum
+    inputs: [jurisdiction, facts, question, supplied authority]
+    outputs: [issue map, authority table, fact gaps, research plan]
+    gates: [jurisdiction, authority, evidence, privacy]
+    approval: qualified legal review
+    tool_contract: "Native for supplied material; current authority retrieval and citator checks require authorized legal research tools."
+  - id: chronology-and-exhibits
+    title: Build a Matter Chronology
+    starter: "Turn these records into a dated chronology and exhibit index. Distinguish document fact, party assertion, and inference."
+    outcome: traceable case chronology with provenance
+    route: legal/prepare-document
+    inputs: [matter records, date boundary, confidentiality scope]
+    outputs: [chronology, exhibit index, contradiction log, missing-record list]
+    gates: [evidence, privacy, matter isolation]
+    approval: responsible matter owner
+    tool_contract: "Native for supplied records; OCR, discovery-platform retrieval, and filing require external tools."
+  - id: contract-risk-pass
+    title: Review Contract Risk
+    starter: "Review this agreement against the supplied priorities. Quote the relevant language, explain the operational effect, and propose questions—not invented law."
+    outcome: clause-level review prioritized by business consequence
+    route: legal/review-document
+    inputs: [agreement, jurisdiction, party position, priorities]
+    outputs: [risk table, clause notes, negotiation questions]
+    gates: [jurisdiction, authority, privacy, approval]
+    approval: qualified legal review
+    tool_contract: native
+  - id: client-update
+    title: Draft a Clear Matter Update
+    starter: "Draft a client update from the approved matter record, separating what happened, what it means, what remains uncertain, and the next decision."
+    outcome: accurate plain-language update with no leakage between matters
+    route: writing/new-output
+    profile: business_report
+    form_lock: preserve-form
+    inputs: [approved matter state, audience, next decision]
+    outputs: [update draft, fact check, approval checklist]
+    gates: [privacy, matter isolation, evidence, approval]
+    approval: responsible lawyer
+    tool_contract: native

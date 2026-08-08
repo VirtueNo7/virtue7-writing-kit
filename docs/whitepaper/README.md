@@ -1,14 +1,15 @@
 # Whitepaper
 
-This folder contains the architecture paper that governs the kit:
+This folder contains the v0.4 architecture paper governing the kit:
 
-**The Compressible Content Architecture: A System for Creating, Expanding, and Adapting Structured Knowledge**  
-Virtue7 Reference Implementation, Independent Working Draft, July 2026.
+**The Compressible Content Architecture, v0.4: A Personal, Governed Runtime for Writing, Research, and Multi-Format Production**<br>
+Virtue7 Writing Kit reference implementation, open working paper, August 2026.
 
 Files:
 
-- `compressible-content-architecture_whitepaper.pdf` - original formatted paper.
-- `compressible-content-architecture_ai-readable.txt` - machine-extracted text for AI systems that cannot inspect a PDF inside an archive.
-- `IMPLEMENTATION_MAP.md` - map from whitepaper concepts to repository files.
+- `compressible-content-architecture_whitepaper.md` — editable canonical source.
+- `compressible-content-architecture_whitepaper.pdf` — formatted edition generated from the source.
+- `compressible-content-architecture_ai-readable.txt` — plain-text edition for systems that cannot inspect the PDF.
+- `IMPLEMENTATION_MAP.md` — map from paper concepts to repository files.
 
-If the text extraction and PDF appear to conflict, the PDF controls. The whitepaper uses Virtue7 as a reference implementation; the runtime kit keeps generated books white-label by default.
+The Markdown source controls meaning. The PDF is a rendered projection and the text file is an accessibility and machine-reading projection. Generated user work remains white-label by default.

@@ -1,0 +1,11 @@
+id: novel_chapter
+name: Novel Chapter
+default_prose_mode: narrative_literary
+default_form_lock: narrative
+required_inputs: [approved_canon, scene_intent, point_of_view, continuity_state]
+required_sections: [chapter_body]
+structure:
+  headings: chapter_title_only
+  bullets: prohibited_in_chapter_body
+  project_state: separate_from_prose
+quality_gate: quality/profile-gates/narrative.md

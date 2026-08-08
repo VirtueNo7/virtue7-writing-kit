@@ -1,0 +1,11 @@
+id: standard_operating_procedure
+name: Standard Operating Procedure
+default_prose_mode: technical_guidance
+default_form_lock: preserve-form
+required_inputs: [actual_process, owners, systems, exceptions, controls]
+required_sections: [purpose, scope, prerequisites, roles, procedure, decision_points, exceptions, controls, records, escalation, review]
+structure:
+  ordered_steps: required
+  owners: required
+  evidence_of_completion: required
+quality_gate: quality/profile-gates/technical.md
