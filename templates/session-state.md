@@ -3,7 +3,7 @@
 ```yaml
 project_id: ""
 project_title: ""
-kit_version: "0.2.0"
+kit_version: "0.4.0"
 current_gate: "Intent | References | Kernel | Matrix | Book Plan | Representative Unit | Full Draft | Validation | Release"
 last_approved_gate: ""
 approval_state: "Draft | Approved | Revised"

@@ -1,8 +1,9 @@
 bundle:
   name: "Virtue7 Writing Kit"
-  version: "0.3.0"
-  runtime: "lean-capability-lazy"
+  version: "0.4.0"
+  runtime: "personal-lean-capability-lazy"
   entrypoint: "00_START_HERE.md"
+  white_label_outputs: true
 
 boot:
   maximum_files: 3
@@ -12,66 +13,87 @@ boot:
     - "MASTER_PROMPT.md"
 
 capabilities:
+  personalization:
+    label: "Make it mine"
+    triggers: ["make it mine", "learn my cadence", "show my profile", "remember this", "forget this", "switch hats", "create my command", "reset to neutral"]
+    manifest: "capabilities/personalization/manifest.yaml"
   writing:
-    menu: 1
-    label: "Freestyle writing"
-    triggers: ["write", "draft", "revise", "edit", "opening statement", "speech", "book", "article", "essay", "story", "manual", "from notes", "from dot points", "turn this into", "use my transcript"]
+    label: "Write"
+    triggers: ["write", "draft", "revise", "edit", "fiction", "story", "book", "chapter", "script", "article", "essay", "report", "manual", "from notes", "use my transcript"]
     manifest: "capabilities/writing/manifest.yaml"
+  content_creator:
+    label: "Create"
+    triggers: ["content", "podcast", "video", "newsletter", "episode", "clips", "timestamps", "interview dossier", "campaign", "repurpose"]
+    manifest: "capabilities/content-creator/manifest.yaml"
+  research:
+    label: "Research"
+    triggers: ["research", "investigate", "analyse", "analyze", "evidence", "source check", "fact-check", "chronology", "compare claims"]
+    manifest: "capabilities/research/manifest.yaml"
   resume:
-    menu: 2
+    label: "Career materials"
     triggers: ["resume", "résumé", "cv", "cover letter", "job application", "selection criteria", "professional bio"]
     manifest: "capabilities/resume/manifest.yaml"
   job_search:
-    menu: 3
+    label: "Job search"
     triggers: ["jobs", "job search", "find work", "open roles", "opportunities", "hiring"]
     manifest: "capabilities/job-search/manifest.yaml"
-  content_creator:
-    menu: 4
-    triggers: ["content", "podcast", "video", "newsletter", "episode", "clips", "interview dossier", "campaign", "repurpose"]
-    manifest: "capabilities/content-creator/manifest.yaml"
-  research:
-    menu: 5
-    triggers: ["research", "investigate", "analyse", "analyze", "evidence review", "source check"]
-    manifest: "capabilities/research/manifest.yaml"
   legal:
-    menu: 6
-    triggers: ["legal", "law", "court", "statute", "contract review", "legal memorandum", "legal opening statement", "chronology"]
+    label: "Legal preparation"
+    triggers: ["legal", "law", "court", "statute", "contract review", "legal memorandum", "legal research", "legal chronology"]
     manifest: "capabilities/legal/manifest.yaml"
   continuation:
-    menu: 7
+    label: "Continue"
     triggers: ["continue project", "resume project", "pick up where we stopped", "load project state", "update project"]
     manifest: "capabilities/continuation/manifest.yaml"
   review:
-    menu: 8
-    triggers: ["review", "validate", "audit", "quality check", "release", "demo", "Virtue№7 demo"]
+    label: "Review"
+    triggers: ["review", "validate", "audit", "quality check", "release", "demo"]
     manifest: "capabilities/review/manifest.yaml"
 
+playbook_library:
+  manifest: "library/manifest.yaml"
+  activation: "Load only after the desired outcome or requested pack is known."
+
+supporting_profiles:
+  personal_work_profile: "templates/personal-work-profile.md"
+  role_profile: "templates/role-profile.md"
+  organization_profile: "templates/organization-profile.md"
+  client_profile: "templates/client-profile.md"
+  cadence_profile: "templates/cadence-profile.md"
+  form_lock: "config/form-lock.yaml"
+
 routing_precedence:
-  - "Explicit action and object"
+  - "Explicit current instruction"
   - "Current artifact state and latest revision instruction"
-  - "Explicit capability command"
+  - "Explicit capability or custom command"
   - "Current approved project state"
+  - "Active scoped role, organization, client, or channel profile"
+  - "Approved personal defaults"
   - "Trigger match"
-  - "Master menu"
+  - "Boot screen"
 
 loading_rules:
   maximum_active_capabilities: 1
   maximum_active_routes: 1
   maximum_active_profiles: 1
+  maximum_supporting_context_packets: 1
   maximum_boot_files: 3
   instructions:
     - "Read the capability manifest before any capability route."
     - "Do not recursively inspect directories."
     - "Load optional files only after their activation condition is true."
-    - "References and examples are dormant by default."
+    - "References, examples, and playbook packs are dormant by default."
     - "Pass compact handoff packets between capabilities instead of prior capability history."
     - "If the selected packet is sufficient, stop loading and begin."
 
 never_preload:
   - "other capability directories"
   - "profiles not selected by the active route"
+  - "library packs not selected by outcome"
+  - "examples/"
   - "references/"
   - "demo/"
   - "tests/"
   - "scripts/"
+  - "docs/whitepaper/"
   - "release history"

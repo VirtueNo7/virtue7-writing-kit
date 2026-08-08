@@ -1,6 +1,6 @@
 ---
 artifact_id: "MATRIX-001"
-version: "0.2.0"
+version: "0.4.0"
 status: "Draft"
 kernel_version: "[KERNEL_VERSION]"
 approval_state: "Not approved"

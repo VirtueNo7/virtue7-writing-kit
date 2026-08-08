@@ -59,6 +59,12 @@ def analyse(profile: str, text: str):
         req(any(v in low for v in ['use ','keep ','avoid ','confirm ','test ','group ','select ','open ']),'Direct action language is weak.')
         req(m['max_sentence_words']<=45,'At least one sentence is too dense for procedural guidance.')
 
+    elif profile in {'fiction_short_story', 'novel_chapter'}:
+        req(m['list_items']==0,'Narrative Lock prohibits bullet or numbered lists in the story body.')
+        req(m['heading_count']<=1,'Narrative body has unrequested interior headings.')
+        req(m['paragraphs']>=3,'Narrative movement needs developed paragraphs.')
+        block(m['short_paragraph_ratio']>=0.65 and m['paragraphs']>=4,'Fragment stacks indicate narrative Form Lock drift.')
+
     elif profile == 'essay_article':
         req(m['list_items']==0,'Essay or strategic narrative should remain continuous prose.')
         req(m['heading_count']<=1,'Essay is over-sectioned.')
@@ -95,6 +101,39 @@ def analyse(profile: str, text: str):
         for field in ['match rationale','verification needed','recommended action']:
             req(field in low,f'Missing decision field: {field}.')
         req('next step' in low,'No controlled handoff is present.')
+
+    elif profile == 'standard_operating_procedure':
+        for h in ['purpose','scope','roles','procedure','exceptions','controls','records','escalation','review']:
+            req(any(h in x.lower() for x in m['headings']),f'Missing SOP section: {h}.')
+        req(m['list_items']>=6,'SOP needs ordered or scannable operational steps.')
+        req(any(x in low for x in ['owner','responsible','accountable']), 'SOP ownership is not explicit.')
+        req(any(x in low for x in ['evidence of completion','completion record','record of completion']), 'Proof of completion is not defined.')
+
+    elif profile == 'product_brief':
+        for h in ['problem','evidence','users','requirements','non-goals','risks','success','open questions']:
+            req(any(h in x.lower() for x in m['headings']),f'Missing product brief section: {h}.')
+        req(any(x in low for x in ['acceptance criteria','must ','shall ']), 'Requirements are not visibly testable.')
+
+    elif profile == 'brand_strategy':
+        for h in ['audience','problem','promise','proof','difference','boundaries','open questions']:
+            req(any(h in x.lower() for x in m['headings']),f'Missing brand strategy section: {h}.')
+        req(any(x in low for x in ['evidence','source','supported']), 'Brand proof boundary is weak.')
+
+    elif profile == 'meeting_decision_record':
+        for h in ['context','decisions','rationale','actions','owners','due dates','dependencies','unresolved questions']:
+            req(any(h in x.lower() for x in m['headings']),f'Missing decision-record section: {h}.')
+        req(m['list_items']>=4,'Decision record lacks scannable actions and ownership.')
+
+    elif profile == 'fact_check_report':
+        for h in ['question','methodology','findings','claim statuses','contradictions','limitations','conclusion','sources']:
+            req(any(h in x.lower() for x in m['headings']),f'Missing fact-check section: {h}.')
+        req(any(x in low for x in ['verified fact','credible report','interpretation','allegation','theory','unknown']), 'Claim classification is absent.')
+        req(len(re.findall(r'\b(?:19|20)\d{2}\b', text))>=2,'Source dating is insufficient.')
+
+    elif profile == 'social_content_package':
+        for h in ['source kernel','titles','description','channel assets','calls to action','release checklist']:
+            req(any(h in x.lower() for x in m['headings']),f'Missing release-package section: {h}.')
+        req(m['list_items']>=5,'Release package lacks usable asset options or checks.')
 
     else:
         findings.append({'severity':'Block','message':f'Unknown profile: {profile}'})
