@@ -1,20 +1,17 @@
-# Upgrade Guide: v0.1.0 to v0.2.0
+# Upgrade Guide: v0.3.0 to v0.4.0
 
-Version 0.2.0 is a backward-compatible architectural upgrade. Existing kernels, matrices, plans, chapters, source records, and session states remain valid.
+Version 0.4.0 is compatible with existing content kernels, source registers, claim records, voice contracts, project states, and approved drafts. It adds personalization and Form Lock without promoting old material automatically.
 
-## What changes
+## Upgrade an existing project
 
-The project model now includes a classified reference corpus (`R`) and voice contract (`V`). Projects created entirely from scratch may leave these layers minimal. Projects built from prior writing, transcripts, interviews, notes, or archives should complete the reference and voice gates before representative drafting.
+1. Keep all approved canonical and source records unchanged.
+2. Start through `00_START_HERE.md`; direct task requests still bypass the menu.
+3. Create a personal work profile only if persistent preferences would help.
+4. Create separate role, organization, or client profiles where their rules differ. Do not merge confidential scopes.
+5. Confirm authorization before using transcripts, prior writing, websites, or social handles as voice evidence.
+6. Convert the existing voice contract into a cadence profile or keep it as a compatible project-native record.
+7. Select Adaptive, Preserve Form, or Narrative Form Lock for each output profile. Narrative projects should normally use Narrative Lock.
+8. Save repeated workflows as scoped custom commands. Review the playbook library for starter patterns.
+9. Run the personalization, privacy, cadence, Form Lock, evidence, profile, and release gates before approval.
 
-## Migrating an existing project
-
-1. Keep all approved canonical records unchanged.
-2. Inventory prior writing and source materials using `templates/reference-register.md`.
-3. Classify each item using `config/reference-policy.yaml`.
-4. Build a voice contract only from suitable, approved voice references.
-5. Create a compact reference packet for the next unit being drafted or revised.
-6. Add provenance to representative and publication-ready units.
-7. Run `workflows/09-run-drift-test.md` before scaling or release.
-8. Update `SESSION_STATE` with reference and voice status.
-
-No existing prose is automatically promoted into the voice canon. Human approval is required.
+Existing work remains Draft until explicitly approved. No user, organization, or client data becomes a global kit default.

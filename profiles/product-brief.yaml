@@ -1,0 +1,11 @@
+id: product_brief
+name: Product Brief
+default_prose_mode: technical_guidance
+default_form_lock: preserve-form
+required_inputs: [user_evidence, objective, constraints, decision_owner]
+required_sections: [problem, evidence, users, proposed_value, requirements, non_goals, risks, success_conditions, open_questions]
+structure:
+  requirements: testable
+  assumptions: explicit
+  decisions: approval_tracked
+quality_gate: quality/profile-gates/technical.md

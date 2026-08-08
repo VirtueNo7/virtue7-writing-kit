@@ -279,5 +279,95 @@
     "actual": "Pass",
     "ok": true,
     "findings": []
+  },
+  {
+    "file": "18_narrative_lock_chapter.md",
+    "profile": "novel_chapter",
+    "expected": "Pass",
+    "actual": "Pass",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "19_narrative_lock_bullet_drift.md",
+    "profile": "novel_chapter",
+    "expected": "Block",
+    "actual": "Block",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Narrative Lock prohibits bullet or numbered lists in the story body."
+      },
+      {
+        "severity": "Block",
+        "message": "Fragment stacks indicate narrative Form Lock drift."
+      }
+    ]
+  },
+  {
+    "file": "20_operating_procedure.md",
+    "profile": "standard_operating_procedure",
+    "expected": "Pass",
+    "actual": "Pass",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "21_operating_procedure_vague.md",
+    "profile": "standard_operating_procedure",
+    "expected": "Block",
+    "actual": "Block",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing SOP section: purpose."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing SOP section: scope."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing SOP section: roles."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing SOP section: procedure."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing SOP section: exceptions."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing SOP section: controls."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing SOP section: records."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing SOP section: escalation."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing SOP section: review."
+      },
+      {
+        "severity": "Block",
+        "message": "SOP needs ordered or scannable operational steps."
+      },
+      {
+        "severity": "Block",
+        "message": "SOP ownership is not explicit."
+      },
+      {
+        "severity": "Block",
+        "message": "Proof of completion is not defined."
+      }
+    ]
   }
 ]

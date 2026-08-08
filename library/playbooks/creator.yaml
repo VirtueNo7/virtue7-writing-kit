@@ -1,0 +1,43 @@
+pack: creator
+version: 0.4.0
+playbooks:
+  - id: topic-radar
+    title: Find Worthwhile Topics
+    starter: "Find five timely topics for my audience, rank them, and show why each is worth making now."
+    outcome: ranked topic slate with novelty, audience fit, evidence availability, and production effort
+    route: research/evidence-brief
+    inputs: [audience, subject boundaries, recent coverage, time budget]
+    outputs: [topic slate, selection rationale, research questions]
+    gates: [evidence, personalization, privacy]
+    tool_contract: "Native with supplied material; recency and trend claims require authorized live research or analytics tools."
+  - id: evidence-led-run-of-show
+    title: Build a Run of Show
+    starter: "Turn this research into a flexible run of show that sounds like me and keeps every claim attached to its support."
+    outcome: performance-ready episode structure with hooks, beats, receipts, transitions, and risk flags
+    route: content-creator/episode-video-newsletter
+    profile: creator_episode
+    form_lock: preserve-form
+    inputs: [content kernel, approved cadence evidence, sources, target duration]
+    outputs: [run of show, source register, claim records, publication-risk check]
+    gates: [cadence fidelity, evidence, form lock, publication risk]
+    tool_contract: "Native for supplied sources; fresh verification requires live research tools."
+  - id: clip-map
+    title: Find the Clips
+    starter: "Mark the strongest short-form moments in this approved episode and package each one for an editor."
+    outcome: prioritized clip sheet with opening line, in/out points, context, caption, title, and risk note
+    route: content-creator/clips
+    profile: clip_sheet
+    inputs: [approved transcript or timestamped media map, target platforms]
+    outputs: [clip sheet, caption options, editor notes]
+    gates: [context integrity, publication risk, profile structure]
+    tool_contract: "Native on a supplied timestamped transcript; automated timecodes, cuts, and exports require transcription or editing tools."
+  - id: release-package
+    title: Package the Release
+    starter: "Turn this approved episode into a release package without changing its claims or voice."
+    outcome: coordinated title, description, newsletter, social, clip, and call-to-action package
+    route: content-creator/campaign
+    profile: social_content_package
+    inputs: [approved episode, channel rules, offer or desired action]
+    outputs: [title set, description, newsletter, social assets, release checklist]
+    gates: [cadence fidelity, form lock, claim consistency, approval]
+    tool_contract: "Native for drafting; scheduling, publishing, editing, and performance measurement require external tools."

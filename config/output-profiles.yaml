@@ -1,4 +1,4 @@
-version: 0.3.0
+version: 0.4.0
 registry:
   children_picture_book: profiles/children-picture-book.yaml
   children_chapter_book: profiles/children-chapter-book.yaml
@@ -15,3 +15,11 @@ registry:
   interview_dossier: profiles/interview-dossier.yaml
   clip_sheet: profiles/clip-sheet.yaml
   job_search_brief: profiles/job-search-brief.yaml
+  fiction_short_story: profiles/fiction-short-story.yaml
+  novel_chapter: profiles/novel-chapter.yaml
+  brand_strategy: profiles/brand-strategy.yaml
+  product_brief: profiles/product-brief.yaml
+  standard_operating_procedure: profiles/standard-operating-procedure.yaml
+  meeting_decision_record: profiles/meeting-decision-record.yaml
+  social_content_package: profiles/social-content-package.yaml
+  fact_check_report: profiles/fact-check-report.yaml

@@ -1,4 +1,4 @@
-version: 0.2.0
+version: 0.4.0
 classification_required: true
 unclassified_reference_action: block
 packet:

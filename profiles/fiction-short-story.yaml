@@ -1,0 +1,11 @@
+id: fiction_short_story
+name: Fiction Short Story
+default_prose_mode: narrative_literary
+default_form_lock: narrative
+required_inputs: [premise, intended_reader, point_of_view, approved_canon]
+required_sections: [story_body]
+structure:
+  headings: prohibited_unless_requested
+  bullets: prohibited_in_story_body
+  continuity: required
+quality_gate: quality/profile-gates/narrative.md

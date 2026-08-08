@@ -1,4 +1,4 @@
-version: 0.2.0
+version: 0.4.0
 named_author_imitation: prohibited
 translate_style_requests_to_neutral_traits: true
 minimum_support_for_high_confidence: 3

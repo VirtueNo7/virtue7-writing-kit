@@ -1,0 +1,10 @@
+id: brand_strategy
+name: Brand Strategy
+default_prose_mode: analytical_academic
+default_form_lock: preserve-form
+required_inputs: [audience_evidence, category, offer_truth, alternatives]
+required_sections: [audience, problem, promise, proof, difference, boundaries, open_questions]
+structure:
+  tables: permitted_for_comparison
+  claim_register: required_when_public_claims_present
+quality_gate: quality/profile-gates/research.md

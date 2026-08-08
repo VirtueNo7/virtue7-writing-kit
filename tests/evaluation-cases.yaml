@@ -1,4 +1,4 @@
-version: 0.3.0
+version: 0.4.0
 cases:
   - {file: 01_childrens_read_aloud.md, profile: children_picture_book, expect: Pass}
   - {file: 02_interface_clarity_technical_guidance.md, profile: technical_manual, expect: Pass}
@@ -17,3 +17,7 @@ cases:
   - {file: 15_job_search_vague.md, profile: job_search_brief, expect: Block}
   - {file: 16_generic_strategy_sludge.md, profile: essay_article, expect: Block}
   - {file: 17_freestyle_opening_statement.md, profile: essay_article, expect: Pass}
+  - {file: 18_narrative_lock_chapter.md, profile: novel_chapter, expect: Pass}
+  - {file: 19_narrative_lock_bullet_drift.md, profile: novel_chapter, expect: Block}
+  - {file: 20_operating_procedure.md, profile: standard_operating_procedure, expect: Pass}
+  - {file: 21_operating_procedure_vague.md, profile: standard_operating_procedure, expect: Block}

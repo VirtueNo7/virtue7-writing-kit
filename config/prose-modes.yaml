@@ -1,4 +1,4 @@
-version: 0.3.0
+version: 0.4.0
 prose_modes:
   read_aloud_narrative:
     paragraph_default: "short but developed; dialogue and refrains permitted"

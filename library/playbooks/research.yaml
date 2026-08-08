@@ -1,0 +1,42 @@
+pack: research
+version: 0.4.0
+playbooks:
+  - id: source-map
+    title: Map the Evidence
+    starter: "Build a source map for this question. Separate primary evidence, reporting, expert interpretation, allegations, and open questions."
+    outcome: navigable evidence base with source roles and uncertainty preserved
+    route: research/source-review
+    profile: fact_check_report
+    inputs: [research question, supplied sources, scope and date boundary]
+    outputs: [source register, evidence map, gaps]
+    gates: [evidence, privacy, source quality]
+    tool_contract: "Native for supplied sources; discovery and current verification require live research tools."
+  - id: claim-ledger
+    title: Test the Claims
+    starter: "Extract every material claim, classify it, attach its best support and contradiction, and show what cannot yet be concluded."
+    outcome: claim-by-claim record distinguishing verified facts, credible reports, interpretations, allegations, theories, and unknowns
+    route: research/source-review
+    profile: fact_check_report
+    inputs: [draft or transcript, sources, risk tolerance]
+    outputs: [claim records, contradiction log, correction queue]
+    gates: [evidence, publication risk]
+    tool_contract: "Native for supplied evidence; current checks require live research tools."
+  - id: timeline-reconstruction
+    title: Reconstruct the Timeline
+    starter: "Build a dated timeline from these materials and flag conflicts, missing intervals, and retrospective claims."
+    outcome: auditable chronology that exposes contradictions and evidence gaps
+    route: research/evidence-brief
+    inputs: [source set, relevant time range]
+    outputs: [timeline, contradiction table, unresolved dates]
+    gates: [evidence, source quality]
+    tool_contract: "Native for supplied sources; archive or web retrieval requires live tools."
+  - id: decision-brief
+    title: Research a Decision
+    starter: "Compare these options against my criteria, identify evidence quality, and recommend the next reversible decision."
+    outcome: decision-ready comparison without false certainty
+    route: research/evidence-brief
+    profile: business_report
+    inputs: [decision, options, criteria, constraints, evidence]
+    outputs: [comparison, assumptions, recommendation, verification plan]
+    gates: [evidence, semantic finish, approval]
+    tool_contract: "Native for supplied evidence; current prices, availability, law, or specifications require live tools."

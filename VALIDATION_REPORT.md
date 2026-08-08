@@ -1,15 +1,30 @@
-# Validation Report — v0.3.0
+# Validation Report — v0.4.0
 
-- Release checks: PASS
-- Profile evaluation: 17/17 expected outcomes matched
-- Valid profiles accepted: children read-aloud, technical guidance, strategic essay, freestyle opening statement, research brief, legal memorandum, resume, job-search brief
-- Adversarial controls blocked: fragmented narrative, bullet-drift story, novelised manual, outline essay, unsupported research, jurisdictionless legal memo, prose resume, vague job advice, generic strategic sludge
-- Boot packet: 3 files, 13,476 bytes
-- Capabilities: 8
-- Freestyle, artifact lifecycle, file delivery, locale, and timezone contract checks: PASS
-- White-label, reference-safety, and ZIP hygiene checks: PASS
-- Virtue№7 demo: isolated reference implementation with conditional professional-chapter status pending historical research and human approval
+**Validated:** 2026-08-08 UTC<br>
+**Command:** `python scripts/run_release_checks.py`
 
-## Known limits
+## Result
 
-The semantic checker is a regression aid, not a substitute for editorial judgement. Voice matching requires available user-owned evidence. File creation depends on host tool support. Legal accuracy still requires current authoritative research for the resolved jurisdiction and date. Job search requires current posting sources. Historical narrative requires approved source records.
+All automated release checks passed.
+
+- 21 of 21 profile evaluation cases matched their expected result.
+- Passing and blocking fixtures cover narrative Form Lock and operating-procedure structure in addition to the existing writing, research, legal, resume, job-search, creator-adjacent, and semantic-finish controls.
+- The runtime boot contains exactly three files and 15,990 bytes, below the 16,000-byte limit.
+- Nine capabilities, 35 routes, 23 output profiles, 32 playbooks, and nine synthetic examples validated.
+- Every playbook points to an existing capability route and registered output profile.
+- The file manifest matched every distributable file by byte count and SHA-256 digest.
+- Bundle hygiene, white-label identity patterns, direct-imitation patterns, and isolated-demo leakage checks passed.
+- The release archive has one versioned root and excludes Git data, OS metadata, caches, and compiled files.
+
+## Whitepaper
+
+- Canonical Markdown, AI-readable text, implementation map, and formatted PDF describe v0.4.0.
+- The AI-readable text matches the canonical Markdown source.
+- The PDF contains 19 letter-size pages, passes text extraction checks, and was rendered to PNG for visual inspection.
+- Cover, headers, footers, section breaks, margins, overflow, and final-page rendering were inspected; no clipping or overlap was found.
+
+## Additional release audit
+
+A separate case-insensitive scan found no conversation-specific names, brands, or handles in the distributable. Built-in runtime behavior remains white-label, while the repository retains its own license, documentation title, and isolated synthetic demonstration.
+
+The automated tests are regression controls, not a guarantee of factual, legal, creative, or publication quality. Human approval remains required.

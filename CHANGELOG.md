@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.4.0 — 2026-08-08
+
+- Replaced the category-heavy opening with a direct, personal boot that works for first-time, returning, and task-first users.
+- Added separate personal, role, organization, client, and project scopes with explicit precedence and privacy boundaries.
+- Added optional working name, website, and social-handle discovery keys with ownership, authorization, and live-tool safeguards.
+- Added evidence-backed cadence learning from authorized transcripts and approved work without direct identity imitation.
+- Added Adaptive, Preserve Form, and Narrative Form Lock modes, including a gate that catches unrequested bullet, heading, fragment, and outline drift.
+- Added a Prompt & Playbook Library with 32 governed starters across creator, writer, research, legal, brand, product, company administration, and career work.
+- Added nine synthetic end-to-end examples demonstrating different inputs, structures, controls, approvals, and external-tool boundaries.
+- Added eight output profiles for fiction, novels, brand strategy, product briefs, SOPs, decision records, release packages, and fact-check reports.
+- Added personalization, cadence fidelity, Form Lock, and privacy-boundary quality gates.
+- Updated runtime and bundle manifests, release checks, documentation, and the whitepaper for the personal governed runtime.
+- Preserved the lean three-file boot, lazy loading, human approval, white-label output, and model-neutral design.
+
 ## 0.3.0 — 2026-07-31
 
 - Added Freestyle Writing as the main doorway for direct instructions, notes, dot points, fragments, transcripts, sources, and prior drafts.

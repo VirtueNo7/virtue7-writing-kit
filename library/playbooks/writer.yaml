@@ -1,0 +1,46 @@
+pack: writer
+version: 0.4.0
+playbooks:
+  - id: story-engine
+    title: Build a Fiction Project
+    starter: "Build a story engine from this premise, preserve my prose tendencies, and give me the next decision rather than writing past me."
+    outcome: coherent premise, characters, tensions, world rules, and draftable sequence
+    route: writing/new-output
+    profile: novel_chapter
+    form_lock: narrative
+    inputs: [premise, genre, intended reader, approved voice evidence]
+    outputs: [canonical kernel, story map, scene queue, decision log]
+    gates: [cadence fidelity, form lock, continuity]
+    tool_contract: native
+  - id: draft-next-scene
+    title: Draft the Next Scene
+    starter: "Draft the next scene from the approved canon. Do not summarize, outline, or introduce unapproved facts."
+    outcome: scene-level prose that advances the approved project without continuity drift
+    route: writing/new-output
+    profile: novel_chapter
+    form_lock: narrative
+    inputs: [approved canon, scene intent, point of view, constraints]
+    outputs: [draft scene, continuity notes, unresolved decisions]
+    gates: [cadence fidelity, form lock, continuity, semantic finish]
+    tool_contract: native
+  - id: nonfiction-architecture
+    title: Shape a Nonfiction Work
+    starter: "Turn these notes and sources into an argument architecture, then show what is known, inferred, missing, and disputed."
+    outcome: evidence-aware structure for an article, report, or book
+    route: writing/new-output
+    profile: narrative_nonfiction
+    form_lock: preserve-form
+    inputs: [purpose, audience, notes, sources]
+    outputs: [content kernel, section logic, evidence map, gap list]
+    gates: [evidence, form lock, publication risk]
+    tool_contract: "Native for supplied material; source discovery and verification require live research tools."
+  - id: revision-without-flattening
+    title: Revise Without Flattening
+    starter: "Revise this draft for clarity and force while preserving its sentence movement, texture, and deliberate irregularities."
+    outcome: stronger draft with traceable edits and protected voice features
+    route: writing/revise-output
+    form_lock: preserve-form
+    inputs: [draft, purpose, protected traits, allowed edit depth]
+    outputs: [revised draft, change summary, cadence drift check]
+    gates: [cadence fidelity, form lock, semantic finish]
+    tool_contract: native

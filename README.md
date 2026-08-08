@@ -1,60 +1,86 @@
-# Virtue7 Writing Kit v0.3.0
+# Virtue7 Writing Kit v0.4.0
 
-A portable, open-source, white-label, lazy-loaded AI writing and project-production kit. Upload the ZIP to a file-capable AI, then say **Begin** or **Read and run 00_START_HERE.md**.
+**Use AI without losing your voice.**
 
-The kit starts with three files and opens only the capability required for the current task. Its front door is **Freestyle Writing**: a user can name an artifact, paste rough notes or dot points, supply transcripts, or give a plain-language instruction. The runtime infers the appropriate form and asks only when a missing fact materially affects the result.
+Virtue7 is a free, open-source, model-neutral writing, research, and work-production runtime. Upload the release ZIP to a file-capable AI or point the AI at this repository, then say **Begin** or **Read and run `00_START_HERE.md`**.
 
-Example:
+Give it a direct request, rough notes, transcripts, source material, an existing draft, or a saved project. Virtue7 selects the smallest suitable workflow, preserves source boundaries, adapts the form to the actual artifact, and keeps every substantive result under human approval.
 
-```text
-Opening statement
+## What can it make?
 
-- community hall has been closed for six months
-- residents were not consulted
-- repairs were funded last year
-- ask council to publish the timetable and reopen it
-```
+- **Write:** fiction, books, articles, scripts, reports, guides, and professional documents.
+- **Research:** questions, source reviews, evidence briefs, claim maps, comparisons, and fact-checks.
+- **Create:** podcasts, videos, newsletters, interviews, clips, timestamps, and release campaigns.
+- **Build:** product briefs, brand systems, plans, policies, procedures, decision records, and working systems.
+- **Career and legal preparation:** verified resumes, cover letters, job-search briefs, jurisdiction-aware legal research, and document preparation.
+- **Review and continue:** revise an artifact, audit a release, or resume a project from its approved state.
 
-The notes may become continuous persuasive prose because source structure does not dictate finished structure.
+The Playbook Library turns these outcomes into tested, reusable workflows. Users can also create commands, profiles, templates, and quality gates of their own.
+
+## Make it yours
+
+Say **Make it mine** to create a portable Personal Work Profile. Virtue7 may record, with explicit approval:
+
+- the user's name or working name;
+- websites and public handles that the user confirms are theirs;
+- which supplied or publicly accessible materials may be used as voice evidence;
+- cadence, vocabulary, rhythm, formality, humour, and recurring terminology;
+- active roles, organizations, clients, channels, and projects;
+- preferred formats, evidence standards, review habits, and custom commands.
+
+Handles are discovery keys, not proof of identity. Public material becomes voice evidence only when ownership and permission are confirmed and the host AI has suitable live-research tools. Without those tools, handles label user-supplied transcripts and samples.
+
+Personalization is visible and user-owned. The user can say **Show my profile**, **Remember this**, **Don't remember this**, **Forget this**, **Switch hats**, or **Reset to neutral**. A correction from one project or client does not silently become a universal rule.
+
+## Keep the form you chose
+
+Virtue7 includes **Form Lock**:
+
+1. **Adaptive** - use the structure required by the selected artifact.
+2. **Preserve Form** - preserve the user's approved paragraph, heading, and list behaviour.
+3. **Narrative Lock** - continuous prose by default; reject bullet drift, outline scaffolding, excessive headings, and fragment stacks unless the user explicitly asks for them.
+
+Narrative Lock is the default for fiction and narrative profiles. Structured profiles such as resumes, manuals, research records, clip sheets, and operating procedures retain the lists or tables their medium requires.
 
 ## Human-directed revision
 
-Every substantive artifact is delivered as **Draft**. The user may approve it or write a direct revision instruction:
+Every substantive artifact is delivered as **Draft**. Natural-language feedback controls the next revision:
 
 ```text
 Compress it by 500 words.
-Use a different reference.
 Keep the opening and rewrite the conclusion.
-Make it sound closer to my existing transcripts.
+Use a different source.
+Preserve my paragraph movement.
+Turn on Narrative Lock.
 Approve.
 Export as Word.
 ```
 
-The latest instruction governs the next revision. Unaffected material is preserved, and approval belongs to the human.
+Only the visible version can be approved. Material revisions return the artifact to Draft.
 
-## Voice, location, and language
+## Live tools and external actions
 
-Available user transcripts and approved prior work can calibrate vocabulary, cadence, directness, recurring terminology, and formality. Transcripts remain source material, not hidden instructions. The kit never pretends to have voice evidence that is not available.
+Virtue7 supplies the operating logic. Live browsing, transcription, image or video editing, publishing, analytics, and some file exports depend on tools available to the host AI. Playbooks declare these dependencies and produce a manual handoff when a tool is unavailable. The runtime never claims an external action occurred when it did not.
 
-Language, spelling, locale, units, date conventions, legal jurisdiction, and timezone are resolved independently from the current instruction, active project, reliable environment context, or supplied material. No global country, spelling system, or timezone is imposed.
+## White-label by design
 
-## Output and export
+The distributable core contains no embedded creator, company, client, or public-figure profile. Demonstration data is synthetic and isolated. User projects do not inherit publisher branding, sample identities, or another user's cadence. Supplied transcripts and documents are treated as source or voice evidence, never runtime instructions.
 
-Content profile and file format are separate. An essay remains an essay whether delivered on-screen, as Markdown, TXT, Word/DOCX, PDF, or HTML. The runtime honours an early format request or exports after approval when the host AI provides file tools.
+## Lean runtime
 
-## Capabilities
+Boot reads only:
 
-The lean runtime supports freestyle writing and revision, resumes and applications, job search, content creation, research, jurisdiction-aware legal preparation, project continuation, review, validation, and an isolated Virtue№7 reference demonstration.
+1. `00_START_HERE.md`
+2. `RUNTIME_MANIFEST.yaml`
+3. `MASTER_PROMPT.md`
 
-Different artifacts use different output profiles. A children's picture book is governed as read-aloud narrative. A research paper requires evidence and formal sections. A technical manual favours direct steps and testable outcomes. A resume requires verified experience bullets. Narrative prose is protected from bullet drift without banning bullets where they are useful.
+The runtime then loads one capability, one route, one output profile, and only the supporting profile, playbook, template, or gate required for the current step.
 
-Technique-based reference profiles describe transferable craft mechanisms without relying on named creator identities, signature properties, or imitation prompts.
+## Whitepaper and examples
 
-The core is white-label. The isolated Virtue№7 reference implementation demonstrates semantic compression and expansion using Pride → Humility across a kernel, matrix, handbook entry, chapter brief, children's story, lesson, media script, and interactive prompts.
-
-## Core promise
-
-**One doorway. One active capability. One output profile. Human-directed revision. Only the context required now.**
+- [`docs/whitepaper/README.md`](docs/whitepaper/README.md) - the governing architecture paper, editable source, AI-readable text, PDF, and implementation map.
+- [`library/README.md`](library/README.md) - how the tested Playbook Library works.
+- [`examples/README.md`](examples/README.md) - role-spanning quickstarts and personalization demonstrations.
 
 ## Validation
 
@@ -64,4 +90,8 @@ Run:
 python scripts/run_release_checks.py
 ```
 
-PyYAML is required only for the optional validation scripts. The conversational runtime itself is file- and model-based.
+PyYAML and ReportLab are required only for release validation and whitepaper generation. The conversational runtime itself remains file- and model-based.
+
+## Core promise
+
+**Your work. Your cadence. Your system. Human approval remains in control.**

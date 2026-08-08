@@ -1,0 +1,41 @@
+pack: career
+version: 0.4.0
+playbooks:
+  - id: evidence-inventory
+    title: Build a Career Evidence Inventory
+    starter: "Extract roles, outcomes, scope, skills, and proof from these records. Do not invent achievements."
+    outcome: reusable source of verified career evidence
+    route: resume/build-source
+    inputs: [resume, reviews, work records, notes]
+    outputs: [resume source, achievement records, missing-proof questions]
+    gates: [evidence, privacy]
+    tool_contract: native
+  - id: targeted-resume
+    title: Target a Resume
+    starter: "Target my resume to this role using only verified evidence and show every material change."
+    outcome: truthful, role-specific resume with traceable edits
+    route: resume/tailor-resume
+    profile: resume
+    inputs: [verified resume source, role description]
+    outputs: [targeted resume, change log, evidence gaps]
+    gates: [evidence, profile structure, approval]
+    tool_contract: native
+  - id: opportunity-search
+    title: Find and Rank Opportunities
+    starter: "Find roles matching these constraints and rank them by evidence-based fit, verification burden, and next action."
+    outcome: controlled opportunity brief rather than an unverified link dump
+    route: job-search/search
+    profile: job_search_brief
+    inputs: [target roles, location, constraints, verified profile]
+    outputs: [opportunity brief, verification fields, action queue]
+    gates: [evidence, privacy]
+    tool_contract: "Current discovery and listing verification require authorized live browsing tools."
+  - id: interview-evidence-bank
+    title: Build an Interview Evidence Bank
+    starter: "Turn my verified experience into concise interview stories mapped to likely questions, without scripting a fake persona."
+    outcome: authentic evidence bank with adaptable responses
+    route: writing/new-output
+    inputs: [verified career evidence, target role, likely competencies]
+    outputs: [story bank, evidence map, practice questions]
+    gates: [evidence, cadence fidelity, privacy]
+    tool_contract: native
