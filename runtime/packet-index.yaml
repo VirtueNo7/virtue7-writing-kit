@@ -1,0 +1,909 @@
+version: 0.5.0
+generated: true
+routes:
+  personalization/initialize:
+    path: runtime/packets/routes/personalization--initialize.md
+    bytes: 4737
+    source_manifest: capabilities/personalization/manifest.yaml
+    source_route: capabilities/personalization/routes/initialize.md
+    gate_ids: &id001
+    - universal
+    - semantic_finish
+    - personalization
+    - privacy_boundary
+    - cadence_fidelity
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: personalization
+      path: quality/PERSONALIZATION_GATE.md
+      sha256: 65530b5248cd028450a5d587570798f767701fa8db4f247909776b654d53e99b
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: cadence_fidelity
+      path: quality/CADENCE_FIDELITY_GATE.md
+      sha256: bb13951940c3fc914bbad846fad84191590910032ebfaee8937b84123ff2a3a6
+  personalization/learn-cadence:
+    path: runtime/packets/routes/personalization--learn-cadence.md
+    bytes: 4766
+    source_manifest: capabilities/personalization/manifest.yaml
+    source_route: capabilities/personalization/routes/learn-cadence.md
+    gate_ids: *id001
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: personalization
+      path: quality/PERSONALIZATION_GATE.md
+      sha256: 65530b5248cd028450a5d587570798f767701fa8db4f247909776b654d53e99b
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: cadence_fidelity
+      path: quality/CADENCE_FIDELITY_GATE.md
+      sha256: bb13951940c3fc914bbad846fad84191590910032ebfaee8937b84123ff2a3a6
+  personalization/manage-profile:
+    path: runtime/packets/routes/personalization--manage-profile.md
+    bytes: 4663
+    source_manifest: capabilities/personalization/manifest.yaml
+    source_route: capabilities/personalization/routes/manage-profile.md
+    gate_ids: *id001
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: personalization
+      path: quality/PERSONALIZATION_GATE.md
+      sha256: 65530b5248cd028450a5d587570798f767701fa8db4f247909776b654d53e99b
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: cadence_fidelity
+      path: quality/CADENCE_FIDELITY_GATE.md
+      sha256: bb13951940c3fc914bbad846fad84191590910032ebfaee8937b84123ff2a3a6
+  personalization/switch-scope:
+    path: runtime/packets/routes/personalization--switch-scope.md
+    bytes: 4619
+    source_manifest: capabilities/personalization/manifest.yaml
+    source_route: capabilities/personalization/routes/switch-scope.md
+    gate_ids: *id001
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: personalization
+      path: quality/PERSONALIZATION_GATE.md
+      sha256: 65530b5248cd028450a5d587570798f767701fa8db4f247909776b654d53e99b
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: cadence_fidelity
+      path: quality/CADENCE_FIDELITY_GATE.md
+      sha256: bb13951940c3fc914bbad846fad84191590910032ebfaee8937b84123ff2a3a6
+  personalization/create-command:
+    path: runtime/packets/routes/personalization--create-command.md
+    bytes: 4716
+    source_manifest: capabilities/personalization/manifest.yaml
+    source_route: capabilities/personalization/routes/create-command.md
+    gate_ids: *id001
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: personalization
+      path: quality/PERSONALIZATION_GATE.md
+      sha256: 65530b5248cd028450a5d587570798f767701fa8db4f247909776b654d53e99b
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: cadence_fidelity
+      path: quality/CADENCE_FIDELITY_GATE.md
+      sha256: bb13951940c3fc914bbad846fad84191590910032ebfaee8937b84123ff2a3a6
+  writing/freestyle:
+    path: runtime/packets/routes/writing--freestyle.md
+    bytes: 7513
+    source_manifest: capabilities/writing/manifest.yaml
+    source_route: capabilities/writing/routes/freestyle.md
+    gate_ids: &id002
+    - universal
+    - evidence
+    - semantic_finish
+    - form_lock
+    - privacy_boundary
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: form_lock
+      path: quality/FORM_LOCK_GATE.md
+      sha256: c7efab90b25ae440c29365e8c86076a0e4d00626f5723b2511bb2f9a9d2d948b
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  writing/new-output:
+    path: runtime/packets/routes/writing--new-output.md
+    bytes: 6147
+    source_manifest: capabilities/writing/manifest.yaml
+    source_route: capabilities/writing/routes/new-output.md
+    gate_ids: *id002
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: form_lock
+      path: quality/FORM_LOCK_GATE.md
+      sha256: c7efab90b25ae440c29365e8c86076a0e4d00626f5723b2511bb2f9a9d2d948b
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  writing/revise-output:
+    path: runtime/packets/routes/writing--revise-output.md
+    bytes: 6321
+    source_manifest: capabilities/writing/manifest.yaml
+    source_route: capabilities/writing/routes/revise-output.md
+    gate_ids: *id002
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: form_lock
+      path: quality/FORM_LOCK_GATE.md
+      sha256: c7efab90b25ae440c29365e8c86076a0e4d00626f5723b2511bb2f9a9d2d948b
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  writing/expand-collapse:
+    path: runtime/packets/routes/writing--expand-collapse.md
+    bytes: 5973
+    source_manifest: capabilities/writing/manifest.yaml
+    source_route: capabilities/writing/routes/expand-collapse.md
+    gate_ids: *id002
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: form_lock
+      path: quality/FORM_LOCK_GATE.md
+      sha256: c7efab90b25ae440c29365e8c86076a0e4d00626f5723b2511bb2f9a9d2d948b
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  content-creator/original-content:
+    path: runtime/packets/routes/content-creator--original-content.md
+    bytes: 5910
+    source_manifest: capabilities/content-creator/manifest.yaml
+    source_route: capabilities/content-creator/routes/original-content.md
+    gate_ids: &id003
+    - universal
+    - evidence
+    - semantic_finish
+    - form_lock
+    - publication_risk
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: form_lock
+      path: quality/FORM_LOCK_GATE.md
+      sha256: c7efab90b25ae440c29365e8c86076a0e4d00626f5723b2511bb2f9a9d2d948b
+    - id: publication_risk
+      path: templates/publication-risk-check.md
+      sha256: 8bb0859759a025bda56905f3f6547c3cc784bba0b10c9e5e79328a05386ff785
+  content-creator/episode-video-newsletter:
+    path: runtime/packets/routes/content-creator--episode-video-newsletter.md
+    bytes: 5544
+    source_manifest: capabilities/content-creator/manifest.yaml
+    source_route: capabilities/content-creator/routes/episode-video-newsletter.md
+    gate_ids: *id003
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: form_lock
+      path: quality/FORM_LOCK_GATE.md
+      sha256: c7efab90b25ae440c29365e8c86076a0e4d00626f5723b2511bb2f9a9d2d948b
+    - id: publication_risk
+      path: templates/publication-risk-check.md
+      sha256: 8bb0859759a025bda56905f3f6547c3cc784bba0b10c9e5e79328a05386ff785
+  content-creator/repurpose:
+    path: runtime/packets/routes/content-creator--repurpose.md
+    bytes: 5548
+    source_manifest: capabilities/content-creator/manifest.yaml
+    source_route: capabilities/content-creator/routes/repurpose.md
+    gate_ids: *id003
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: form_lock
+      path: quality/FORM_LOCK_GATE.md
+      sha256: c7efab90b25ae440c29365e8c86076a0e4d00626f5723b2511bb2f9a9d2d948b
+    - id: publication_risk
+      path: templates/publication-risk-check.md
+      sha256: 8bb0859759a025bda56905f3f6547c3cc784bba0b10c9e5e79328a05386ff785
+  content-creator/clips:
+    path: runtime/packets/routes/content-creator--clips.md
+    bytes: 5544
+    source_manifest: capabilities/content-creator/manifest.yaml
+    source_route: capabilities/content-creator/routes/clips.md
+    gate_ids: *id003
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: form_lock
+      path: quality/FORM_LOCK_GATE.md
+      sha256: c7efab90b25ae440c29365e8c86076a0e4d00626f5723b2511bb2f9a9d2d948b
+    - id: publication_risk
+      path: templates/publication-risk-check.md
+      sha256: 8bb0859759a025bda56905f3f6547c3cc784bba0b10c9e5e79328a05386ff785
+  content-creator/interview:
+    path: runtime/packets/routes/content-creator--interview.md
+    bytes: 5523
+    source_manifest: capabilities/content-creator/manifest.yaml
+    source_route: capabilities/content-creator/routes/interview.md
+    gate_ids: *id003
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: form_lock
+      path: quality/FORM_LOCK_GATE.md
+      sha256: c7efab90b25ae440c29365e8c86076a0e4d00626f5723b2511bb2f9a9d2d948b
+    - id: publication_risk
+      path: templates/publication-risk-check.md
+      sha256: 8bb0859759a025bda56905f3f6547c3cc784bba0b10c9e5e79328a05386ff785
+  content-creator/campaign:
+    path: runtime/packets/routes/content-creator--campaign.md
+    bytes: 5516
+    source_manifest: capabilities/content-creator/manifest.yaml
+    source_route: capabilities/content-creator/routes/campaign.md
+    gate_ids: *id003
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: form_lock
+      path: quality/FORM_LOCK_GATE.md
+      sha256: c7efab90b25ae440c29365e8c86076a0e4d00626f5723b2511bb2f9a9d2d948b
+    - id: publication_risk
+      path: templates/publication-risk-check.md
+      sha256: 8bb0859759a025bda56905f3f6547c3cc784bba0b10c9e5e79328a05386ff785
+  research/research-question:
+    path: runtime/packets/routes/research--research-question.md
+    bytes: 4031
+    source_manifest: capabilities/research/manifest.yaml
+    source_route: capabilities/research/routes/research-question.md
+    gate_ids: &id004
+    - universal
+    - evidence
+    - semantic_finish
+    - privacy_boundary
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  research/source-review:
+    path: runtime/packets/routes/research--source-review.md
+    bytes: 4068
+    source_manifest: capabilities/research/manifest.yaml
+    source_route: capabilities/research/routes/source-review.md
+    gate_ids: *id004
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  research/evidence-brief:
+    path: runtime/packets/routes/research--evidence-brief.md
+    bytes: 4057
+    source_manifest: capabilities/research/manifest.yaml
+    source_route: capabilities/research/routes/evidence-brief.md
+    gate_ids: *id004
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  resume/build-source:
+    path: runtime/packets/routes/resume--build-source.md
+    bytes: 4104
+    source_manifest: capabilities/resume/manifest.yaml
+    source_route: capabilities/resume/routes/build-source.md
+    gate_ids: &id005
+    - universal
+    - evidence
+    - semantic_finish
+    - privacy_boundary
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  resume/tailor-resume:
+    path: runtime/packets/routes/resume--tailor-resume.md
+    bytes: 4087
+    source_manifest: capabilities/resume/manifest.yaml
+    source_route: capabilities/resume/routes/tailor-resume.md
+    gate_ids: *id005
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  resume/cover-letter:
+    path: runtime/packets/routes/resume--cover-letter.md
+    bytes: 4106
+    source_manifest: capabilities/resume/manifest.yaml
+    source_route: capabilities/resume/routes/cover-letter.md
+    gate_ids: *id005
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  job-search/search:
+    path: runtime/packets/routes/job-search--search.md
+    bytes: 4157
+    source_manifest: capabilities/job-search/manifest.yaml
+    source_route: capabilities/job-search/routes/search.md
+    gate_ids: &id006
+    - universal
+    - evidence
+    - semantic_finish
+    - privacy_boundary
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  job-search/evaluate:
+    path: runtime/packets/routes/job-search--evaluate.md
+    bytes: 4139
+    source_manifest: capabilities/job-search/manifest.yaml
+    source_route: capabilities/job-search/routes/evaluate.md
+    gate_ids: *id006
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  job-search/handoff:
+    path: runtime/packets/routes/job-search--handoff.md
+    bytes: 4154
+    source_manifest: capabilities/job-search/manifest.yaml
+    source_route: capabilities/job-search/routes/handoff.md
+    gate_ids: *id006
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  legal/resolve-jurisdiction:
+    path: runtime/packets/routes/legal--resolve-jurisdiction.md
+    bytes: 5103
+    source_manifest: capabilities/legal/manifest.yaml
+    source_route: capabilities/legal/routes/resolve-jurisdiction.md
+    gate_ids: &id007
+    - universal
+    - evidence
+    - semantic_finish
+    - privacy_boundary
+    - jurisdiction
+    - publication_risk
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: jurisdiction
+      path: quality/profile-gates/legal.md
+      sha256: 16ce7954623c2c76da74c7a858425b37767ff50ddf62830740fc3f094080b12f
+    - id: publication_risk
+      path: templates/publication-risk-check.md
+      sha256: 8bb0859759a025bda56905f3f6547c3cc784bba0b10c9e5e79328a05386ff785
+  legal/legal-research:
+    path: runtime/packets/routes/legal--legal-research.md
+    bytes: 5077
+    source_manifest: capabilities/legal/manifest.yaml
+    source_route: capabilities/legal/routes/legal-research.md
+    gate_ids: *id007
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: jurisdiction
+      path: quality/profile-gates/legal.md
+      sha256: 16ce7954623c2c76da74c7a858425b37767ff50ddf62830740fc3f094080b12f
+    - id: publication_risk
+      path: templates/publication-risk-check.md
+      sha256: 8bb0859759a025bda56905f3f6547c3cc784bba0b10c9e5e79328a05386ff785
+  legal/prepare-document:
+    path: runtime/packets/routes/legal--prepare-document.md
+    bytes: 5088
+    source_manifest: capabilities/legal/manifest.yaml
+    source_route: capabilities/legal/routes/prepare-document.md
+    gate_ids: *id007
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: jurisdiction
+      path: quality/profile-gates/legal.md
+      sha256: 16ce7954623c2c76da74c7a858425b37767ff50ddf62830740fc3f094080b12f
+    - id: publication_risk
+      path: templates/publication-risk-check.md
+      sha256: 8bb0859759a025bda56905f3f6547c3cc784bba0b10c9e5e79328a05386ff785
+  legal/review-document:
+    path: runtime/packets/routes/legal--review-document.md
+    bytes: 5084
+    source_manifest: capabilities/legal/manifest.yaml
+    source_route: capabilities/legal/routes/review-document.md
+    gate_ids: *id007
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: jurisdiction
+      path: quality/profile-gates/legal.md
+      sha256: 16ce7954623c2c76da74c7a858425b37767ff50ddf62830740fc3f094080b12f
+    - id: publication_risk
+      path: templates/publication-risk-check.md
+      sha256: 8bb0859759a025bda56905f3f6547c3cc784bba0b10c9e5e79328a05386ff785
+  continuation/load-state:
+    path: runtime/packets/routes/continuation--load-state.md
+    bytes: 4001
+    source_manifest: capabilities/continuation/manifest.yaml
+    source_route: capabilities/continuation/routes/load-state.md
+    gate_ids: &id008
+    - universal
+    - evidence
+    - semantic_finish
+    - privacy_boundary
+    - continuity
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: continuity
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+  continuation/next-gate:
+    path: runtime/packets/routes/continuation--next-gate.md
+    bytes: 3954
+    source_manifest: capabilities/continuation/manifest.yaml
+    source_route: capabilities/continuation/routes/next-gate.md
+    gate_ids: *id008
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: continuity
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+  continuation/controlled-update:
+    path: runtime/packets/routes/continuation--controlled-update.md
+    bytes: 3984
+    source_manifest: capabilities/continuation/manifest.yaml
+    source_route: capabilities/continuation/routes/controlled-update.md
+    gate_ids: *id008
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+    - id: continuity
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+  review/artifact-review:
+    path: runtime/packets/routes/review--artifact-review.md
+    bytes: 4038
+    source_manifest: capabilities/review/manifest.yaml
+    source_route: capabilities/review/routes/artifact-review.md
+    gate_ids: &id009
+    - universal
+    - evidence
+    - semantic_finish
+    - privacy_boundary
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  review/release-audit:
+    path: runtime/packets/routes/review--release-audit.md
+    bytes: 4017
+    source_manifest: capabilities/review/manifest.yaml
+    source_route: capabilities/review/routes/release-audit.md
+    gate_ids: *id009
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  review/evaluation:
+    path: runtime/packets/routes/review--evaluation.md
+    bytes: 4049
+    source_manifest: capabilities/review/manifest.yaml
+    source_route: capabilities/review/routes/evaluation.md
+    gate_ids: *id009
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+  review/virtue7-demo:
+    path: runtime/packets/routes/review--virtue7-demo.md
+    bytes: 4028
+    source_manifest: capabilities/review/manifest.yaml
+    source_route: capabilities/review/routes/virtue7-demo.md
+    gate_ids: *id009
+    gate_sources:
+    - id: universal
+      path: quality/UNIVERSAL_GATE.md
+      sha256: ae9ac47463ad3b8cbf53768d8d3cfb8d236d163574321007da39334458a04f62
+    - id: evidence
+      path: quality/EVIDENCE_GATE.md
+      sha256: 2ae7678e290b7d5e1f4076dfde105818f522b2417d41764d76b0dd3746fee767
+    - id: semantic_finish
+      path: quality/SEMANTIC_FINISH_GATE.md
+      sha256: a55bac8db3a4a74ff15635b98f3e07c8a37d15a1815fd4c59bf6918701799917
+    - id: privacy_boundary
+      path: quality/PRIVACY_BOUNDARY_GATE.md
+      sha256: e7481cd4c149a6f6abfca367e3abdd73685301ad09eb8dae085d65350080a8bb
+profiles:
+  children_picture_book:
+    path: runtime/packets/profiles/children_picture_book.md
+    bytes: 946
+    source_profile: profiles/children-picture-book.yaml
+    form_lock: narrative_lock
+  children_chapter_book:
+    path: runtime/packets/profiles/children_chapter_book.md
+    bytes: 816
+    source_profile: profiles/children-chapter-book.yaml
+    form_lock: narrative_lock
+  narrative_nonfiction:
+    path: runtime/packets/profiles/narrative_nonfiction.md
+    bytes: 1096
+    source_profile: profiles/narrative-nonfiction.yaml
+    form_lock: narrative_lock
+  spoken_argument:
+    path: runtime/packets/profiles/spoken_argument.md
+    bytes: 1430
+    source_profile: profiles/spoken-argument.yaml
+    form_lock: narrative_lock
+  essay_article:
+    path: runtime/packets/profiles/essay_article.md
+    bytes: 1055
+    source_profile: profiles/essay-article.yaml
+    form_lock: narrative_lock
+  research_paper:
+    path: runtime/packets/profiles/research_paper.md
+    bytes: 913
+    source_profile: profiles/research-paper.yaml
+    form_lock: adaptive
+  technical_manual:
+    path: runtime/packets/profiles/technical_manual.md
+    bytes: 883
+    source_profile: profiles/technical-manual.yaml
+    form_lock: adaptive
+  business_report:
+    path: runtime/packets/profiles/business_report.md
+    bytes: 789
+    source_profile: profiles/business-report.yaml
+    form_lock: adaptive
+  workbook_guide:
+    path: runtime/packets/profiles/workbook_guide.md
+    bytes: 754
+    source_profile: profiles/workbook-guide.yaml
+    form_lock: adaptive
+  resume:
+    path: runtime/packets/profiles/resume.md
+    bytes: 819
+    source_profile: profiles/resume.yaml
+    form_lock: adaptive
+  cover_letter:
+    path: runtime/packets/profiles/cover_letter.md
+    bytes: 740
+    source_profile: profiles/cover-letter.yaml
+    form_lock: adaptive
+  legal_memorandum:
+    path: runtime/packets/profiles/legal_memorandum.md
+    bytes: 879
+    source_profile: profiles/legal-memorandum.yaml
+    form_lock: adaptive
+  creator_episode:
+    path: runtime/packets/profiles/creator_episode.md
+    bytes: 821
+    source_profile: profiles/creator-episode.yaml
+    form_lock: adaptive
+  interview_dossier:
+    path: runtime/packets/profiles/interview_dossier.md
+    bytes: 795
+    source_profile: profiles/interview-dossier.yaml
+    form_lock: adaptive
+  clip_sheet:
+    path: runtime/packets/profiles/clip_sheet.md
+    bytes: 790
+    source_profile: profiles/clip-sheet.yaml
+    form_lock: adaptive
+  job_search_brief:
+    path: runtime/packets/profiles/job_search_brief.md
+    bytes: 884
+    source_profile: profiles/job-search-brief.yaml
+    form_lock: adaptive
+  fiction_short_story:
+    path: runtime/packets/profiles/fiction_short_story.md
+    bytes: 1087
+    source_profile: profiles/fiction-short-story.yaml
+    form_lock: narrative_lock
+  novel_chapter:
+    path: runtime/packets/profiles/novel_chapter.md
+    bytes: 1084
+    source_profile: profiles/novel-chapter.yaml
+    form_lock: narrative_lock
+  brand_strategy:
+    path: runtime/packets/profiles/brand_strategy.md
+    bytes: 883
+    source_profile: profiles/brand-strategy.yaml
+    form_lock: preserve_form
+  product_brief:
+    path: runtime/packets/profiles/product_brief.md
+    bytes: 916
+    source_profile: profiles/product-brief.yaml
+    form_lock: preserve_form
+  standard_operating_procedure:
+    path: runtime/packets/profiles/standard_operating_procedure.md
+    bytes: 972
+    source_profile: profiles/standard-operating-procedure.yaml
+    form_lock: preserve_form
+  meeting_decision_record:
+    path: runtime/packets/profiles/meeting_decision_record.md
+    bytes: 1207
+    source_profile: profiles/meeting-decision-record.yaml
+    form_lock: preserve_form
+  social_content_package:
+    path: runtime/packets/profiles/social_content_package.md
+    bytes: 919
+    source_profile: profiles/social-content-package.yaml
+    form_lock: adaptive
+  fact_check_report:
+    path: runtime/packets/profiles/fact_check_report.md
+    bytes: 984
+    source_profile: profiles/fact-check-report.yaml
+    form_lock: preserve_form

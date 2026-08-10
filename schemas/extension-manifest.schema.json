@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://virtue7.example/schemas/extension-manifest.schema.json",
+  "title": "Virtue7 Extension Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "namespace", "id", "version", "requires_virtue7", "components", "permissions"],
+  "properties": {
+    "schema_version": {"const": "0.5.0"},
+    "namespace": {"type": "string", "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+$"},
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "requires_virtue7": {"type": "string", "pattern": "^(?:>=)?[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "components": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "capabilities": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "routes": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "profiles": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "gates": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "templates": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tools", "data_scopes", "external_actions"],
+      "properties": {
+        "tools": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "data_scopes": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "external_actions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "replaces_core_components": {"const": false}
+  }
+}

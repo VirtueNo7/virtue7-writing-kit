@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://virtue7.example/schemas/approval-record.schema.json",
+  "title": "Virtue7 Approval Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "artifact_id", "artifact_version",
+    "artifact_sha256", "decision", "actor_type", "actor_id",
+    "recorded_at", "scope", "previous_state", "resulting_state"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.5.0"},
+    "event_id": {"type": "string", "pattern": "^APR-[A-Za-z0-9._-]+$"},
+    "artifact_id": {"type": "string", "minLength": 1},
+    "artifact_version": {"type": "string", "minLength": 1},
+    "artifact_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "decision": {"enum": ["approved", "rejected", "revoked"]},
+    "actor_type": {"const": "human"},
+    "actor_id": {"type": "string", "minLength": 1},
+    "authority": {"type": "string"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "scope": {"type": "string", "minLength": 1},
+    "previous_state": {"enum": ["draft", "revision_requested", "revised_draft", "approved", "exported", "released"]},
+    "resulting_state": {"enum": ["draft", "revision_requested", "revised_draft", "approved", "exported", "released"]},
+    "reason": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"decision": {"const": "approved"}}},
+      "then": {"properties": {"resulting_state": {"const": "approved"}}}
+    }
+  ]
+}
