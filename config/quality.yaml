@@ -1,14 +1,23 @@
-version: 0.4.0
+version: 0.5.0
 pipeline:
-  - profile_structure
-  - truth_and_evidence
-  - semantic_finish
-  - profile_final_review
-status_order: [Pass, Revise, Block]
+- universal
+- profile_structure
+- truth_and_evidence
+- semantic_finish
+- personalization_when_active
+- privacy_boundary
+- cadence_fidelity_when_active
+- form_lock
+- profile_final_review
+status_order:
+- Pass
+- Revise
+- Block
 automatic_repair:
   enabled: true
   maximum_silent_passes: 2
-  expose_when: "a material uncertainty, missing authority, missing source, or human decision remains"
+  expose_when: a material uncertainty, missing authority, missing source, or human
+    decision remains
 semantic_finish:
   generic_phrase_warn_per_1000_words: 4
   generic_phrase_block_per_1000_words: 8
@@ -17,4 +26,12 @@ semantic_finish:
 white_label:
   require_neutral_tokens: true
   scan_paths_and_content: true
-  prohibited_person_specific_markers: []
+  prohibited_person_specific_markers:
+  - origin_story
+  - private_product
+  - private_brief
+  - private_dataset
+assurance:
+  structural_checks_are_semantic_proof: false
+  evidence_sensitive_pass_requires_context: true
+  independent_model_evaluation: not_yet_completed

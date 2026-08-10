@@ -1,5 +1,5 @@
 id: virtue7_reference_implementation
-version: 0.4.0
+version: 0.5.0
 entry: demo/virtue7-reference-implementation/DEMO_START.md
 boot_files:
   - demo/virtue7-reference-implementation/DEMO_START.md

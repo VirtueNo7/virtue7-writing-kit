@@ -1,0 +1,22 @@
+version: 0.5.0
+gates:
+  universal: quality/UNIVERSAL_GATE.md
+  evidence: quality/EVIDENCE_GATE.md
+  profile_structure: quality/PROFILE_STRUCTURE_GATE.md
+  semantic_finish: quality/SEMANTIC_FINISH_GATE.md
+  form_lock: quality/FORM_LOCK_GATE.md
+  personalization: quality/PERSONALIZATION_GATE.md
+  privacy: quality/PRIVACY_BOUNDARY_GATE.md
+  privacy_boundary: quality/PRIVACY_BOUNDARY_GATE.md
+  cadence_fidelity: quality/CADENCE_FIDELITY_GATE.md
+  publication_risk: templates/publication-risk-check.md
+  approval: templates/approval-matrix.md
+  authorization: quality/PERSONALIZATION_GATE.md
+  authority: quality/EVIDENCE_GATE.md
+  claim_consistency: quality/EVIDENCE_GATE.md
+  consistency: quality/UNIVERSAL_GATE.md
+  context_integrity: quality/EVIDENCE_GATE.md
+  continuity: quality/UNIVERSAL_GATE.md
+  jurisdiction: quality/profile-gates/legal.md
+  matter_isolation: quality/PRIVACY_BOUNDARY_GATE.md
+  source_quality: quality/EVIDENCE_GATE.md

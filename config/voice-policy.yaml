@@ -1,13 +1,13 @@
-version: 0.4.0
+version: 0.5.0
 named_author_imitation: prohibited
 translate_style_requests_to_neutral_traits: true
 minimum_support_for_high_confidence: 3
 project_native_priority: highest
 low_confidence_traits_require_approval: true
 genericity_flags:
-  - generic motivational filler
-  - synthetic profundity
-  - repeated thesis restatement
-  - empty transition language
-  - inflated certainty
-  - interchangeable anecdotes
+- generic motivational filler
+- synthetic profundity
+- repeated thesis restatement
+- empty transition language
+- inflated certainty
+- interchangeable anecdotes
