@@ -1,8 +1,19 @@
+version: 0.5.0
 id: job_search_brief
 name: Qualified Job Search Brief
 default_prose_mode: professional_application
-required_inputs: [search_criteria, current_postings]
-required_fields: [role, employer, location, employment_type, source, match_rationale, verification_needed, recommended_action]
+required_inputs:
+- search_criteria
+- current_postings
+required_fields:
+- role
+- employer
+- location
+- employment_type
+- source
+- match_rationale
+- verification_needed
+- recommended_action
 structure:
   grouped_sections: preferred
   bullets: required

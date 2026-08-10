@@ -1,10 +1,15 @@
+version: 0.5.0
 id: narrative_nonfiction
 name: Narrative Nonfiction
 default_prose_mode: narrative_nonfiction
-required_inputs: [reader, thesis, evidence_boundary]
+required_inputs:
+- reader
+- thesis
+- evidence_boundary
 structure:
   headings: sparse
   body_bullets: rare
   narrative_movement: required
   interpretation_after_evidence: required
+  short_point_sequences: develop_as_prose_unless_an_explicit_list_is_allowed
 quality_gate: quality/profile-gates/narrative.md

@@ -1,9 +1,26 @@
+version: 0.5.0
 id: standard_operating_procedure
 name: Standard Operating Procedure
-default_prose_mode: technical_guidance
-default_form_lock: preserve-form
-required_inputs: [actual_process, owners, systems, exceptions, controls]
-required_sections: [purpose, scope, prerequisites, roles, procedure, decision_points, exceptions, controls, records, escalation, review]
+default_prose_mode: procedural_instructional
+default_form_lock: preserve_form
+required_inputs:
+- actual_process
+- owners
+- systems
+- exceptions
+- controls
+required_sections:
+- purpose
+- scope
+- prerequisites
+- roles
+- procedure
+- decision_points
+- exceptions
+- controls
+- records
+- escalation
+- review
 structure:
   ordered_steps: required
   owners: required

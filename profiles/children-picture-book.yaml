@@ -1,10 +1,13 @@
+version: 0.5.0
 id: children_picture_book
 name: Children's Picture Book
-purpose: "Create an age-specific read-aloud story with emotional and causal clarity."
+purpose: Create an age-specific read-aloud story with emotional and causal clarity.
 default_prose_mode: read_aloud_narrative
-required_inputs: [age_range, story_promise]
+required_inputs:
+- age_range
+- story_promise
 structure:
-  headings: "title only"
+  headings: title only
   bullets: forbidden
   numbered_steps: forbidden
   short_paragraphs: permitted

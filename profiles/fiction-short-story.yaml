@@ -1,9 +1,15 @@
+version: 0.5.0
 id: fiction_short_story
 name: Fiction Short Story
-default_prose_mode: narrative_literary
-default_form_lock: narrative
-required_inputs: [premise, intended_reader, point_of_view, approved_canon]
-required_sections: [story_body]
+default_prose_mode: literary_narrative
+default_form_lock: narrative_lock
+required_inputs:
+- premise
+- intended_reader
+- point_of_view
+- approved_canon
+required_sections:
+- story_body
 structure:
   headings: prohibited_unless_requested
   bullets: prohibited_in_story_body

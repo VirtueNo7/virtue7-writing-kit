@@ -1,9 +1,21 @@
+version: 0.5.0
 id: meeting_decision_record
 name: Meeting and Decision Record
-default_prose_mode: technical_guidance
-default_form_lock: preserve-form
-required_inputs: [meeting_or_context, participants, scope]
-required_sections: [context, decisions, rationale, actions, owners, due_dates, dependencies, unresolved_questions]
+default_prose_mode: procedural_instructional
+default_form_lock: preserve_form
+required_inputs:
+- meeting_or_context
+- participants
+- scope
+required_sections:
+- context
+- decisions
+- rationale
+- actions
+- owners
+- due_dates
+- dependencies
+- unresolved_questions
 structure:
   decisions: approval_tracked
   actions: owner_and_due_date_required
