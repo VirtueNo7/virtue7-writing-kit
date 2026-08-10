@@ -1,11 +1,30 @@
+version: 0.5.0
 id: fact_check_report
 name: Fact-Check Report
 default_prose_mode: analytical_academic
-default_form_lock: preserve-form
-required_inputs: [claim_set, source_register, scope, date_boundary]
-required_sections: [question, methodology, findings, claim_statuses, contradictions, limitations, conclusion, sources]
+default_form_lock: preserve_form
+required_inputs:
+- claim_set
+- source_register
+- scope
+- date_boundary
+required_sections:
+- question
+- methodology
+- findings
+- claim_statuses
+- contradictions
+- limitations
+- conclusion
+- sources
 structure:
-  claim_categories: [verified_fact, credible_report, interpretation, allegation, theory, unknown]
+  claim_categories:
+  - verified_fact
+  - credible_report
+  - interpretation
+  - allegation
+  - theory
+  - unknown
   citations: required
   uncertainty: preserved
 quality_gate: quality/profile-gates/research.md

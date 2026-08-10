@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.5.0",
+  "namespace": "org.example.virtue7",
+  "id": "test-extension",
+  "version": "0.1.0",
+  "requires_virtue7": ">=0.5.0",
+  "components": {
+    "capabilities": [],
+    "routes": [],
+    "profiles": [],
+    "gates": [],
+    "templates": []
+  },
+  "permissions": {
+    "tools": [],
+    "data_scopes": [],
+    "external_actions": []
+  },
+  "replaces_core_components": false
+}

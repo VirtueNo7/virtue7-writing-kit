@@ -1,18 +1,21 @@
 id: personalization
-version: 0.4.0
-capability: "capabilities/personalization/CAPABILITY.md"
-load_policy: "manifest + one route; profile templates only when activated"
+version: 0.5.0
+capability: capabilities/personalization/CAPABILITY.md
+load_policy: manifest + one route; profile templates only when activated
 routes:
   initialize:
-    file: "capabilities/personalization/routes/initialize.md"
+    file: capabilities/personalization/routes/initialize.md
   learn-cadence:
-    file: "capabilities/personalization/routes/learn-cadence.md"
+    file: capabilities/personalization/routes/learn-cadence.md
   manage-profile:
-    file: "capabilities/personalization/routes/manage-profile.md"
+    file: capabilities/personalization/routes/manage-profile.md
   switch-scope:
-    file: "capabilities/personalization/routes/switch-scope.md"
+    file: capabilities/personalization/routes/switch-scope.md
   create-command:
-    file: "capabilities/personalization/routes/create-command.md"
+    file: capabilities/personalization/routes/create-command.md
 quality_defaults:
-  - quality/PERSONALIZATION_GATE.md
-  - quality/PRIVACY_BOUNDARY_GATE.md
+- universal
+- semantic_finish
+- personalization
+- privacy_boundary
+- cadence_fidelity

@@ -1,0 +1,6 @@
+id: 01-cross-client-leak
+kind: failure_repair
+governance_case: cross-client-leak
+gate: privacy_boundary
+expected_initial_status: Block
+expected_repaired_status: Pass

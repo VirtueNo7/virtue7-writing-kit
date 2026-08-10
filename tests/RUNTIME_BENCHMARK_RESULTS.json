@@ -1,0 +1,180 @@
+{
+  "baseline": {
+    "version": "0.4.0",
+    "commit": "26d31552df8fabfc028a7910a3a0ed273f23fe9f",
+    "boot_bytes": 15992,
+    "boot_files": 3,
+    "loading_model": "boot + capability manifest + capability + route + profile + default gates + profile gate"
+  },
+  "current": {
+    "version": "0.5.0",
+    "boot_bytes": 11906,
+    "boot_files": 3
+  },
+  "summary": {
+    "journeys": 12,
+    "baseline_byte_range": [
+      19099,
+      20397
+    ],
+    "current_byte_range": [
+      16752,
+      20849
+    ],
+    "mean_baseline_bytes": 19615.8,
+    "mean_current_bytes": 17904,
+    "mean_byte_reduction_percent": 8.7,
+    "journey_reduction_range_percent": [
+      -2.2,
+      12.5
+    ],
+    "boot_reduction_percent": 25.6,
+    "file_reduction_percent": 50.0
+  },
+  "journeys": [
+    {
+      "id": "freestyle-opening-statement",
+      "route": "writing/freestyle",
+      "profile": "spoken_argument",
+      "baseline_bytes": 20397,
+      "current_bytes": 20849,
+      "byte_reduction_percent": -2.2,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    },
+    {
+      "id": "novel-chapter",
+      "route": "writing/new-output",
+      "profile": "novel_chapter",
+      "baseline_bytes": 19949,
+      "current_bytes": 19137,
+      "byte_reduction_percent": 4.1,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    },
+    {
+      "id": "evidence-brief",
+      "route": "research/evidence-brief",
+      "profile": "fact_check_report",
+      "baseline_bytes": 19279,
+      "current_bytes": 16947,
+      "byte_reduction_percent": 12.1,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    },
+    {
+      "id": "legal-memo",
+      "route": "legal/prepare-document",
+      "profile": "legal_memorandum",
+      "baseline_bytes": 19471,
+      "current_bytes": 17873,
+      "byte_reduction_percent": 8.2,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    },
+    {
+      "id": "targeted-resume",
+      "route": "resume/tailor-resume",
+      "profile": "resume",
+      "baseline_bytes": 19157,
+      "current_bytes": 16812,
+      "byte_reduction_percent": 12.2,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    },
+    {
+      "id": "cover-letter",
+      "route": "resume/cover-letter",
+      "profile": "cover_letter",
+      "baseline_bytes": 19099,
+      "current_bytes": 16752,
+      "byte_reduction_percent": 12.3,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    },
+    {
+      "id": "sop",
+      "route": "writing/new-output",
+      "profile": "standard_operating_procedure",
+      "baseline_bytes": 20027,
+      "current_bytes": 19025,
+      "byte_reduction_percent": 5.0,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    },
+    {
+      "id": "release-package",
+      "route": "content-creator/campaign",
+      "profile": "social_content_package",
+      "baseline_bytes": 20087,
+      "current_bytes": 18341,
+      "byte_reduction_percent": 8.7,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    },
+    {
+      "id": "interview-dossier",
+      "route": "content-creator/interview",
+      "profile": "interview_dossier",
+      "baseline_bytes": 19974,
+      "current_bytes": 18224,
+      "byte_reduction_percent": 8.8,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    },
+    {
+      "id": "job-brief",
+      "route": "job-search/search",
+      "profile": "job_search_brief",
+      "baseline_bytes": 19269,
+      "current_bytes": 16947,
+      "byte_reduction_percent": 12.1,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    },
+    {
+      "id": "continuation",
+      "route": "continuation/load-state",
+      "profile": "meeting_decision_record",
+      "baseline_bytes": 19451,
+      "current_bytes": 17114,
+      "byte_reduction_percent": 12.0,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    },
+    {
+      "id": "artifact-review",
+      "route": "review/artifact-review",
+      "profile": "technical_manual",
+      "baseline_bytes": 19230,
+      "current_bytes": 16827,
+      "byte_reduction_percent": 12.5,
+      "baseline_files": 10,
+      "current_files": 5,
+      "file_reduction_percent": 50.0,
+      "passed": true
+    }
+  ]
+}

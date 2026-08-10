@@ -1,5 +1,5 @@
 pack: career
-version: 0.4.0
+version: 0.5.0
 playbooks:
   - id: evidence-inventory
     title: Build a Career Evidence Inventory
@@ -18,7 +18,7 @@ playbooks:
     profile: resume
     inputs: [verified resume source, role description]
     outputs: [targeted resume, change log, evidence gaps]
-    gates: [evidence, profile structure, approval]
+    gates: [evidence, profile_structure, approval]
     tool_contract: native
   - id: opportunity-search
     title: Find and Rank Opportunities
@@ -37,5 +37,5 @@ playbooks:
     route: writing/new-output
     inputs: [verified career evidence, target role, likely competencies]
     outputs: [story bank, evidence map, practice questions]
-    gates: [evidence, cadence fidelity, privacy]
+    gates: [evidence, cadence_fidelity, privacy]
     tool_contract: native

@@ -1,17 +1,14 @@
-# Upgrade Guide: v0.3.0 to v0.4.0
+# Upgrade Guide: v0.4.0 to v0.5.0
 
-Version 0.4.0 is compatible with existing content kernels, source registers, claim records, voice contracts, project states, and approved drafts. It adds personalization and Form Lock without promoting old material automatically.
+Version 0.5.0 preserves user-owned profiles, project records, capabilities, routes, playbooks, and white-label output behavior while adding a compact mode-first boot, compiled runtime packets, stronger approval/tool records, broader validation, and prose-structure hardening.
 
-## Upgrade an existing project
+1. Preserve canonical source, claim, profile, and project-state records.
+2. Replace the v0.4.0 runtime files with the v0.5.0 release and regenerate compiled packets when developing from source.
+3. Keep existing capability and playbook identifiers; the shipped capability set remains 9 modules and 35 routes.
+4. Add the `spoken_argument` profile where oral advocacy or presentation-ready prose needs its own form.
+5. Convert informal approval markers into `schemas/approval-record.schema.json` when exact approval lineage matters. Content without an exact artifact hash remains Draft or Revised Draft until approved.
+6. Record tool-dependent completion with `schemas/tool-receipt.schema.json`. Boolean flags and prose claims are not receipts.
+7. Re-run profile, evidence, privacy, Form Lock, governance, adversarial, manifest, whitepaper, and reproducibility checks.
+8. Review prose-led outputs for pseudo-lists. Short standalone points should be developed into connected prose or formatted as real list items when a list is appropriate.
 
-1. Keep all approved canonical and source records unchanged.
-2. Start through `00_START_HERE.md`; direct task requests still bypass the menu.
-3. Create a personal work profile only if persistent preferences would help.
-4. Create separate role, organization, or client profiles where their rules differ. Do not merge confidential scopes.
-5. Confirm authorization before using transcripts, prior writing, websites, or social handles as voice evidence.
-6. Convert the existing voice contract into a cadence profile or keep it as a compatible project-native record.
-7. Select Adaptive, Preserve Form, or Narrative Form Lock for each output profile. Narrative projects should normally use Narrative Lock.
-8. Save repeated workflows as scoped custom commands. Review the playbook library for starter patterns.
-9. Run the personalization, privacy, cadence, Form Lock, evidence, profile, and release gates before approval.
-
-Existing work remains Draft until explicitly approved. No user, organization, or client data becomes a global kit default.
+No profile, command, source, client rule, or channel rule becomes global during upgrade.

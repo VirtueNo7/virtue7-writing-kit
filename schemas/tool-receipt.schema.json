@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://virtue7.example/schemas/tool-receipt.schema.json",
+  "title": "Virtue7 Tool Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "tool_name", "action", "authorization",
+    "started_at", "request_sha256", "status", "target", "side_effects"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.5.0"},
+    "receipt_id": {"type": "string", "pattern": "^TOOL-[A-Za-z0-9._-]+$"},
+    "tool_name": {"type": "string", "minLength": 1},
+    "tool_version": {"type": "string"},
+    "action": {"type": "string", "minLength": 1},
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authorized", "actor_id", "scope"],
+      "properties": {
+        "authorized": {"const": true},
+        "actor_id": {"type": "string", "minLength": 1},
+        "scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "started_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": "string", "format": "date-time"},
+    "request_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "status": {"enum": ["completed", "partial", "failed", "cancelled"]},
+    "target": {"type": "string", "minLength": 1},
+    "result_reference": {"type": "string", "minLength": 1},
+    "side_effects": {"type": "array", "items": {"type": "string"}},
+    "error": {"type": "string", "minLength": 1}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "completed"}}},
+      "then": {"required": ["completed_at", "result_reference"]}
+    },
+    {
+      "if": {"properties": {"status": {"const": "failed"}}},
+      "then": {"required": ["completed_at", "error"]}
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 pack: creator
-version: 0.4.0
+version: 0.5.0
 playbooks:
   - id: topic-radar
     title: Find Worthwhile Topics
@@ -16,10 +16,10 @@ playbooks:
     outcome: performance-ready episode structure with hooks, beats, receipts, transitions, and risk flags
     route: content-creator/episode-video-newsletter
     profile: creator_episode
-    form_lock: preserve-form
+    form_lock: preserve_form
     inputs: [content kernel, approved cadence evidence, sources, target duration]
     outputs: [run of show, source register, claim records, publication-risk check]
-    gates: [cadence fidelity, evidence, form lock, publication risk]
+    gates: [cadence_fidelity, evidence, form_lock, publication_risk]
     tool_contract: "Native for supplied sources; fresh verification requires live research tools."
   - id: clip-map
     title: Find the Clips
@@ -29,7 +29,7 @@ playbooks:
     profile: clip_sheet
     inputs: [approved transcript or timestamped media map, target platforms]
     outputs: [clip sheet, caption options, editor notes]
-    gates: [context integrity, publication risk, profile structure]
+    gates: [context_integrity, publication_risk, profile_structure]
     tool_contract: "Native on a supplied timestamped transcript; automated timecodes, cuts, and exports require transcription or editing tools."
   - id: release-package
     title: Package the Release
@@ -39,5 +39,5 @@ playbooks:
     profile: social_content_package
     inputs: [approved episode, channel rules, offer or desired action]
     outputs: [title set, description, newsletter, social assets, release checklist]
-    gates: [cadence fidelity, form lock, claim consistency, approval]
+    gates: [cadence_fidelity, form_lock, claim_consistency, approval]
     tool_contract: "Native for drafting; scheduling, publishing, editing, and performance measurement require external tools."

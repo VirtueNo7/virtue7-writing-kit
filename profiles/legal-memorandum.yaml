@@ -1,8 +1,19 @@
+version: 0.5.0
 id: legal_memorandum
 name: Legal Memorandum
 default_prose_mode: legal_analytical
-required_inputs: [jurisdiction, operative_date, issues, supplied_facts, authority_packet]
-required_sections: [issue, brief_answer, facts_or_assumptions, analysis, conclusion]
+required_inputs:
+- jurisdiction
+- operative_date
+- issues
+- supplied_facts
+- authority_packet
+required_sections:
+- issue
+- brief_answer
+- facts_or_assumptions
+- analysis
+- conclusion
 structure:
   headings: required
   citations: required_for_substantive_law

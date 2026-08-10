@@ -4,15 +4,14 @@
 
 Every substantial artifact uses one of these states:
 
-- `Draft`
-- `In Review`
-- `Validated`
-- `Approved`
-- `Superseded`
-- `Rejected`
-- `Released`
+- `draft`
+- `revision_requested`
+- `revised_draft`
+- `approved`
+- `exported`
+- `released`
 
-Validation does not equal approval. An artifact may satisfy formal checks and still fail editorial, ethical, narrative, or strategic judgement.
+Validation does not equal approval. Gate findings are recorded separately from lifecycle state. A materially revised artifact returns to `revised_draft` and must be approved again.
 
 ## Required metadata
 

@@ -1,6 +1,6 @@
 ---
 artifact_id: "PLAN-001"
-version: "0.4.0"
+version: "0.5.0"
 status: "Draft"
 kernel_version: "[KERNEL_VERSION]"
 matrix_version: "[MATRIX_VERSION]"

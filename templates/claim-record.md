@@ -2,7 +2,7 @@
 
 - Claim ID:
 - Exact claim:
-- Type: fact / quote / interpretation / inference / allegation
+- Evidence class: supplied_fact / verified_fact / credible_report / quotation / interview_statement / interpretation / inference / reconstruction / allegation / disputed_fact / theory / unknown
 - Source and locator:
 - Date and jurisdiction if relevant:
 - Verification state:

@@ -1,0 +1,14 @@
+id: 01-content-creator-campaign
+kind: route
+capability: content-creator
+route: content-creator/campaign
+profile: social_content_package
+form_lock: adaptive
+playbooks:
+- creator/release-package
+- brand/campaign-architecture
+expected_structural_status: Pass
+source_status: synthetic_fixture_not_independently_verified
+complete_artifact: false
+tool_boundary: Drafting is complete. Live research, transcription, editing, publishing,
+  and analytics require authorized tools.

@@ -1,0 +1,584 @@
+version: 0.5.0
+generated: true
+count: 32
+playbooks:
+- id: creator/topic-radar
+  pack: creator
+  title: Find Worthwhile Topics
+  starter: Find five timely topics for my audience, rank them, and show why each is
+    worth making now.
+  outcome: ranked topic slate with novelty, audience fit, evidence availability, and
+    production effort
+  route: research/evidence-brief
+  profile: null
+  form_lock: adaptive
+  gates:
+  - evidence
+  - personalization
+  - privacy
+  tool_contract: Native with supplied material; recency and trend claims require authorized
+    live research or analytics tools.
+  search_text: creator find worthwhile topics ranked topic slate with novelty, audience
+    fit, evidence availability, and production effort research/evidence-brief audience
+    subject boundaries recent coverage time budget topic slate selection rationale
+    research questions
+- id: creator/evidence-led-run-of-show
+  pack: creator
+  title: Build a Run of Show
+  starter: Turn this research into a flexible run of show that sounds like me and
+    keeps every claim attached to its support.
+  outcome: performance-ready episode structure with hooks, beats, receipts, transitions,
+    and risk flags
+  route: content-creator/episode-video-newsletter
+  profile: creator_episode
+  form_lock: preserve_form
+  gates:
+  - cadence_fidelity
+  - evidence
+  - form_lock
+  - publication_risk
+  tool_contract: Native for supplied sources; fresh verification requires live research
+    tools.
+  search_text: creator build a run of show performance-ready episode structure with
+    hooks, beats, receipts, transitions, and risk flags content-creator/episode-video-newsletter
+    content kernel approved cadence evidence sources target duration run of show source
+    register claim records publication-risk check
+- id: creator/clip-map
+  pack: creator
+  title: Find the Clips
+  starter: Mark the strongest short-form moments in this approved episode and package
+    each one for an editor.
+  outcome: prioritized clip sheet with opening line, in/out points, context, caption,
+    title, and risk note
+  route: content-creator/clips
+  profile: clip_sheet
+  form_lock: adaptive
+  gates:
+  - context_integrity
+  - publication_risk
+  - profile_structure
+  tool_contract: Native on a supplied timestamped transcript; automated timecodes,
+    cuts, and exports require transcription or editing tools.
+  search_text: creator find the clips prioritized clip sheet with opening line, in/out
+    points, context, caption, title, and risk note content-creator/clips approved
+    transcript or timestamped media map target platforms clip sheet caption options
+    editor notes
+- id: creator/release-package
+  pack: creator
+  title: Package the Release
+  starter: Turn this approved episode into a release package without changing its
+    claims or voice.
+  outcome: coordinated title, description, newsletter, social, clip, and call-to-action
+    package
+  route: content-creator/campaign
+  profile: social_content_package
+  form_lock: adaptive
+  gates:
+  - cadence_fidelity
+  - form_lock
+  - claim_consistency
+  - approval
+  tool_contract: Native for drafting; scheduling, publishing, editing, and performance
+    measurement require external tools.
+  search_text: creator package the release coordinated title, description, newsletter,
+    social, clip, and call-to-action package content-creator/campaign approved episode
+    channel rules offer or desired action title set description newsletter social
+    assets release checklist
+- id: writer/story-engine
+  pack: writer
+  title: Build a Fiction Project
+  starter: Build a story engine from this premise, preserve my prose tendencies, and
+    give me the next decision rather than writing past me.
+  outcome: coherent premise, characters, tensions, world rules, and draftable sequence
+  route: writing/new-output
+  profile: novel_chapter
+  form_lock: narrative_lock
+  gates:
+  - cadence_fidelity
+  - form_lock
+  - continuity
+  tool_contract: native
+  search_text: writer build a fiction project coherent premise, characters, tensions,
+    world rules, and draftable sequence writing/new-output premise genre intended
+    reader approved voice evidence canonical kernel story map scene queue decision
+    log
+- id: writer/draft-next-scene
+  pack: writer
+  title: Draft the Next Scene
+  starter: Draft the next scene from the approved canon. Do not summarize, outline,
+    or introduce unapproved facts.
+  outcome: scene-level prose that advances the approved project without continuity
+    drift
+  route: writing/new-output
+  profile: novel_chapter
+  form_lock: narrative_lock
+  gates:
+  - cadence_fidelity
+  - form_lock
+  - continuity
+  - semantic_finish
+  tool_contract: native
+  search_text: writer draft the next scene scene-level prose that advances the approved
+    project without continuity drift writing/new-output approved canon scene intent
+    point of view constraints draft scene continuity notes unresolved decisions
+- id: writer/nonfiction-architecture
+  pack: writer
+  title: Shape a Nonfiction Work
+  starter: Turn these notes and sources into an argument architecture, then show what
+    is known, inferred, missing, and disputed.
+  outcome: evidence-aware structure for an article, report, or book
+  route: writing/new-output
+  profile: narrative_nonfiction
+  form_lock: preserve_form
+  gates:
+  - evidence
+  - form_lock
+  - publication_risk
+  tool_contract: Native for supplied material; source discovery and verification require
+    live research tools.
+  search_text: writer shape a nonfiction work evidence-aware structure for an article,
+    report, or book writing/new-output purpose audience notes sources content kernel
+    section logic evidence map gap list
+- id: writer/revision-without-flattening
+  pack: writer
+  title: Revise Without Flattening
+  starter: Revise this draft for clarity and force while preserving its sentence movement,
+    texture, and deliberate irregularities.
+  outcome: stronger draft with traceable edits and protected voice features
+  route: writing/revise-output
+  profile: null
+  form_lock: preserve_form
+  gates:
+  - cadence_fidelity
+  - form_lock
+  - semantic_finish
+  tool_contract: native
+  search_text: writer revise without flattening stronger draft with traceable edits
+    and protected voice features writing/revise-output draft purpose protected traits
+    allowed edit depth revised draft change summary cadence drift check
+- id: research/source-map
+  pack: research
+  title: Map the Evidence
+  starter: Build a source map for this question. Separate primary evidence, reporting,
+    expert interpretation, allegations, and open questions.
+  outcome: navigable evidence base with source roles and uncertainty preserved
+  route: research/source-review
+  profile: fact_check_report
+  form_lock: adaptive
+  gates:
+  - evidence
+  - privacy
+  - source_quality
+  tool_contract: Native for supplied sources; discovery and current verification require
+    live research tools.
+  search_text: research map the evidence navigable evidence base with source roles
+    and uncertainty preserved research/source-review research question supplied sources
+    scope and date boundary source register evidence map gaps
+- id: research/claim-ledger
+  pack: research
+  title: Test the Claims
+  starter: Extract every material claim, classify it, attach its best support and
+    contradiction, and show what cannot yet be concluded.
+  outcome: claim-by-claim record distinguishing verified facts, credible reports,
+    interpretations, allegations, theories, and unknowns
+  route: research/source-review
+  profile: fact_check_report
+  form_lock: adaptive
+  gates:
+  - evidence
+  - publication_risk
+  tool_contract: Native for supplied evidence; current checks require live research
+    tools.
+  search_text: research test the claims claim-by-claim record distinguishing verified
+    facts, credible reports, interpretations, allegations, theories, and unknowns
+    research/source-review draft or transcript sources risk tolerance claim records
+    contradiction log correction queue
+- id: research/timeline-reconstruction
+  pack: research
+  title: Reconstruct the Timeline
+  starter: Build a dated timeline from these materials and flag conflicts, missing
+    intervals, and retrospective claims.
+  outcome: auditable chronology that exposes contradictions and evidence gaps
+  route: research/evidence-brief
+  profile: null
+  form_lock: adaptive
+  gates:
+  - evidence
+  - source_quality
+  tool_contract: Native for supplied sources; archive or web retrieval requires live
+    tools.
+  search_text: research reconstruct the timeline auditable chronology that exposes
+    contradictions and evidence gaps research/evidence-brief source set relevant time
+    range timeline contradiction table unresolved dates
+- id: research/decision-brief
+  pack: research
+  title: Research a Decision
+  starter: Compare these options against my criteria, identify evidence quality, and
+    recommend the next reversible decision.
+  outcome: decision-ready comparison without false certainty
+  route: research/evidence-brief
+  profile: business_report
+  form_lock: adaptive
+  gates:
+  - evidence
+  - semantic_finish
+  - approval
+  tool_contract: Native for supplied evidence; current prices, availability, law,
+    or specifications require live tools.
+  search_text: research research a decision decision-ready comparison without false
+    certainty research/evidence-brief decision options criteria constraints evidence
+    comparison assumptions recommendation verification plan
+- id: legal/issue-and-authority-map
+  pack: legal
+  title: Map Issues and Authority
+  starter: Organize this matter by issue, jurisdiction, controlling authority, disputed
+    facts, and missing evidence.
+  outcome: attorney-reviewable research plan with legal and factual boundaries separated
+  route: legal/prepare-document
+  profile: legal_memorandum
+  form_lock: adaptive
+  gates:
+  - jurisdiction
+  - authority
+  - evidence
+  - privacy
+  tool_contract: Native for supplied material; current authority retrieval and citator
+    checks require authorized legal research tools.
+  search_text: legal map issues and authority attorney-reviewable research plan with
+    legal and factual boundaries separated legal/prepare-document jurisdiction facts
+    question supplied authority issue map authority table fact gaps research plan
+- id: legal/chronology-and-exhibits
+  pack: legal
+  title: Build a Matter Chronology
+  starter: Turn these records into a dated chronology and exhibit index. Distinguish
+    document fact, party assertion, and inference.
+  outcome: traceable case chronology with provenance
+  route: legal/prepare-document
+  profile: null
+  form_lock: adaptive
+  gates:
+  - evidence
+  - privacy
+  - matter_isolation
+  tool_contract: Native for supplied records; OCR, discovery-platform retrieval, and
+    filing require external tools.
+  search_text: legal build a matter chronology traceable case chronology with provenance
+    legal/prepare-document matter records date boundary confidentiality scope chronology
+    exhibit index contradiction log missing-record list
+- id: legal/contract-risk-pass
+  pack: legal
+  title: Review Contract Risk
+  starter: "Review this agreement against the supplied priorities. Quote the relevant\
+    \ language, explain the operational effect, and propose questions\u2014not invented\
+    \ law."
+  outcome: clause-level review prioritized by business consequence
+  route: legal/review-document
+  profile: null
+  form_lock: adaptive
+  gates:
+  - jurisdiction
+  - authority
+  - privacy
+  - approval
+  tool_contract: native
+  search_text: legal review contract risk clause-level review prioritized by business
+    consequence legal/review-document agreement jurisdiction party position priorities
+    risk table clause notes negotiation questions
+- id: legal/client-update
+  pack: legal
+  title: Draft a Clear Matter Update
+  starter: Draft a client update from the approved matter record, separating what
+    happened, what it means, what remains uncertain, and the next decision.
+  outcome: accurate plain-language update with no leakage between matters
+  route: writing/new-output
+  profile: business_report
+  form_lock: preserve_form
+  gates:
+  - privacy
+  - matter_isolation
+  - evidence
+  - approval
+  tool_contract: native
+  search_text: legal draft a clear matter update accurate plain-language update with
+    no leakage between matters writing/new-output approved matter state audience next
+    decision update draft fact check approval checklist
+- id: brand/positioning-core
+  pack: brand
+  title: Build the Positioning Core
+  starter: Turn these customer, category, product, and competitor inputs into a defensible
+    positioning core.
+  outcome: precise audience, problem, promise, proof, difference, and boundaries
+  route: writing/new-output
+  profile: brand_strategy
+  form_lock: adaptive
+  gates:
+  - evidence
+  - semantic_finish
+  - approval
+  tool_contract: Native for supplied inputs; current competitor research requires
+    live tools.
+  search_text: brand build the positioning core precise audience, problem, promise,
+    proof, difference, and boundaries writing/new-output customer evidence category
+    offer alternatives positioning core proof map prohibited claims open questions
+- id: brand/voice-system
+  pack: brand
+  title: Build a Brand Voice System
+  starter: Learn the recurring choices in these approved materials and create usable
+    voice rules with positive and negative examples.
+  outcome: evidence-backed voice contract that guides without cloning an individual
+  route: personalization/learn-cadence
+  profile: null
+  form_lock: adaptive
+  gates:
+  - authorization
+  - cadence_fidelity
+  - privacy
+  tool_contract: native
+  search_text: brand build a brand voice system evidence-backed voice contract that
+    guides without cloning an individual personalization/learn-cadence authorized
+    brand corpus audiences channels voice contract cadence profile do-and-don't examples
+- id: brand/campaign-architecture
+  pack: brand
+  title: Build a Campaign
+  starter: Build one campaign idea that can survive across channels without turning
+    into repeated generic copy.
+  outcome: campaign kernel with channel-specific expressions and proof discipline
+  route: content-creator/campaign
+  profile: social_content_package
+  form_lock: adaptive
+  gates:
+  - claim_consistency
+  - cadence_fidelity
+  - approval
+  tool_contract: Native for development; design, publishing, and measurement require
+    external tools.
+  search_text: brand build a campaign campaign kernel with channel-specific expressions
+    and proof discipline content-creator/campaign positioning core campaign objective
+    audiences channels campaign kernel asset matrix copy drafts approval map
+- id: brand/claim-audit
+  pack: brand
+  title: Audit Brand Claims
+  starter: Test every public claim in this copy against the supplied proof and mark
+    unsupported, ambiguous, regulated, or approved language.
+  outcome: safer public copy with a reusable claim register
+  route: review/release-audit
+  profile: null
+  form_lock: adaptive
+  gates:
+  - evidence
+  - publication_risk
+  - approval
+  tool_contract: Native for supplied proof; current regulatory verification requires
+    live authoritative sources and qualified review.
+  search_text: brand audit brand claims safer public copy with a reusable claim register
+    review/release-audit copy substantiation market or jurisdiction approval policy
+    claim register risk notes revision options
+- id: product/opportunity-brief
+  pack: product
+  title: Frame the Product Opportunity
+  starter: Turn these signals into a product opportunity brief that separates user
+    evidence, assumptions, constraints, and proposed value.
+  outcome: decision-ready problem framing
+  route: writing/new-output
+  profile: product_brief
+  form_lock: adaptive
+  gates:
+  - evidence
+  - semantic_finish
+  - approval
+  tool_contract: Native for supplied inputs; analytics and repository retrieval require
+    external tools.
+  search_text: product frame the product opportunity decision-ready problem framing
+    writing/new-output user evidence business objective constraints opportunity brief
+    assumption ledger research gaps
+- id: product/requirement-builder
+  pack: product
+  title: Build Requirements
+  starter: Convert this approved opportunity into testable requirements, non-goals,
+    edge cases, dependencies, and acceptance criteria.
+  outcome: implementation-ready requirements without hidden scope
+  route: writing/new-output
+  profile: product_brief
+  form_lock: adaptive
+  gates:
+  - profile_structure
+  - consistency
+  - approval
+  tool_contract: native
+  search_text: product build requirements implementation-ready requirements without
+    hidden scope writing/new-output approved opportunity users constraints system
+    context requirements non-goals acceptance criteria dependency map
+- id: product/release-decision
+  pack: product
+  title: Prepare a Release Decision
+  starter: Assemble the release evidence, unresolved risks, rollback conditions, and
+    required approvals into one decision record.
+  outcome: auditable go, hold, or limited-release decision
+  route: review/release-audit
+  profile: meeting_decision_record
+  form_lock: adaptive
+  gates:
+  - evidence
+  - privacy
+  - approval
+  tool_contract: Native for supplied evidence; CI, analytics, and deployment actions
+    require external tools.
+  search_text: product prepare a release decision auditable go, hold, or limited-release
+    decision review/release-audit test results incidents known limitations owners
+    decision record risk register approval checklist
+- id: product/feedback-synthesis
+  pack: product
+  title: Synthesize Feedback
+  starter: Cluster this feedback without losing minority signals, quote representative
+    evidence, and distinguish frequency from severity.
+  outcome: evidence-traceable insight set and decision options
+  route: research/evidence-brief
+  profile: null
+  form_lock: adaptive
+  gates:
+  - privacy
+  - evidence
+  - semantic_finish
+  tool_contract: Native for supplied feedback; data retrieval and quantitative analysis
+    may require external tools.
+  search_text: product synthesize feedback evidence-traceable insight set and decision
+    options research/evidence-brief feedback corpus segmentation decision context
+    theme map counter-signals evidence excerpts next tests
+- id: company_admin/sop-builder
+  pack: company_admin
+  title: Build a Working SOP
+  starter: Turn this actual process into an SOP with owners, decisions, exceptions,
+    controls, and proof of completion.
+  outcome: usable operating procedure rather than a generic checklist
+  route: writing/new-output
+  profile: standard_operating_procedure
+  form_lock: adaptive
+  gates:
+  - profile_structure
+  - privacy
+  - approval
+  tool_contract: native
+  search_text: company_admin build a working sop usable operating procedure rather
+    than a generic checklist writing/new-output current process owners systems exceptions
+    controls sop control points escalation path change log
+- id: company_admin/meeting-to-decisions
+  pack: company_admin
+  title: Convert a Meeting into Decisions
+  starter: Turn these notes into decisions, rationale, owners, deadlines, dependencies,
+    and unresolved questions.
+  outcome: durable decision state with accountable follow-through
+  route: continuation/controlled-update
+  profile: meeting_decision_record
+  form_lock: adaptive
+  gates:
+  - privacy
+  - evidence
+  - approval
+  tool_contract: Native for supplied notes; recording, transcription, calendar updates,
+    and task creation require external tools.
+  search_text: company_admin convert a meeting into decisions durable decision state
+    with accountable follow-through continuation/controlled-update meeting notes or
+    transcript participants project scope decision record action register unresolved
+    questions
+- id: company_admin/policy-builder
+  pack: company_admin
+  title: Draft an Operational Policy
+  starter: Build a policy from these obligations and operating realities, including
+    scope, responsibilities, controls, exceptions, and review cadence.
+  outcome: governed policy connected to real procedures
+  route: writing/new-output
+  profile: business_report
+  form_lock: adaptive
+  gates:
+  - evidence
+  - privacy
+  - approval
+  tool_contract: Native for supplied obligations; current legal or regulatory verification
+    requires authoritative live sources and qualified review.
+  search_text: company_admin draft an operational policy governed policy connected
+    to real procedures writing/new-output purpose obligations stakeholders existing
+    procedures policy draft control map implementation questions
+- id: company_admin/incident-record
+  pack: company_admin
+  title: Build an Incident Record
+  starter: Create a neutral incident record from these materials. Separate observed
+    facts, reported statements, impact, response, and open questions.
+  outcome: reliable chronology and follow-up record without premature conclusions
+  route: research/evidence-brief
+  profile: null
+  form_lock: adaptive
+  gates:
+  - privacy
+  - evidence
+  - approval
+  tool_contract: native
+  search_text: company_admin build an incident record reliable chronology and follow-up
+    record without premature conclusions research/evidence-brief authorized incident
+    materials reporting scope incident chronology evidence register action list
+- id: career/evidence-inventory
+  pack: career
+  title: Build a Career Evidence Inventory
+  starter: Extract roles, outcomes, scope, skills, and proof from these records. Do
+    not invent achievements.
+  outcome: reusable source of verified career evidence
+  route: resume/build-source
+  profile: null
+  form_lock: adaptive
+  gates:
+  - evidence
+  - privacy
+  tool_contract: native
+  search_text: career build a career evidence inventory reusable source of verified
+    career evidence resume/build-source resume reviews work records notes resume source
+    achievement records missing-proof questions
+- id: career/targeted-resume
+  pack: career
+  title: Target a Resume
+  starter: Target my resume to this role using only verified evidence and show every
+    material change.
+  outcome: truthful, role-specific resume with traceable edits
+  route: resume/tailor-resume
+  profile: resume
+  form_lock: adaptive
+  gates:
+  - evidence
+  - profile_structure
+  - approval
+  tool_contract: native
+  search_text: career target a resume truthful, role-specific resume with traceable
+    edits resume/tailor-resume verified resume source role description targeted resume
+    change log evidence gaps
+- id: career/opportunity-search
+  pack: career
+  title: Find and Rank Opportunities
+  starter: Find roles matching these constraints and rank them by evidence-based fit,
+    verification burden, and next action.
+  outcome: controlled opportunity brief rather than an unverified link dump
+  route: job-search/search
+  profile: job_search_brief
+  form_lock: adaptive
+  gates:
+  - evidence
+  - privacy
+  tool_contract: Current discovery and listing verification require authorized live
+    browsing tools.
+  search_text: career find and rank opportunities controlled opportunity brief rather
+    than an unverified link dump job-search/search target roles location constraints
+    verified profile opportunity brief verification fields action queue
+- id: career/interview-evidence-bank
+  pack: career
+  title: Build an Interview Evidence Bank
+  starter: Turn my verified experience into concise interview stories mapped to likely
+    questions, without scripting a fake persona.
+  outcome: authentic evidence bank with adaptable responses
+  route: writing/new-output
+  profile: null
+  form_lock: adaptive
+  gates:
+  - evidence
+  - cadence_fidelity
+  - privacy
+  tool_contract: native
+  search_text: career build an interview evidence bank authentic evidence bank with
+    adaptable responses writing/new-output verified career evidence target role likely
+    competencies story bank evidence map practice questions

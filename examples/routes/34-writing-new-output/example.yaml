@@ -1,0 +1,22 @@
+id: 34-writing-new-output
+kind: route
+capability: writing
+route: writing/new-output
+profile: children_chapter_book
+form_lock: narrative_lock
+playbooks:
+- writer/story-engine
+- writer/draft-next-scene
+- writer/nonfiction-architecture
+- legal/client-update
+- brand/positioning-core
+- product/opportunity-brief
+- product/requirement-builder
+- company_admin/sop-builder
+- company_admin/policy-builder
+- career/interview-evidence-bank
+expected_structural_status: Pass
+source_status: synthetic_fixture_not_independently_verified
+complete_artifact: false
+tool_boundary: The draft and revision are native. Export or publication requires a
+  supported tool and approval.

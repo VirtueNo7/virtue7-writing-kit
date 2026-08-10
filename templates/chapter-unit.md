@@ -1,7 +1,7 @@
 ---
 unit_id: "U-00"
 title: "[UNIT_TITLE]"
-version: "0.4.0"
+version: "0.5.0"
 status: "Draft"
 kernel_dependencies: []
 source_dependencies: []

@@ -1,0 +1,6 @@
+id: 10-unauthorized-cadence-learning
+kind: failure_repair
+governance_case: unauthorized-cadence-learning
+gate: personalization_authorization
+expected_initial_status: Block
+expected_repaired_status: Pass

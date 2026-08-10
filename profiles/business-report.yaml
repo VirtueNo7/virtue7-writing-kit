@@ -1,8 +1,16 @@
+version: 0.5.0
 id: business_report
 name: Business Report
 default_prose_mode: analytical_academic
-required_inputs: [decision, audience, evidence]
-required_sections: [executive_summary, findings, implications, recommendation]
+required_inputs:
+- decision
+- audience
+- evidence
+required_sections:
+- executive_summary
+- findings
+- implications
+- recommendation
 structure:
   headings: required
   tables: permitted

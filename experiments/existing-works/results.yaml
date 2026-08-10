@@ -1,0 +1,10 @@
+version: 0.5.0
+status: not_run
+independent: false
+blinded: false
+cross_model: false
+works_evaluated: 0
+models_evaluated: 0
+claims_supported: []
+reason: No independent existing-works experiment has been executed for this release.
+future_protocol: experiments/existing-works/REPORT.md

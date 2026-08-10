@@ -1,7 +1,11 @@
+version: 0.5.0
 id: workbook_guide
 name: Workbook or Instructional Guide
 default_prose_mode: procedural_instructional
-required_inputs: [learner, outcome, safety_boundary]
+required_inputs:
+- learner
+- outcome
+- safety_boundary
 structure:
   headings: required
   exercises: required

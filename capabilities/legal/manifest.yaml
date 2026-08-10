@@ -1,16 +1,21 @@
 id: legal
-version: 0.4.0
-capability: "capabilities/legal/CAPABILITY.md"
-load_policy: "manifest + one route + one selected profile; optional files only when activated"
+version: 0.5.0
+capability: capabilities/legal/CAPABILITY.md
+load_policy: manifest + one route + one selected profile; optional files only when
+  activated
 routes:
   resolve-jurisdiction:
-    file: "capabilities/legal/routes/resolve-jurisdiction.md"
+    file: capabilities/legal/routes/resolve-jurisdiction.md
   legal-research:
-    file: "capabilities/legal/routes/legal-research.md"
+    file: capabilities/legal/routes/legal-research.md
   prepare-document:
-    file: "capabilities/legal/routes/prepare-document.md"
+    file: capabilities/legal/routes/prepare-document.md
   review-document:
-    file: "capabilities/legal/routes/review-document.md"
+    file: capabilities/legal/routes/review-document.md
 quality_defaults:
-  - quality/UNIVERSAL_GATE.md
-  - quality/SEMANTIC_FINISH_GATE.md
+- universal
+- evidence
+- semantic_finish
+- privacy_boundary
+- jurisdiction
+- publication_risk

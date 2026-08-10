@@ -1,5 +1,5 @@
 pack: legal
-version: 0.4.0
+version: 0.5.0
 playbooks:
   - id: issue-and-authority-map
     title: Map Issues and Authority
@@ -19,7 +19,7 @@ playbooks:
     route: legal/prepare-document
     inputs: [matter records, date boundary, confidentiality scope]
     outputs: [chronology, exhibit index, contradiction log, missing-record list]
-    gates: [evidence, privacy, matter isolation]
+    gates: [evidence, privacy, matter_isolation]
     approval: responsible matter owner
     tool_contract: "Native for supplied records; OCR, discovery-platform retrieval, and filing require external tools."
   - id: contract-risk-pass
@@ -38,9 +38,9 @@ playbooks:
     outcome: accurate plain-language update with no leakage between matters
     route: writing/new-output
     profile: business_report
-    form_lock: preserve-form
+    form_lock: preserve_form
     inputs: [approved matter state, audience, next decision]
     outputs: [update draft, fact check, approval checklist]
-    gates: [privacy, matter isolation, evidence, approval]
+    gates: [privacy, matter_isolation, evidence, approval]
     approval: responsible lawyer
     tool_contract: native

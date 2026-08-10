@@ -42,9 +42,31 @@ def main() -> int:
 
     if cards < 32:
         failures.append(f"Expected at least 32 playbooks; found {cards}")
-    examples = sorted((ROOT / "examples").glob("[0-9][0-9]-*.md"))
-    if len(examples) < 9:
-        failures.append(f"Expected at least 9 examples; found {len(examples)}")
+
+    library_index_path = ROOT / "library/index.yaml"
+    if not library_index_path.exists():
+        failures.append("Missing generated library/index.yaml")
+        indexed_playbooks = []
+    else:
+        library_index = yaml.safe_load(library_index_path.read_text(encoding="utf-8"))
+        indexed_playbooks = library_index.get("playbooks", [])
+        if len(indexed_playbooks) != cards:
+            failures.append(
+                f"Playbook index contains {len(indexed_playbooks)} records; expected {cards}"
+            )
+
+    example_index_path = ROOT / "examples/index.yaml"
+    if not example_index_path.exists():
+        failures.append("Missing generated examples/index.yaml")
+        worked_examples = []
+    else:
+        example_index = yaml.safe_load(example_index_path.read_text(encoding="utf-8"))
+        worked_examples = example_index.get("examples", [])
+        example_routes = set(route_registry)
+        governance_cases = yaml.safe_load((ROOT / "tests/governance-cases.yaml").read_text(encoding="utf-8")).get("cases", [])
+        expected_examples = len(example_routes) + len(governance_cases)
+        if len(worked_examples) != expected_examples:
+            failures.append(f"Expected {expected_examples} worked examples; found {len(worked_examples)}")
 
     form_lock = yaml.safe_load((ROOT / "config/form-lock.yaml").read_text(encoding="utf-8"))
     modes = set(form_lock.get("modes", {}))
@@ -66,7 +88,7 @@ def main() -> int:
         return 1
     print("Playbook and personalization validation passed.")
     print(f"Playbooks: {cards}")
-    print(f"Examples: {len(examples)}")
+    print(f"Worked examples: {len(worked_examples)}")
     print(f"Routes: {len(route_registry)}")
     print(f"Profiles: {len(profiles)}")
     return 0

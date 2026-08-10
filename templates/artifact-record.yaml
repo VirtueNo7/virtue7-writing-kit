@@ -1,0 +1,10 @@
+schema_version: 0.5.0
+project_id: "[PROJECT_ID]"
+artifact_id: "[ARTIFACT_ID]"
+version: "[ARTIFACT_VERSION]"
+sha256: "[64_LOWERCASE_HEX_CHARACTERS]"
+previous_version_sha256: null
+state: draft
+source_lineage: []
+validation_state: not_evaluated
+unresolved_questions: []

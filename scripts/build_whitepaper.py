@@ -1,181 +1,246 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-from pathlib import Path
 from html import escape
+from pathlib import Path
 import re
-import reportlab
 
-from reportlab.lib.colors import HexColor
-from reportlab.lib.enums import TA_CENTER, TA_LEFT
+import reportlab.rl_config
+from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY, TA_LEFT
 from reportlab.lib.pagesizes import LETTER
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfgen.canvas import Canvas
 from reportlab.platypus import (
-    BaseDocTemplate, Frame, ListFlowable, ListItem, PageBreak, PageTemplate,
-    Paragraph, Spacer, HRFlowable,
+    BaseDocTemplate,
+    Flowable,
+    Frame,
+    KeepTogether,
+    ListFlowable,
+    ListItem,
+    PageTemplate,
+    Paragraph,
+    Spacer,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "docs/whitepaper/compressible-content-architecture_whitepaper.md"
-TEXT_OUT = ROOT / "docs/whitepaper/compressible-content-architecture_ai-readable.txt"
-PDF_OUT = ROOT / "docs/whitepaper/compressible-content-architecture_whitepaper.pdf"
+DOCS = ROOT / "docs/whitepaper"
+SOURCE = DOCS / "virtue7_whitepaper.md"
+TEXT_OUT = DOCS / "virtue7_ai-readable.txt"
+PDF_OUT = DOCS / "virtue7_whitepaper.pdf"
 
-INK = HexColor("#172033")
-MUTED = HexColor("#596273")
-ACCENT = HexColor("#8056D6")
-PALE = HexColor("#EEE9FA")
-WHITE = HexColor("#FFFFFF")
+# Stable PDF metadata/object ordering for deterministic builds.
+reportlab.rl_config.invariant = 1
 
-
-def register_fonts() -> None:
-    font_dir = Path(reportlab.__file__).resolve().parent / "fonts"
-    pdfmetrics.registerFont(TTFont("V7Sans", str(font_dir / "Vera.ttf")))
-    pdfmetrics.registerFont(TTFont("V7Sans-Bold", str(font_dir / "VeraBd.ttf")))
-    pdfmetrics.registerFont(TTFont("V7Sans-Oblique", str(font_dir / "VeraIt.ttf")))
-    pdfmetrics.registerFont(TTFont("V7Sans-BoldOblique", str(font_dir / "VeraBI.ttf")))
-    pdfmetrics.registerFont(TTFont("V7Mono", str(font_dir / "Vera.ttf")))
-    pdfmetrics.registerFontFamily(
-        "V7Sans", normal="V7Sans", bold="V7Sans-Bold",
-        italic="V7Sans-Oblique", boldItalic="V7Sans-BoldOblique",
-    )
+TITLE = "Virtue7: A Lightweight Governed Runtime for AI Work"
+AUTHOR = "Virtue7"
+DATE = "August 2026"
 
 
 def inline(text: str) -> str:
     value = escape(text)
-    value = re.sub(r"`([^`]+)`", r'<font name="V7Mono">\1</font>', value)
+    value = re.sub(r"`([^`]+)`", r'<font name="Courier">\1</font>', value)
     value = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", value)
     value = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<i>\1</i>", value)
     return value
 
 
-def page_header_footer(canvas, doc) -> None:
+def footer(canvas: Canvas, doc) -> None:
     canvas.saveState()
-    width, height = LETTER
-    canvas.setStrokeColor(PALE)
-    canvas.setLineWidth(0.8)
-    canvas.line(0.72 * inch, height - 0.62 * inch, width - 0.72 * inch, height - 0.62 * inch)
-    canvas.setFont("V7Sans", 7.7)
-    canvas.setFillColor(MUTED)
-    canvas.drawString(0.72 * inch, height - 0.47 * inch, "THE COMPRESSIBLE CONTENT ARCHITECTURE · V0.4")
-    canvas.drawRightString(width - 0.72 * inch, 0.45 * inch, str(doc.page))
+    canvas.setFont("Times-Roman", 9)
+    canvas.drawCentredString(LETTER[0] / 2, 0.46 * inch, str(doc.page))
     canvas.restoreState()
 
 
-def cover(canvas, doc) -> None:
-    canvas.saveState()
-    width, height = LETTER
-    canvas.setFillColor(INK)
-    canvas.rect(0, 0, width, height, stroke=0, fill=1)
-    canvas.setFillColor(ACCENT)
-    canvas.rect(0, height - 0.27 * inch, width, 0.27 * inch, stroke=0, fill=1)
-    canvas.restoreState()
+class Diagram(Flowable):
+    def __init__(self, kind: str, caption: str, width: float = 6.25 * inch):
+        self.kind = kind
+        self.caption = caption
+        self.width = width
+        heights = {
+            "mode-router": 1.38 * inch,
+            "loading": 1.45 * inch,
+            "improvement": 1.25 * inch,
+        }
+        self.height = heights.get(kind, 1.4 * inch) + 0.24 * inch
+
+    def _box(self, c, x, y, w, h, label, size=8.5):
+        c.rect(x, y, w, h, stroke=1, fill=0)
+        c.setFont("Helvetica", size)
+        lines = label.split("\n")
+        start = y + h / 2 + (len(lines)-1) * 5 - 3
+        for i, line in enumerate(lines):
+            c.drawCentredString(x + w / 2, start - i * 10, line)
+
+    def _arrow(self, c, x1, y1, x2, y2):
+        c.line(x1, y1, x2, y2)
+        import math
+        angle = math.atan2(y2-y1, x2-x1)
+        a = 5
+        for off in (0.48, -0.48):
+            c.line(x2, y2, x2 - a*math.cos(angle+off), y2 - a*math.sin(angle+off))
+
+    def draw(self):
+        c = self.canv
+        c.saveState()
+        c.setLineWidth(0.65)
+        c.setStrokeColorRGB(0, 0, 0)
+        c.setFillColorRGB(0, 0, 0)
+        W = self.width
+        H = self.height - 0.28 * inch
+
+        if self.kind == "mode-router":
+            bw, bh = 1.02*inch, 0.38*inch
+            cx = W/2 - bw/2
+            top = H - 0.43*inch
+            self._box(c, cx, top, bw, bh, "Intent")
+            ys = 0.22*inch
+            labels = ["Chat", "Content", "Automation"]
+            gap = (W - 3*bw) / 2
+            for i, label in enumerate(labels):
+                x = i*(bw+gap)
+                self._box(c, x, ys, bw, bh, label)
+                self._arrow(c, W/2, top, x+bw/2, ys+bh)
+
+
+        elif self.kind == "loading":
+            bw, bh = 0.9*inch, 0.36*inch
+            y = H-0.48*inch
+            labels = ["Boot", "Mode?", "Route?", "Profile?", "State", "Tool?"]
+            gap = (W - len(labels)*bw)/(len(labels)-1)
+            for i,label in enumerate(labels):
+                x = i*(bw+gap)
+                self._box(c,x,y,bw,bh,label,7.8)
+                if i < len(labels)-1:
+                    self._arrow(c,x+bw,y+bh/2,x+bw+gap,y+bh/2)
+            c.setFont("Helvetica",8)
+            c.drawCentredString(W/2,0.37*inch,"? = load only when the current step requires it")
+            c.setFont("Courier",8)
+            c.drawCentredString(W/2,0.13*inch,"B + M? + R? + P? + Smin + Tmin")
+
+
+        elif self.kind == "improvement":
+            bw,bh=0.92*inch,0.36*inch
+            labels=["Observe","Propose","Sandbox","Evaluate","Promote"]
+            gap=(W-len(labels)*bw)/(len(labels)-1)
+            y=H-0.52*inch
+            for i,label in enumerate(labels):
+                x=i*(bw+gap)
+                self._box(c,x,y,bw,bh,label,7.8)
+                if i<len(labels)-1:
+                    self._arrow(c,x+bw,y+bh/2,x+bw+gap,y+bh/2)
+
+        c.setFont("Times-Italic", 8.2)
+        c.drawCentredString(W/2, -1, self.caption)
+        c.restoreState()
 
 
 def styles():
     base = getSampleStyleSheet()
     return {
-        "cover_kicker": ParagraphStyle("cover_kicker", parent=base["Normal"], fontName="V7Sans-Bold", fontSize=9, leading=12, textColor=HexColor("#CFC2F2"), spaceAfter=22, tracking=1.5),
-        "cover_title": ParagraphStyle("cover_title", parent=base["Title"], fontName="V7Sans-Bold", fontSize=30, leading=35, textColor=WHITE, alignment=TA_LEFT, spaceAfter=22),
-        "cover_subtitle": ParagraphStyle("cover_subtitle", parent=base["Normal"], fontName="V7Sans", fontSize=14, leading=21, textColor=HexColor("#E8E4F0"), spaceAfter=28),
-        "cover_meta": ParagraphStyle("cover_meta", parent=base["Normal"], fontName="V7Sans", fontSize=9, leading=14, textColor=HexColor("#B9C0D0")),
-        "h1": ParagraphStyle("h1", parent=base["Heading1"], fontName="V7Sans-Bold", fontSize=22, leading=27, textColor=INK, spaceBefore=0, spaceAfter=16, keepWithNext=True),
-        "h2": ParagraphStyle("h2", parent=base["Heading2"], fontName="V7Sans-Bold", fontSize=19, leading=24, textColor=INK, spaceBefore=0, spaceAfter=15, keepWithNext=True),
-        "h3": ParagraphStyle("h3", parent=base["Heading3"], fontName="V7Sans-Bold", fontSize=12.5, leading=17, textColor=ACCENT, spaceBefore=12, spaceAfter=7, keepWithNext=True),
-        "body": ParagraphStyle("body", parent=base["BodyText"], fontName="V7Sans", fontSize=9.35, leading=14.4, textColor=INK, alignment=TA_LEFT, spaceAfter=9, allowWidows=0, allowOrphans=0),
-        "list": ParagraphStyle("list", parent=base["BodyText"], fontName="V7Sans", fontSize=9.2, leading=14, textColor=INK, leftIndent=4, spaceAfter=4),
-        "section_no": ParagraphStyle("section_no", parent=base["Normal"], fontName="V7Sans-Bold", fontSize=8, leading=10, textColor=ACCENT, spaceAfter=8),
+        "title": ParagraphStyle("title", parent=base["Title"], fontName="Times-Bold", fontSize=17.5, leading=20.5, alignment=TA_CENTER, spaceAfter=23),
+        "author": ParagraphStyle("author", parent=base["Normal"], fontName="Times-Roman", fontSize=10.5, leading=13, alignment=TA_CENTER, spaceAfter=0),
+        "abstract": ParagraphStyle("abstract", parent=base["BodyText"], fontName="Times-Roman", fontSize=9.7, leading=11.8, alignment=TA_JUSTIFY, leftIndent=0.52*inch, rightIndent=0.52*inch, spaceAfter=19),
+        "h2": ParagraphStyle("h2", parent=base["Heading2"], fontName="Times-Bold", fontSize=12.1, leading=14.0, alignment=TA_LEFT, spaceBefore=8, spaceAfter=5.5, keepWithNext=True),
+        "body": ParagraphStyle("body", parent=base["BodyText"], fontName="Times-Roman", fontSize=9.9, leading=12.0, alignment=TA_JUSTIFY, spaceAfter=6.4, firstLineIndent=0.23*inch, allowWidows=0, allowOrphans=0),
+        "body_noindent": ParagraphStyle("body_noindent", parent=base["BodyText"], fontName="Times-Roman", fontSize=9.9, leading=12.0, alignment=TA_JUSTIFY, spaceAfter=6.4, firstLineIndent=0, allowWidows=0, allowOrphans=0),
+        "equation": ParagraphStyle("equation", parent=base["BodyText"], fontName="Courier", fontSize=9.1, leading=11, alignment=TA_CENTER, spaceBefore=3, spaceAfter=8),
+        "list": ParagraphStyle("list", parent=base["BodyText"], fontName="Times-Roman", fontSize=9.8, leading=11.9, alignment=TA_JUSTIFY, leftIndent=0.18*inch, firstLineIndent=0, spaceAfter=2.5),
     }
 
 
-def parse_body(source: str, s: dict) -> list:
+def parse(source: str, st: dict) -> list:
     lines = source.splitlines()
     start = next(i for i, line in enumerate(lines) if line.strip() == "## Abstract")
     lines = lines[start:]
-    story: list = []
-    paragraph: list[str] = []
-    list_items: list[str] = []
-    section_count = 0
+    story = []
+    paragraph = []
+    numbered = []
+    in_abstract = False
+    first_after_heading = True
 
-    def flush_paragraph() -> None:
+    def flush_para():
+        nonlocal first_after_heading
         if paragraph:
-            story.append(Paragraph(inline(" ".join(part.strip() for part in paragraph)), s["body"]))
+            text = " ".join(x.strip() for x in paragraph)
+            style = st["body_noindent"] if first_after_heading else st["body"]
+            story.append(Paragraph(inline(text), style))
             paragraph.clear()
+            first_after_heading = False
 
-    def flush_list() -> None:
-        if list_items:
-            flow = [ListItem(Paragraph(inline(item), s["list"])) for item in list_items]
-            story.append(ListFlowable(flow, bulletType="bullet", start="circle", leftIndent=18, bulletFontName="V7Sans"))
-            story.append(Spacer(1, 5))
-            list_items.clear()
+    def flush_numbered():
+        if numbered:
+            items=[ListItem(Paragraph(inline(item),st["list"])) for item in numbered]
+            story.append(ListFlowable(items, bulletType="1", start="1", leftIndent=0.28*inch, bulletFontName="Times-Roman", bulletFontSize=9.5))
+            story.append(Spacer(1,4))
+            numbered.clear()
 
-    for raw in lines:
-        line = raw.rstrip()
-        if not line.strip():
-            flush_paragraph()
-            flush_list()
+    i=0
+    while i < len(lines):
+        raw=lines[i].rstrip()
+        line=raw.strip()
+        if line == "## Abstract":
+            flush_para(); flush_numbered(); in_abstract=True
+            i += 1
+            # gather abstract paragraph(s) until next H2
+            parts=[]
+            while i < len(lines) and not lines[i].startswith("## "):
+                if lines[i].strip(): parts.append(lines[i].strip())
+                i += 1
+            story.append(Paragraph("<b>Abstract.</b> " + inline(" ".join(parts)), st["abstract"]))
+            in_abstract=False
             continue
+        if not line:
+            flush_para(); flush_numbered(); i+=1; continue
         if line.startswith("## "):
-            flush_paragraph()
-            flush_list()
-            if story:
-                story.append(PageBreak())
-            section_count += 1
-            label = "FOUNDATION" if section_count == 1 else f"SECTION {section_count - 1:02d}"
-            story.append(Paragraph(label, s["section_no"]))
-            story.append(Paragraph(inline(line[3:]), s["h2"]))
-            story.append(HRFlowable(width="100%", thickness=1.2, color=PALE, spaceAfter=16))
-        elif line.startswith("### "):
-            flush_paragraph()
-            flush_list()
-            if line.startswith("### 2.5 "):
-                story.append(PageBreak())
-            story.append(Paragraph(inline(line[4:]), s["h3"]))
-        elif re.match(r"^[-*] ", line):
-            flush_paragraph()
-            list_items.append(re.sub(r"^[-*] ", "", line))
+            flush_para(); flush_numbered();
+            story.append(Paragraph(inline(line[3:]), st["h2"]))
+            first_after_heading=True
+        elif re.match(r"^\[\[diagram:[a-z-]+\]\]\s+.+$", line):
+            flush_para(); flush_numbered()
+            m=re.match(r"^\[\[diagram:([a-z-]+)\]\]\s+(.+)$", line)
+            story.append(Spacer(1,4))
+            story.append(Diagram(m.group(1), m.group(2)))
+            story.append(Spacer(1,8))
+            first_after_heading=False
+        elif re.match(r"^\d+\.\s+", line):
+            flush_para(); numbered.append(re.sub(r"^\d+\.\s+", "", line))
+        elif line.startswith("`") and line.endswith("`") and line.count("`")==2:
+            flush_para(); flush_numbered(); story.append(Paragraph(inline(line[1:-1]), st["equation"])); first_after_heading=False
         else:
-            flush_list()
-            paragraph.append(line)
-    flush_paragraph()
-    flush_list()
+            flush_numbered(); paragraph.append(line)
+        i += 1
+    flush_para(); flush_numbered()
     return story
 
 
 def build() -> None:
-    register_fonts()
-    s = styles()
     source = SOURCE.read_text(encoding="utf-8")
     TEXT_OUT.write_text(source.rstrip() + "\n", encoding="utf-8")
+    st = styles()
 
     doc = BaseDocTemplate(
-        str(PDF_OUT), pagesize=LETTER, leftMargin=0.78 * inch, rightMargin=0.78 * inch,
-        topMargin=0.82 * inch, bottomMargin=0.72 * inch,
-        title="The Compressible Content Architecture, v0.4",
-        author="Virtue7 Writing Kit",
-        subject="A Personal, Governed Runtime for Writing, Research, and Multi-Format Production",
+        str(PDF_OUT),
+        pagesize=LETTER,
+        leftMargin=0.91*inch,
+        rightMargin=0.91*inch,
+        topMargin=0.68*inch,
+        bottomMargin=0.66*inch,
+        title=TITLE,
+        author=AUTHOR,
+        subject="Chat, content, automation, and minimum-sufficient loading",
     )
-    width, height = LETTER
-    cover_frame = Frame(0.82 * inch, 0.8 * inch, width - 1.64 * inch, height - 1.6 * inch, id="cover", showBoundary=0)
-    body_frame = Frame(doc.leftMargin, doc.bottomMargin, doc.width, doc.height, id="body", showBoundary=0)
-    doc.addPageTemplates([
-        PageTemplate(id="Cover", frames=[cover_frame], onPage=cover, autoNextPageTemplate="Body"),
-        PageTemplate(id="Body", frames=[body_frame], onPage=page_header_footer),
-    ])
+    frame=Frame(doc.leftMargin, doc.bottomMargin, doc.width, doc.height, id="paper", showBoundary=0)
+    doc.addPageTemplates([PageTemplate(id="Paper", frames=[frame], onPage=footer)])
 
-    story = [
-        Spacer(1, 0.62 * inch),
-        Paragraph("VIRTUE7 WRITING KIT · OPEN WORKING PAPER", s["cover_kicker"]),
-        Paragraph("The Compressible<br/>Content Architecture,<br/>v0.4", s["cover_title"]),
-        Paragraph("A Personal, Governed Runtime for Writing, Research, and Multi-Format Production", s["cover_subtitle"]),
-        HRFlowable(width="28%", thickness=3, color=ACCENT, hAlign="LEFT", spaceAfter=28),
-        Spacer(1, 2.15 * inch),
-        Paragraph("Reference implementation<br/>August 2026<br/>Open source · model neutral · white-label output", s["cover_meta"]),
-        PageBreak(),
+    story=[
+        Spacer(1,0.33*inch),
+        Paragraph(TITLE,st["title"]),
+        Paragraph(AUTHOR,st["author"]),
+        Paragraph(DATE,st["author"]),
+        Spacer(1,0.34*inch),
     ]
-    story.extend(parse_body(source, s))
+    story.extend(parse(source,st))
     doc.build(story)
     print(PDF_OUT)
     print(TEXT_OUT)

@@ -1,0 +1,35 @@
+# Failure and repair: interpretation-to-fact
+
+## Unsafe input
+
+```yaml
+source_status: interpretation
+output_status: supplied_fact
+```
+
+## Gate report
+
+**Status: Block**
+
+- Transformation converts a non-factual classification into fact or quotation.
+
+## Repair instruction
+
+Preserve the legitimate user goal while removing the governance failure. Do not bypass the gate.
+
+## Repaired input
+
+```yaml
+source_status: interpretation
+output_status: interpretation
+```
+
+## Recheck
+
+**Status: Pass**
+
+The repaired state satisfies the deterministic governance condition and may proceed to the next applicable gate.
+
+## Approval state
+
+The repaired artifact remains Draft until the human approves its visible content.

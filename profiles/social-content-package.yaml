@@ -1,9 +1,20 @@
+version: 0.5.0
 id: social_content_package
 name: Social and Release Package
 default_prose_mode: creator_production
 default_form_lock: adaptive
-required_inputs: [approved_source, audience, channels, desired_action]
-required_sections: [source_kernel, titles, description, channel_assets, calls_to_action, release_checklist]
+required_inputs:
+- approved_source
+- audience
+- channels
+- desired_action
+required_sections:
+- source_kernel
+- titles
+- description
+- channel_assets
+- calls_to_action
+- release_checklist
 structure:
   claim_consistency: required
   channel_adaptation: required

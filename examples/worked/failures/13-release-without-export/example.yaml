@@ -1,0 +1,6 @@
+id: 13-release-without-export
+kind: failure_repair
+governance_case: release-without-export
+gate: lifecycle_transition
+expected_initial_status: Block
+expected_repaired_status: Pass

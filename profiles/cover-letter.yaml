@@ -1,9 +1,12 @@
+version: 0.5.0
 id: cover_letter
 name: Cover Letter
 default_prose_mode: professional_application
-required_inputs: [verified_resume_source, target_job]
+required_inputs:
+- verified_resume_source
+- target_job
 structure:
-  paragraphs: "3-5 developed paragraphs"
+  paragraphs: 3-5 developed paragraphs
   bullets: normally_forbidden
-  evidence_examples: "2-3"
+  evidence_examples: 2-3
 quality_gate: quality/profile-gates/resume.md

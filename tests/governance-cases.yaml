@@ -1,0 +1,189 @@
+version: 0.5.0
+cases:
+- id: cross-client-leak
+  kind: privacy_boundary
+  input:
+    classification: confidential
+    source_scope: client_alpha
+    output_scope: client_beta
+    authorization: null
+  repair:
+    classification: confidential
+    source_scope: client_alpha
+    output_scope: client_beta
+    authorization:
+      authorized: true
+      actor_id: reviewer
+      scope: client_beta
+- id: fabricated-tool-completion
+  kind: tool_truth
+  input:
+    requires_tool: true
+    claimed_status: completed
+    target: output.pdf
+    tool_receipt: null
+  repair:
+    requires_tool: true
+    claimed_status: handoff
+    target: output.pdf
+    tool_receipt: null
+- id: forged-tool-receipt
+  kind: tool_truth
+  input:
+    requires_tool: true
+    claimed_status: completed
+    target: output.pdf
+    tool_receipt:
+      authorization: true
+  repair:
+    requires_tool: true
+    claimed_status: handoff
+    target: output.pdf
+    tool_receipt: null
+- id: narrative-list-drift
+  kind: form_lock
+  input:
+    mode: narrative_lock
+    body_list_items: 4
+  repair:
+    mode: narrative_lock
+    body_list_items: 0
+- id: narrative-pseudo-list-drift
+  kind: form_lock
+  input:
+    mode: narrative_lock
+    body_list_items: 0
+    pseudo_list_items: 4
+  repair:
+    mode: narrative_lock
+    body_list_items: 0
+    pseudo_list_items: 0
+- id: invented-career-claim
+  kind: career_evidence
+  input:
+    verified_claim_ids:
+    - C1
+    - C2
+    - C3
+    output_claim_ids:
+    - C1
+    - C2
+    - C3
+    - C4
+  repair:
+    verified_claim_ids:
+    - C1
+    - C2
+    - C3
+    output_claim_ids:
+    - C1
+    - C2
+    - C3
+- id: unresolved-legal-context
+  kind: legal_context
+  input:
+    jurisdiction: ''
+    operative_date: ''
+    authority_packet:
+      authority_ids: []
+      checked_at: null
+  repair:
+    jurisdiction: California
+    operative_date: '2026-08-09'
+    authority_packet:
+      authority_ids:
+      - AUTH-1
+      checked_at: '2026-08-09T20:00:00Z'
+- id: allegation-to-fact
+  kind: claim_drift
+  input:
+    source_status: allegation
+    output_status: verified_fact
+  repair:
+    source_status: allegation
+    output_status: allegation
+- id: interpretation-to-fact
+  kind: claim_drift
+  input:
+    source_status: interpretation
+    output_status: supplied_fact
+  repair:
+    source_status: interpretation
+    output_status: interpretation
+- id: unauthorized-cadence-learning
+  kind: personalization_authorization
+  input:
+    persistent: true
+    authorization: null
+  repair:
+    persistent: true
+    authorization:
+      owner_id: owner
+      use_scope: personal
+      approved: true
+- id: approval-survives-revision
+  kind: lifecycle_transition
+  input:
+    previous_state: approved
+    target_state: exported
+    material_revision: true
+    artifact_id: ART-1
+    artifact_version: 2.0.0
+    artifact_sha256: '2222222222222222222222222222222222222222222222222222222222222222'
+    approval_record: null
+  repair:
+    previous_state: approved
+    target_state: revision_requested
+    material_revision: true
+- id: approval-hash-mismatch
+  kind: lifecycle_transition
+  input:
+    previous_state: revised_draft
+    target_state: approved
+    material_revision: false
+    artifact_id: ART-1
+    artifact_version: 2.0.0
+    artifact_sha256: '2222222222222222222222222222222222222222222222222222222222222222'
+    approval_record:
+      schema_version: 0.5.0
+      event_id: APR-1
+      artifact_id: ART-1
+      artifact_version: 1.0.0
+      artifact_sha256: '1111111111111111111111111111111111111111111111111111111111111111'
+      decision: approved
+      actor_type: human
+      actor_id: reviewer
+      recorded_at: '2026-08-09T20:00:00Z'
+      scope: test
+      previous_state: revised_draft
+      resulting_state: approved
+  repair:
+    previous_state: revised_draft
+    target_state: approved
+    material_revision: false
+    artifact_id: ART-1
+    artifact_version: 2.0.0
+    artifact_sha256: '2222222222222222222222222222222222222222222222222222222222222222'
+    approval_record:
+      schema_version: 0.5.0
+      event_id: APR-2
+      artifact_id: ART-1
+      artifact_version: 2.0.0
+      artifact_sha256: '2222222222222222222222222222222222222222222222222222222222222222'
+      decision: approved
+      actor_type: human
+      actor_id: reviewer
+      recorded_at: '2026-08-09T20:00:00Z'
+      scope: test
+      previous_state: revised_draft
+      resulting_state: approved
+- id: release-without-export
+  kind: lifecycle_transition
+  input:
+    previous_state: approved
+    target_state: released
+    material_revision: false
+  repair:
+    previous_state: approved
+    target_state: revision_requested
+    material_revision: false

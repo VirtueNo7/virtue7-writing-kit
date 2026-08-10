@@ -1,6 +1,7 @@
-version: 0.4.0
+version: 0.5.0
 name: Prompt & Playbook Library
-load_policy: load the index and one selected playbook file; never preload the full library
+load_policy: load the index and one selected playbook file; never preload the full
+  library
 packs:
   creator: library/playbooks/creator.yaml
   writer: library/playbooks/writer.yaml
@@ -11,5 +12,18 @@ packs:
   company_admin: library/playbooks/company-admin.yaml
   career: library/playbooks/career.yaml
 card_contract:
-  required: [id, title, starter, outcome, route, inputs, outputs, gates, tool_contract]
-  optional: [profile, form_lock, risk, approval]
+  required:
+  - id
+  - title
+  - starter
+  - outcome
+  - route
+  - inputs
+  - outputs
+  - gates
+  - tool_contract
+  optional:
+  - profile
+  - form_lock
+  - risk
+  - approval

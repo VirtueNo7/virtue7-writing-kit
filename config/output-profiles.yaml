@@ -1,8 +1,9 @@
-version: 0.4.0
+version: 0.5.0
 registry:
   children_picture_book: profiles/children-picture-book.yaml
   children_chapter_book: profiles/children-chapter-book.yaml
   narrative_nonfiction: profiles/narrative-nonfiction.yaml
+  spoken_argument: profiles/spoken-argument.yaml
   essay_article: profiles/essay-article.yaml
   research_paper: profiles/research-paper.yaml
   technical_manual: profiles/technical-manual.yaml

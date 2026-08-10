@@ -1,5 +1,5 @@
 pack: product
-version: 0.4.0
+version: 0.5.0
 playbooks:
   - id: opportunity-brief
     title: Frame the Product Opportunity
@@ -9,7 +9,7 @@ playbooks:
     profile: product_brief
     inputs: [user evidence, business objective, constraints]
     outputs: [opportunity brief, assumption ledger, research gaps]
-    gates: [evidence, semantic finish, approval]
+    gates: [evidence, semantic_finish, approval]
     tool_contract: "Native for supplied inputs; analytics and repository retrieval require external tools."
   - id: requirement-builder
     title: Build Requirements
@@ -19,7 +19,7 @@ playbooks:
     profile: product_brief
     inputs: [approved opportunity, users, constraints, system context]
     outputs: [requirements, non-goals, acceptance criteria, dependency map]
-    gates: [profile structure, consistency, approval]
+    gates: [profile_structure, consistency, approval]
     tool_contract: native
   - id: release-decision
     title: Prepare a Release Decision
@@ -38,5 +38,5 @@ playbooks:
     route: research/evidence-brief
     inputs: [feedback corpus, segmentation, decision context]
     outputs: [theme map, counter-signals, evidence excerpts, next tests]
-    gates: [privacy, evidence, semantic finish]
+    gates: [privacy, evidence, semantic_finish]
     tool_contract: "Native for supplied feedback; data retrieval and quantitative analysis may require external tools."

@@ -1,26 +1,40 @@
-version: 0.4.0
+version: 0.5.0
 modes:
   adaptive:
-    purpose: "Use the structure required by the selected output profile."
+    purpose: Use the structure required by the selected output profile.
     body_lists: profile_controlled
     headings: profile_controlled
     fragments: profile_controlled
   preserve_form:
-    purpose: "Preserve the user's approved paragraph, heading, and list behaviour unless the selected profile requires otherwise."
+    purpose: Preserve the user's approved paragraph, heading, and list behaviour unless
+      the selected profile requires otherwise.
     evidence_required: true
     source_bullets_define_output: false
   narrative_lock:
-    purpose: "Protect continuous prose from bullet, heading, fragment, and outline drift."
-    default_for: [children_picture_book, children_chapter_book, fiction_short_story, novel_chapter, narrative_nonfiction, essay_article]
+    purpose: Protect continuous prose from bullet, heading, fragment, and outline
+      drift.
+    default_for:
+    - children_picture_book
+    - children_chapter_book
+    - fiction_short_story
+    - novel_chapter
+    - narrative_nonfiction
+    - essay_article
+    - spoken_argument
     body_lists: forbidden_unless_explicit
     numbered_lists: forbidden_unless_explicit
     fragment_stacks: revise
     excessive_headings: revise
     visible_outline_scaffolding: block
-    one_sentence_paragraphs: "Permitted only for deliberate rhythm or emphasis."
+    one_sentence_paragraphs: Permitted only for deliberate rhythm or emphasis.
+    pseudo_lists: revise_into_developed_prose_or_explicit_list_when_permitted
+    short_point_sequences: Do not simulate lists with successive one-sentence paragraphs
+      or standalone fragments. In continuous prose, integrate short points into developed
+      paragraphs. When the profile or current instruction permits a list, render the
+      points as explicit bullets or a numbered list.
 precedence:
-  - explicit_current_instruction
-  - legitimate_output_profile_structure
-  - active_form_lock
-  - approved_voice_evidence
-  - neutral_default
+- explicit_current_instruction
+- legitimate_output_profile_structure
+- active_form_lock
+- approved_voice_evidence
+- neutral_default

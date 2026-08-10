@@ -1,0 +1,14 @@
+schema_version: 0.5.0
+event_id: APR-[EVENT_ID]
+artifact_id: "[ARTIFACT_ID]"
+artifact_version: "[ARTIFACT_VERSION]"
+artifact_sha256: "[64_LOWERCASE_HEX_CHARACTERS]"
+decision: approved
+actor_type: human
+actor_id: "[APPROVER_ID]"
+authority: "[WHY_THIS_PERSON_CAN_APPROVE]"
+recorded_at: "[ISO_8601_UTC]"
+scope: "[APPROVAL_SCOPE]"
+previous_state: revised_draft
+resulting_state: approved
+reason: "[OPTIONAL_DECISION_NOTE]"

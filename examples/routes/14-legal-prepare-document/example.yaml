@@ -1,0 +1,14 @@
+id: 14-legal-prepare-document
+kind: route
+capability: legal
+route: legal/prepare-document
+profile: legal_memorandum
+form_lock: adaptive
+playbooks:
+- legal/issue-and-authority-map
+- legal/chronology-and-exhibits
+expected_structural_status: Pass
+source_status: synthetic_fixture_not_independently_verified
+complete_artifact: false
+tool_boundary: Preparation from supplied material is complete. Currency checks, citators,
+  filing, and legal judgment require qualified tools or people.

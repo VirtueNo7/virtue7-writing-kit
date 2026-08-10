@@ -1,0 +1,6 @@
+id: 06-invented-career-claim
+kind: failure_repair
+governance_case: invented-career-claim
+gate: career_evidence
+expected_initial_status: Block
+expected_repaired_status: Pass

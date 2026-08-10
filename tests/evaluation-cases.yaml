@@ -1,23 +1,147 @@
-version: 0.4.0
+version: 0.5.0
+fixture_directory: tests/profile-fixtures
 cases:
-  - {file: 01_childrens_read_aloud.md, profile: children_picture_book, expect: Pass}
-  - {file: 02_interface_clarity_technical_guidance.md, profile: technical_manual, expect: Pass}
-  - {file: 03_strategic_historical_essay.md, profile: essay_article, expect: Pass}
-  - {file: 04_research_brief.md, profile: research_paper, expect: Pass}
-  - {file: 05_california_legal_memo.md, profile: legal_memorandum, expect: Pass}
-  - {file: 06_resume_profile.md, profile: resume, expect: Pass}
-  - {file: 07_job_search_brief.md, profile: job_search_brief, expect: Pass}
-  - {file: 08_fragmented_control.md, profile: essay_article, expect: Block}
-  - {file: 09_child_bullet_drift.md, profile: children_picture_book, expect: Block}
-  - {file: 10_technical_novelized.md, profile: technical_manual, expect: Block}
-  - {file: 11_strategy_outline.md, profile: essay_article, expect: Block}
-  - {file: 12_research_no_sources.md, profile: research_paper, expect: Block}
-  - {file: 13_legal_no_jurisdiction.md, profile: legal_memorandum, expect: Block}
-  - {file: 14_resume_as_paragraphs.md, profile: resume, expect: Block}
-  - {file: 15_job_search_vague.md, profile: job_search_brief, expect: Block}
-  - {file: 16_generic_strategy_sludge.md, profile: essay_article, expect: Block}
-  - {file: 17_freestyle_opening_statement.md, profile: essay_article, expect: Pass}
-  - {file: 18_narrative_lock_chapter.md, profile: novel_chapter, expect: Pass}
-  - {file: 19_narrative_lock_bullet_drift.md, profile: novel_chapter, expect: Block}
-  - {file: 20_operating_procedure.md, profile: standard_operating_procedure, expect: Pass}
-  - {file: 21_operating_procedure_vague.md, profile: standard_operating_procedure, expect: Block}
+- file: children_picture_book__pass.md
+  profile: children_picture_book
+  expect: Pass
+- file: children_picture_book__block.md
+  profile: children_picture_book
+  expect: Block
+- file: children_chapter_book__pass.md
+  profile: children_chapter_book
+  expect: Pass
+- file: children_chapter_book__block.md
+  profile: children_chapter_book
+  expect: Block
+- file: narrative_nonfiction__pass.md
+  profile: narrative_nonfiction
+  expect: Pass
+- file: narrative_nonfiction__block.md
+  profile: narrative_nonfiction
+  expect: Block
+- file: spoken_argument__pass.md
+  profile: spoken_argument
+  expect: Pass
+- file: spoken_argument__block.md
+  profile: spoken_argument
+  expect: Block
+- file: essay_article__pass.md
+  profile: essay_article
+  expect: Pass
+- file: essay_article__block.md
+  profile: essay_article
+  expect: Block
+- file: research_paper__pass.md
+  profile: research_paper
+  expect: Pass
+- file: research_paper__block.md
+  profile: research_paper
+  expect: Block
+- file: technical_manual__pass.md
+  profile: technical_manual
+  expect: Pass
+- file: technical_manual__block.md
+  profile: technical_manual
+  expect: Block
+- file: business_report__pass.md
+  profile: business_report
+  expect: Pass
+- file: business_report__block.md
+  profile: business_report
+  expect: Block
+- file: workbook_guide__pass.md
+  profile: workbook_guide
+  expect: Pass
+- file: workbook_guide__block.md
+  profile: workbook_guide
+  expect: Block
+- file: resume__pass.md
+  profile: resume
+  expect: Pass
+- file: resume__block.md
+  profile: resume
+  expect: Block
+- file: cover_letter__pass.md
+  profile: cover_letter
+  expect: Pass
+- file: cover_letter__block.md
+  profile: cover_letter
+  expect: Block
+- file: legal_memorandum__pass.md
+  profile: legal_memorandum
+  expect: Pass
+- file: legal_memorandum__block.md
+  profile: legal_memorandum
+  expect: Block
+- file: creator_episode__pass.md
+  profile: creator_episode
+  expect: Pass
+- file: creator_episode__block.md
+  profile: creator_episode
+  expect: Block
+- file: interview_dossier__pass.md
+  profile: interview_dossier
+  expect: Pass
+- file: interview_dossier__block.md
+  profile: interview_dossier
+  expect: Block
+- file: clip_sheet__pass.md
+  profile: clip_sheet
+  expect: Pass
+- file: clip_sheet__block.md
+  profile: clip_sheet
+  expect: Block
+- file: job_search_brief__pass.md
+  profile: job_search_brief
+  expect: Pass
+- file: job_search_brief__block.md
+  profile: job_search_brief
+  expect: Block
+- file: fiction_short_story__pass.md
+  profile: fiction_short_story
+  expect: Pass
+- file: fiction_short_story__block.md
+  profile: fiction_short_story
+  expect: Block
+- file: novel_chapter__pass.md
+  profile: novel_chapter
+  expect: Pass
+- file: novel_chapter__block.md
+  profile: novel_chapter
+  expect: Block
+- file: brand_strategy__pass.md
+  profile: brand_strategy
+  expect: Pass
+- file: brand_strategy__block.md
+  profile: brand_strategy
+  expect: Block
+- file: product_brief__pass.md
+  profile: product_brief
+  expect: Pass
+- file: product_brief__block.md
+  profile: product_brief
+  expect: Block
+- file: standard_operating_procedure__pass.md
+  profile: standard_operating_procedure
+  expect: Pass
+- file: standard_operating_procedure__block.md
+  profile: standard_operating_procedure
+  expect: Block
+- file: meeting_decision_record__pass.md
+  profile: meeting_decision_record
+  expect: Pass
+- file: meeting_decision_record__block.md
+  profile: meeting_decision_record
+  expect: Block
+- file: social_content_package__pass.md
+  profile: social_content_package
+  expect: Pass
+- file: social_content_package__block.md
+  profile: social_content_package
+  expect: Block
+- file: fact_check_report__pass.md
+  profile: fact_check_report
+  expect: Pass
+- file: fact_check_report__block.md
+  profile: fact_check_report
+  expect: Block

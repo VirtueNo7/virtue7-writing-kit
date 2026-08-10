@@ -1,0 +1,57 @@
+version: 0.5.0
+form_lock_modes:
+- adaptive
+- preserve_form
+- narrative_lock
+prose_modes:
+- read_aloud_narrative
+- literary_narrative
+- narrative_nonfiction
+- spoken_argument
+- analytical_academic
+- procedural_instructional
+- professional_application
+- legal_analytical
+- creator_production
+artifact_states:
+- draft
+- revision_requested
+- revised_draft
+- approved
+- exported
+- released
+evidence_classes: &id001
+- supplied_fact
+- verified_fact
+- credible_report
+- quotation
+- interview_statement
+- interpretation
+- inference
+- reconstruction
+- allegation
+- disputed_fact
+- theory
+- unknown
+fact_check_statuses: *id001
+tool_states:
+- native
+- live_tools
+- human_approval
+artifact_transitions:
+  draft:
+  - revision_requested
+  - approved
+  revision_requested:
+  - revised_draft
+  revised_draft:
+  - revision_requested
+  - approved
+  approved:
+  - revision_requested
+  - exported
+  exported:
+  - revision_requested
+  - released
+  released:
+  - revision_requested

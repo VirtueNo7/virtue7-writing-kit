@@ -1,0 +1,13 @@
+id: 35-writing-revise-output
+kind: route
+capability: writing
+route: writing/revise-output
+profile: fiction_short_story
+form_lock: narrative_lock
+playbooks:
+- writer/revision-without-flattening
+expected_structural_status: Pass
+source_status: synthetic_fixture_not_independently_verified
+complete_artifact: false
+tool_boundary: The draft and revision are native. Export or publication requires a
+  supported tool and approval.

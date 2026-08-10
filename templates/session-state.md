@@ -3,39 +3,42 @@
 ```yaml
 project_id: ""
 project_title: ""
-kit_version: "0.4.0"
-current_gate: "Intent | References | Kernel | Matrix | Book Plan | Representative Unit | Full Draft | Validation | Release"
-last_approved_gate: ""
-approval_state: "Draft | Approved | Revised"
+kit_version: "0.5.0"
+capability: ""
+route: ""
+profile: ""
+form_lock: "adaptive | preserve_form | narrative_lock"
+artifact_state: "draft | revision_requested | revised_draft | approved | exported | released"
+approved_artifacts: []
+last_approved_artifact:
+  artifact_id: ""
+  version: ""
+  sha256: ""
+  approval_record_id: ""
 
 canonical:
-  kernel_file: ""
-  matrix_file: ""
-  plan_file: ""
+  records: []
   approved_invariants: []
 
-references:
-  register_file: ""
-  classified_count: 0
-  unresolved_count: 0
-  excluded_ids: []
-  active_packet_file: ""
-
-voice:
-  contract_file: ""
-  contract_state: "Not required | Draft | Approved | Revised"
-  approved_voice_reference_ids: []
-  project_native_canon_ids: []
+scope:
+  active: "personal | role | organization | client | channel | project"
+  profile_file: ""
+  data_classification: ""
 
 evidence:
-  source_register_file: ""
+  source_register: ""
+  claim_register: ""
   unresolved_claim_ids: []
 
 production:
-  current_unit_id: ""
-  latest_draft_file: ""
-  latest_provenance_file: ""
-  latest_drift_report: ""
+  current_artifact: ""
+  current_artifact_id: ""
+  current_artifact_version: ""
+  current_artifact_sha256: ""
+  latest_draft: ""
+  latest_gate_report: ""
+  latest_revision_instruction: ""
+  tool_receipt_ids: []
 
 next_action: ""
 unresolved_decisions: []

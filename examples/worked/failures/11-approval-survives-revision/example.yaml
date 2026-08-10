@@ -1,0 +1,6 @@
+id: 11-approval-survives-revision
+kind: failure_repair
+governance_case: approval-survives-revision
+gate: lifecycle_transition
+expected_initial_status: Block
+expected_repaired_status: Pass
