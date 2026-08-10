@@ -17,3 +17,4 @@ Any card can be saved as a custom command. Change its name, inputs, output shape
 - `human-approval`: a person must approve the consequential output or action.
 
 The playbooks are examples, not ceilings. Create new cards with `Make this a command` or the personalization route in `capabilities/personalization/routes/create-command.md`.
+

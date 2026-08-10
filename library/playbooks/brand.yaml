@@ -1,5 +1,5 @@
 pack: brand
-version: 0.4.0
+version: 0.5.0
 playbooks:
   - id: positioning-core
     title: Build the Positioning Core
@@ -9,7 +9,7 @@ playbooks:
     profile: brand_strategy
     inputs: [customer evidence, category, offer, alternatives]
     outputs: [positioning core, proof map, prohibited claims, open questions]
-    gates: [evidence, semantic finish, approval]
+    gates: [evidence, semantic_finish, approval]
     tool_contract: "Native for supplied inputs; current competitor research requires live tools."
   - id: voice-system
     title: Build a Brand Voice System
@@ -18,7 +18,7 @@ playbooks:
     route: personalization/learn-cadence
     inputs: [authorized brand corpus, audiences, channels]
     outputs: [voice contract, cadence profile, do-and-don't examples]
-    gates: [authorization, cadence fidelity, privacy]
+    gates: [authorization, cadence_fidelity, privacy]
     tool_contract: native
   - id: campaign-architecture
     title: Build a Campaign
@@ -28,7 +28,7 @@ playbooks:
     profile: social_content_package
     inputs: [positioning core, campaign objective, audiences, channels]
     outputs: [campaign kernel, asset matrix, copy drafts, approval map]
-    gates: [claim consistency, cadence fidelity, approval]
+    gates: [claim_consistency, cadence_fidelity, approval]
     tool_contract: "Native for development; design, publishing, and measurement require external tools."
   - id: claim-audit
     title: Audit Brand Claims
@@ -37,5 +37,5 @@ playbooks:
     route: review/release-audit
     inputs: [copy, substantiation, market or jurisdiction, approval policy]
     outputs: [claim register, risk notes, revision options]
-    gates: [evidence, publication risk, approval]
+    gates: [evidence, publication_risk, approval]
     tool_contract: "Native for supplied proof; current regulatory verification requires live authoritative sources and qualified review."

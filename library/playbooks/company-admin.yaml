@@ -1,5 +1,5 @@
 pack: company_admin
-version: 0.4.0
+version: 0.5.0
 playbooks:
   - id: sop-builder
     title: Build a Working SOP
@@ -9,7 +9,7 @@ playbooks:
     profile: standard_operating_procedure
     inputs: [current process, owners, systems, exceptions, controls]
     outputs: [SOP, control points, escalation path, change log]
-    gates: [profile structure, privacy, approval]
+    gates: [profile_structure, privacy, approval]
     tool_contract: native
   - id: meeting-to-decisions
     title: Convert a Meeting into Decisions
