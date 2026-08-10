@@ -3,6 +3,18 @@ from __future__ import annotations
 from pathlib import Path
 import argparse, json, re, sys
 
+SUPPORTED_PROFILES = {
+    'children_picture_book', 'children_chapter_book', 'narrative_nonfiction', 'spoken_argument',
+    'essay_article', 'research_paper', 'technical_manual', 'business_report',
+    'workbook_guide', 'resume', 'cover_letter', 'legal_memorandum',
+    'creator_episode', 'interview_dossier', 'clip_sheet', 'job_search_brief',
+    'fiction_short_story', 'novel_chapter', 'brand_strategy', 'product_brief',
+    'standard_operating_procedure', 'meeting_decision_record',
+    'social_content_package', 'fact_check_report',
+}
+
+EVIDENCE_SENSITIVE_PROFILES = SUPPORTED_PROFILES - {'children_picture_book','children_chapter_book','workbook_guide','fiction_short_story','novel_chapter'}
+
 GENERIC_PHRASES = [
     'transformative landscape','living tapestry','brighter horizon','unlock potential',
     'gateway to renewal','profound testament','evolving paradigm','authentic responsiveness',
@@ -35,14 +47,18 @@ def metrics(text: str):
         'generic_hits_per_1000': round(generic_hits/max(len(words),1)*1000,2)
     }
 
-def analyse(profile: str, text: str):
+def evidence_attested(context):
+    r=context.get('evidence_attestation') if isinstance(context,dict) else None
+    return bool(isinstance(r,dict) and r.get('status')=='reviewed' and r.get('scope') and r.get('reviewer_type') in {'human','test_fixture'} and r.get('reviewer_id') and r.get('source_ids'))
+
+def analyse(profile: str, text: str, context=None):
     m=metrics(text); low=text.lower(); findings=[]
     def block(cond,msg):
         if cond: findings.append({'severity':'Block','message':msg})
     def req(cond,msg): block(not cond,msg)
 
     # universal semantic finish
-    block(m['generic_phrase_hits'] >= 4 or m['generic_hits_per_1000'] >= 7,
+    block(m['generic_hits_per_1000'] >= 8,
           'Generic abstraction density indicates polished but low-information prose.')
 
     if profile == 'children_picture_book':
@@ -53,11 +69,44 @@ def analyse(profile: str, text: str):
         lines=[p.strip() for p in text.split('\n') if 3<=len(p.strip())<=70]
         req(any(text.count(line)>=2 for line in lines),'No repeated refrain or participation cue detected.')
 
+    elif profile == 'children_chapter_book':
+        req(m['list_items']==0,'Chapter-book narrative must not use body lists.')
+        req(m['heading_count']<=3,'Chapter-book sample has excessive interior headings.')
+        req(m['paragraphs']>=4,'Chapter-book sample needs developed scenes and paragraphs.')
+        req(m['words']>=250,'Chapter-book sample is too short to demonstrate narrative movement.')
+
+    elif profile == 'narrative_nonfiction':
+        req(m['list_items']<=2,'Narrative nonfiction has excessive body-list drift.')
+        req(m['heading_count']<=5,'Narrative nonfiction is over-sectioned.')
+        req(m['paragraphs']>=5,'Narrative nonfiction needs developed paragraph movement.')
+        req(any(x in low for x in ['source','record','evidence','according to']), 'Evidence boundary is not visible.')
+        req(any(x in low for x in ['suggests','however','cannot','uncertain','limitation']), 'Interpretive limits are not visible.')
+
+    elif profile == 'spoken_argument':
+        req(m['list_items']==0,'Spoken argument must remain continuous prose unless lists are explicitly requested.')
+        req(m['heading_count']<=1,'Spoken argument should have no interior headings unless the supplied form requires them.')
+        req(m['paragraphs']>=6,'Spoken argument needs developed paragraph movement.')
+        block(m['short_paragraph_ratio']>=0.5 and m['paragraphs']>=6,'Fragment stacks or slogan chains indicate Narrative Lock drift.')
+        req(any(x in low for x in ['evidence','record','timeline','fact','according to','source']), 'Evidence boundary is not visible.')
+        req(any(x in low for x in ['however','but','to be clear','does not mean','cannot','qualification','counterpoint']), 'Counterargument or qualification is not visible.')
+
     elif profile == 'technical_manual':
         req(m['heading_count']>=2,'Technical guidance needs navigational headings.')
         req(m['list_items']>=3,'Technical guidance needs visible rules or ordered steps.')
         req(any(v in low for v in ['use ','keep ','avoid ','confirm ','test ','group ','select ','open ']),'Direct action language is weak.')
         req(m['max_sentence_words']<=45,'At least one sentence is too dense for procedural guidance.')
+
+    elif profile == 'business_report':
+        for h in ['executive summary','findings','implications','recommendation']:
+            req(any(h in x.lower() for x in m['headings']),f'Missing business-report section: {h}.')
+        req(any(x in low for x in ['evidence','source','data']), 'Business report does not expose its evidence basis.')
+        req(any(x in low for x in ['recommend','decision','next step']), 'Business report lacks a decision-ready recommendation.')
+
+    elif profile == 'workbook_guide':
+        req(m['heading_count']>=3,'Workbook needs navigational headings.')
+        req(m['list_items']>=3,'Workbook needs usable exercises or steps.')
+        req(any(x in low for x in ['exercise','practice','activity']), 'Workbook has no exercise or practice activity.')
+        req(any(x in low for x in ['completion check','check your work','success check']), 'Workbook lacks a completion check.')
 
     elif profile in {'fiction_short_story', 'novel_chapter'}:
         req(m['list_items']==0,'Narrative Lock prohibits bullet or numbered lists in the story body.')
@@ -95,12 +144,34 @@ def analyse(profile: str, text: str):
         req(bool(re.search(r'\b\d+(?:\s|\s?percent|%)', low)), 'No quantified achievement detected in this test fixture.')
         block(bool(re.search(r'\b(i|me|my)\b', low)),'First-person resume phrasing detected.')
 
+    elif profile == 'cover_letter':
+        req(m['list_items']==0,'Cover letter should use developed paragraphs rather than lists.')
+        req(3<=m['paragraphs']<=7,'Cover letter should contain three to seven developed paragraphs.')
+        req(any(x in low for x in ['experience','delivered','led','built','improved','supported']), 'Cover letter lacks a concrete evidence example.')
+        req(any(x in low for x in ['role','position','team','organisation','organization']), 'Target role or organization is not visible.')
+
     elif profile == 'job_search_brief':
         req(m['heading_count']>=4,'Job brief lacks navigable role grouping.')
         req(m['list_items']>=8,'Job brief lacks structured decision fields.')
         for field in ['match rationale','verification needed','recommended action']:
             req(field in low,f'Missing decision field: {field}.')
         req('next step' in low,'No controlled handoff is present.')
+
+    elif profile == 'creator_episode':
+        for h in ['hook','central question','development','conclusion','next action']:
+            req(any(h in x.lower() for x in m['headings']),f'Missing creator-episode section: {h}.')
+        req(any(x in low for x in ['source','evidence','story']), 'Episode lacks an evidence or story beat.')
+
+    elif profile == 'interview_dossier':
+        for h in ['background','chronology','themes','verified claims','open questions','question arcs','risks']:
+            req(any(h in x.lower() for x in m['headings']),f'Missing interview-dossier section: {h}.')
+        req(m['list_items']>=5,'Interview dossier lacks scannable questions or evidence records.')
+
+    elif profile == 'clip_sheet':
+        for field in ['hook','context','in point','out point','title options','destination','rights']:
+            req(field in low,f'Missing clip-sheet field: {field}.')
+        req(bool(re.search(r'\b\d{1,2}:\d{2}(?::\d{2})?\b', text)), 'Clip sheet lacks a visible timecode.')
+        req(m['list_items']>=4 or '|' in text,'Clip sheet needs repeated records or a table.')
 
     elif profile == 'standard_operating_procedure':
         for h in ['purpose','scope','roles','procedure','exceptions','controls','records','escalation','review']:
@@ -130,6 +201,7 @@ def analyse(profile: str, text: str):
         req(any(x in low for x in ['verified fact','credible report','interpretation','allegation','theory','unknown']), 'Claim classification is absent.')
         req(len(re.findall(r'\b(?:19|20)\d{2}\b', text))>=2,'Source dating is insufficient.')
 
+
     elif profile == 'social_content_package':
         for h in ['source kernel','titles','description','channel assets','calls to action','release checklist']:
             req(any(h in x.lower() for x in m['headings']),f'Missing release-package section: {h}.')
@@ -138,11 +210,12 @@ def analyse(profile: str, text: str):
     else:
         findings.append({'severity':'Block','message':f'Unknown profile: {profile}'})
 
-    return {'status':'Block' if findings else 'Pass','profile':profile,'metrics':m,'findings':findings}
+    if profile in EVIDENCE_SENSITIVE_PROFILES and not evidence_attested(context): findings.append({'severity':'Block','message':'Evidence-sensitive profiles require a reviewed evidence attestation; structural conformance alone cannot pass.'})
+    return {'status':'Block' if findings else 'Pass','profile':profile,'metrics':m,'assurance':'evidence_attested' if evidence_attested(context) else 'structural_only','findings':findings}
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('path',type=Path); ap.add_argument('--profile',required=True); ap.add_argument('--json',action='store_true'); ap.add_argument('--expect',choices=['Pass','Block'])
-    a=ap.parse_args(); result=analyse(a.profile,a.path.read_text(encoding='utf-8'))
+    ap=argparse.ArgumentParser(); ap.add_argument('path',type=Path); ap.add_argument('--profile',required=True); ap.add_argument('--context',type=Path); ap.add_argument('--json',action='store_true'); ap.add_argument('--expect',choices=['Pass','Block'])
+    a=ap.parse_args(); context=json.loads(a.context.read_text(encoding='utf-8')) if a.context else None; result=analyse(a.profile,a.path.read_text(encoding='utf-8'),context)
     print(json.dumps(result,indent=2) if a.json else f"{a.path.name}: {result['status']} ({a.profile})\n"+'\n'.join('- '+x['message'] for x in result['findings']))
     if a.expect and result['status']!=a.expect: return 2
     return 0 if result['status']=='Pass' else 1
