@@ -1,0 +1,13 @@
+id: 19-personalization-learn-cadence
+kind: route
+capability: personalization
+route: personalization/learn-cadence
+profile: fiction_short_story
+form_lock: narrative_lock
+playbooks:
+- brand/voice-system
+expected_structural_status: Pass
+source_status: synthetic_fixture_not_independently_verified
+complete_artifact: false
+tool_boundary: The scoped record is complete. Public-source retrieval requires permission
+  and a live research tool.

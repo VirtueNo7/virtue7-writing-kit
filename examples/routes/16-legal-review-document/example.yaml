@@ -1,0 +1,13 @@
+id: 16-legal-review-document
+kind: route
+capability: legal
+route: legal/review-document
+profile: fact_check_report
+form_lock: preserve_form
+playbooks:
+- legal/contract-risk-pass
+expected_structural_status: Pass
+source_status: synthetic_fixture_not_independently_verified
+complete_artifact: false
+tool_boundary: Preparation from supplied material is complete. Currency checks, citators,
+  filing, and legal judgment require qualified tools or people.

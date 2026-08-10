@@ -1,0 +1,12 @@
+id: 17-personalization-create-command
+kind: route
+capability: personalization
+route: personalization/create-command
+profile: standard_operating_procedure
+form_lock: preserve_form
+playbooks: []
+expected_structural_status: Pass
+source_status: synthetic_fixture_not_independently_verified
+complete_artifact: false
+tool_boundary: The scoped record is complete. Public-source retrieval requires permission
+  and a live research tool.

@@ -1,0 +1,13 @@
+id: 25-resume-build-source
+kind: route
+capability: resume
+route: resume/build-source
+profile: resume
+form_lock: adaptive
+playbooks:
+- career/evidence-inventory
+expected_structural_status: Pass
+source_status: synthetic_fixture_not_independently_verified
+complete_artifact: false
+tool_boundary: The document is complete from supplied evidence. Listing verification
+  and submission require external tools.
