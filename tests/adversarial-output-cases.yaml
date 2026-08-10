@@ -1,0 +1,6 @@
+version: 0.5.0
+fixture_directory: tests/adversarial-fixtures
+cases:
+  - {file: legal-semantic-nonsense.md, profile: legal_memorandum, expect: Block}
+  - {file: research-fabricated-sources.md, profile: research_paper, expect: Block}
+  - {file: resume-invented-metrics.md, profile: resume, expect: Block}

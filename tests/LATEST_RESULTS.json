@@ -1,92 +1,21 @@
 [
   {
-    "file": "01_childrens_read_aloud.md",
+    "file": "children_picture_book__pass.md",
     "profile": "children_picture_book",
     "expected": "Pass",
     "actual": "Pass",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": []
   },
   {
-    "file": "02_interface_clarity_technical_guidance.md",
-    "profile": "technical_manual",
-    "expected": "Pass",
-    "actual": "Pass",
-    "ok": true,
-    "findings": []
-  },
-  {
-    "file": "03_strategic_historical_essay.md",
-    "profile": "essay_article",
-    "expected": "Pass",
-    "actual": "Pass",
-    "ok": true,
-    "findings": []
-  },
-  {
-    "file": "04_research_brief.md",
-    "profile": "research_paper",
-    "expected": "Pass",
-    "actual": "Pass",
-    "ok": true,
-    "findings": []
-  },
-  {
-    "file": "05_california_legal_memo.md",
-    "profile": "legal_memorandum",
-    "expected": "Pass",
-    "actual": "Pass",
-    "ok": true,
-    "findings": []
-  },
-  {
-    "file": "06_resume_profile.md",
-    "profile": "resume",
-    "expected": "Pass",
-    "actual": "Pass",
-    "ok": true,
-    "findings": []
-  },
-  {
-    "file": "07_job_search_brief.md",
-    "profile": "job_search_brief",
-    "expected": "Pass",
-    "actual": "Pass",
-    "ok": true,
-    "findings": []
-  },
-  {
-    "file": "08_fragmented_control.md",
-    "profile": "essay_article",
-    "expected": "Block",
-    "actual": "Block",
-    "ok": true,
-    "findings": [
-      {
-        "severity": "Block",
-        "message": "Essay is over-sectioned."
-      },
-      {
-        "severity": "Block",
-        "message": "Visible outline scaffolding dominates the prose."
-      },
-      {
-        "severity": "Block",
-        "message": "The essay lacks concrete anchors or specific evidence."
-      }
-    ]
-  },
-  {
-    "file": "09_child_bullet_drift.md",
+    "file": "children_picture_book__block.md",
     "profile": "children_picture_book",
     "expected": "Block",
     "actual": "Block",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": [
-      {
-        "severity": "Block",
-        "message": "Narrative body must not use bullet or numbered lists."
-      },
       {
         "severity": "Block",
         "message": "Length is outside the broad picture-book test range."
@@ -98,37 +27,99 @@
     ]
   },
   {
-    "file": "10_technical_novelized.md",
-    "profile": "technical_manual",
+    "file": "children_chapter_book__pass.md",
+    "profile": "children_chapter_book",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "children_chapter_book__block.md",
+    "profile": "children_chapter_book",
     "expected": "Block",
     "actual": "Block",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": [
       {
         "severity": "Block",
-        "message": "Technical guidance needs navigational headings."
+        "message": "Chapter-book sample needs developed scenes and paragraphs."
       },
       {
         "severity": "Block",
-        "message": "Technical guidance needs visible rules or ordered steps."
+        "message": "Chapter-book sample is too short to demonstrate narrative movement."
       }
     ]
   },
   {
-    "file": "11_strategy_outline.md",
-    "profile": "essay_article",
+    "file": "narrative_nonfiction__pass.md",
+    "profile": "narrative_nonfiction",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "narrative_nonfiction__block.md",
+    "profile": "narrative_nonfiction",
     "expected": "Block",
     "actual": "Block",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": [
       {
         "severity": "Block",
-        "message": "Essay or strategic narrative should remain continuous prose."
+        "message": "Narrative nonfiction needs developed paragraph movement."
       },
       {
         "severity": "Block",
-        "message": "Essay is over-sectioned."
-      },
+        "message": "Interpretive limits are not visible."
+      }
+    ]
+  },
+  {
+    "file": "spoken_argument__pass.md",
+    "profile": "spoken_argument",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "spoken_argument__block.md",
+    "profile": "spoken_argument",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Fragment stacks or slogan chains indicate Narrative Lock drift."
+      }
+    ]
+  },
+  {
+    "file": "essay_article__pass.md",
+    "profile": "essay_article",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "essay_article__block.md",
+    "profile": "essay_article",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
       {
         "severity": "Block",
         "message": "Argument needs developed paragraph movement."
@@ -140,15 +131,41 @@
     ]
   },
   {
-    "file": "12_research_no_sources.md",
+    "file": "research_paper__pass.md",
+    "profile": "research_paper",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "research_paper__block.md",
     "profile": "research_paper",
     "expected": "Block",
     "actual": "Block",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": [
       {
         "severity": "Block",
+        "message": "Missing research section: abstract."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing research section: background/literature."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing research section: evidence/results."
+      },
+      {
+        "severity": "Block",
         "message": "Missing research section: interpretation/discussion."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing research section: conclusion."
       },
       {
         "severity": "Block",
@@ -169,35 +186,125 @@
     ]
   },
   {
-    "file": "13_legal_no_jurisdiction.md",
-    "profile": "legal_memorandum",
+    "file": "technical_manual__pass.md",
+    "profile": "technical_manual",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "technical_manual__block.md",
+    "profile": "technical_manual",
     "expected": "Block",
     "actual": "Block",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": [
       {
         "severity": "Block",
-        "message": "Jurisdiction is not explicit."
+        "message": "Technical guidance needs navigational headings."
       },
       {
         "severity": "Block",
-        "message": "Controlling authority is not identified."
+        "message": "Technical guidance needs visible rules or ordered steps."
       },
       {
         "severity": "Block",
-        "message": "Fact or uncertainty boundary is weak."
-      },
-      {
-        "severity": "Block",
-        "message": "Informational status is not stated."
+        "message": "Direct action language is weak."
       }
     ]
   },
   {
-    "file": "14_resume_as_paragraphs.md",
+    "file": "business_report__pass.md",
+    "profile": "business_report",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "business_report__block.md",
+    "profile": "business_report",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing business-report section: executive summary."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing business-report section: findings."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing business-report section: implications."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing business-report section: recommendation."
+      },
+      {
+        "severity": "Block",
+        "message": "Business report lacks a decision-ready recommendation."
+      }
+    ]
+  },
+  {
+    "file": "workbook_guide__pass.md",
+    "profile": "workbook_guide",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "workbook_guide__block.md",
+    "profile": "workbook_guide",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Workbook needs navigational headings."
+      },
+      {
+        "severity": "Block",
+        "message": "Workbook needs usable exercises or steps."
+      },
+      {
+        "severity": "Block",
+        "message": "Workbook has no exercise or practice activity."
+      },
+      {
+        "severity": "Block",
+        "message": "Workbook lacks a completion check."
+      }
+    ]
+  },
+  {
+    "file": "resume__pass.md",
+    "profile": "resume",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "resume__block.md",
     "profile": "resume",
     "expected": "Block",
     "actual": "Block",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": [
       {
@@ -227,10 +334,247 @@
     ]
   },
   {
-    "file": "15_job_search_vague.md",
+    "file": "cover_letter__pass.md",
+    "profile": "cover_letter",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "cover_letter__block.md",
+    "profile": "cover_letter",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Cover letter should contain three to seven developed paragraphs."
+      },
+      {
+        "severity": "Block",
+        "message": "Cover letter lacks a concrete evidence example."
+      },
+      {
+        "severity": "Block",
+        "message": "Target role or organization is not visible."
+      }
+    ]
+  },
+  {
+    "file": "legal_memorandum__pass.md",
+    "profile": "legal_memorandum",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "legal_memorandum__block.md",
+    "profile": "legal_memorandum",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing legal memorandum section: issue."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing legal memorandum section: brief answer."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing legal memorandum section: analysis."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing legal memorandum section: conclusion."
+      },
+      {
+        "severity": "Block",
+        "message": "Jurisdiction is not explicit."
+      },
+      {
+        "severity": "Block",
+        "message": "Controlling authority is not identified."
+      },
+      {
+        "severity": "Block",
+        "message": "Fact or uncertainty boundary is weak."
+      },
+      {
+        "severity": "Block",
+        "message": "Informational status is not stated."
+      }
+    ]
+  },
+  {
+    "file": "creator_episode__pass.md",
+    "profile": "creator_episode",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "creator_episode__block.md",
+    "profile": "creator_episode",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing creator-episode section: hook."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing creator-episode section: central question."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing creator-episode section: development."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing creator-episode section: conclusion."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing creator-episode section: next action."
+      }
+    ]
+  },
+  {
+    "file": "interview_dossier__pass.md",
+    "profile": "interview_dossier",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "interview_dossier__block.md",
+    "profile": "interview_dossier",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing interview-dossier section: background."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing interview-dossier section: chronology."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing interview-dossier section: themes."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing interview-dossier section: verified claims."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing interview-dossier section: open questions."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing interview-dossier section: question arcs."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing interview-dossier section: risks."
+      },
+      {
+        "severity": "Block",
+        "message": "Interview dossier lacks scannable questions or evidence records."
+      }
+    ]
+  },
+  {
+    "file": "clip_sheet__pass.md",
+    "profile": "clip_sheet",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "clip_sheet__block.md",
+    "profile": "clip_sheet",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing clip-sheet field: hook."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing clip-sheet field: context."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing clip-sheet field: in point."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing clip-sheet field: out point."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing clip-sheet field: title options."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing clip-sheet field: destination."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing clip-sheet field: rights."
+      },
+      {
+        "severity": "Block",
+        "message": "Clip sheet lacks a visible timecode."
+      },
+      {
+        "severity": "Block",
+        "message": "Clip sheet needs repeated records or a table."
+      }
+    ]
+  },
+  {
+    "file": "job_search_brief__pass.md",
+    "profile": "job_search_brief",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "job_search_brief__block.md",
     "profile": "job_search_brief",
     "expected": "Block",
     "actual": "Block",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": [
       {
@@ -260,64 +604,168 @@
     ]
   },
   {
-    "file": "16_generic_strategy_sludge.md",
-    "profile": "essay_article",
+    "file": "fiction_short_story__pass.md",
+    "profile": "fiction_short_story",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "fiction_short_story__block.md",
+    "profile": "fiction_short_story",
     "expected": "Block",
     "actual": "Block",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": [
       {
         "severity": "Block",
-        "message": "Generic abstraction density indicates polished but low-information prose."
+        "message": "Narrative movement needs developed paragraphs."
       }
     ]
   },
   {
-    "file": "17_freestyle_opening_statement.md",
-    "profile": "essay_article",
-    "expected": "Pass",
-    "actual": "Pass",
-    "ok": true,
-    "findings": []
-  },
-  {
-    "file": "18_narrative_lock_chapter.md",
+    "file": "novel_chapter__pass.md",
     "profile": "novel_chapter",
     "expected": "Pass",
     "actual": "Pass",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": []
   },
   {
-    "file": "19_narrative_lock_bullet_drift.md",
+    "file": "novel_chapter__block.md",
     "profile": "novel_chapter",
     "expected": "Block",
     "actual": "Block",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": [
       {
         "severity": "Block",
-        "message": "Narrative Lock prohibits bullet or numbered lists in the story body."
+        "message": "Narrative movement needs developed paragraphs."
+      }
+    ]
+  },
+  {
+    "file": "brand_strategy__pass.md",
+    "profile": "brand_strategy",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "brand_strategy__block.md",
+    "profile": "brand_strategy",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing brand strategy section: audience."
       },
       {
         "severity": "Block",
-        "message": "Fragment stacks indicate narrative Form Lock drift."
+        "message": "Missing brand strategy section: problem."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing brand strategy section: promise."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing brand strategy section: proof."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing brand strategy section: difference."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing brand strategy section: boundaries."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing brand strategy section: open questions."
       }
     ]
   },
   {
-    "file": "20_operating_procedure.md",
-    "profile": "standard_operating_procedure",
+    "file": "product_brief__pass.md",
+    "profile": "product_brief",
     "expected": "Pass",
     "actual": "Pass",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": []
   },
   {
-    "file": "21_operating_procedure_vague.md",
+    "file": "product_brief__block.md",
+    "profile": "product_brief",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing product brief section: problem."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing product brief section: evidence."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing product brief section: users."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing product brief section: requirements."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing product brief section: non-goals."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing product brief section: risks."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing product brief section: success."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing product brief section: open questions."
+      },
+      {
+        "severity": "Block",
+        "message": "Requirements are not visibly testable."
+      }
+    ]
+  },
+  {
+    "file": "standard_operating_procedure__pass.md",
+    "profile": "standard_operating_procedure",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "standard_operating_procedure__block.md",
     "profile": "standard_operating_procedure",
     "expected": "Block",
     "actual": "Block",
+    "assurance": "evidence_attested",
     "ok": true,
     "findings": [
       {
@@ -367,6 +815,167 @@
       {
         "severity": "Block",
         "message": "Proof of completion is not defined."
+      }
+    ]
+  },
+  {
+    "file": "meeting_decision_record__pass.md",
+    "profile": "meeting_decision_record",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "meeting_decision_record__block.md",
+    "profile": "meeting_decision_record",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing decision-record section: context."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing decision-record section: decisions."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing decision-record section: rationale."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing decision-record section: actions."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing decision-record section: owners."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing decision-record section: due dates."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing decision-record section: dependencies."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing decision-record section: unresolved questions."
+      },
+      {
+        "severity": "Block",
+        "message": "Decision record lacks scannable actions and ownership."
+      }
+    ]
+  },
+  {
+    "file": "social_content_package__pass.md",
+    "profile": "social_content_package",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "social_content_package__block.md",
+    "profile": "social_content_package",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing release-package section: source kernel."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing release-package section: titles."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing release-package section: description."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing release-package section: channel assets."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing release-package section: calls to action."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing release-package section: release checklist."
+      },
+      {
+        "severity": "Block",
+        "message": "Release package lacks usable asset options or checks."
+      }
+    ]
+  },
+  {
+    "file": "fact_check_report__pass.md",
+    "profile": "fact_check_report",
+    "expected": "Pass",
+    "actual": "Pass",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": []
+  },
+  {
+    "file": "fact_check_report__block.md",
+    "profile": "fact_check_report",
+    "expected": "Block",
+    "actual": "Block",
+    "assurance": "evidence_attested",
+    "ok": true,
+    "findings": [
+      {
+        "severity": "Block",
+        "message": "Missing fact-check section: question."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing fact-check section: methodology."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing fact-check section: findings."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing fact-check section: claim statuses."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing fact-check section: contradictions."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing fact-check section: limitations."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing fact-check section: conclusion."
+      },
+      {
+        "severity": "Block",
+        "message": "Missing fact-check section: sources."
+      },
+      {
+        "severity": "Block",
+        "message": "Claim classification is absent."
+      },
+      {
+        "severity": "Block",
+        "message": "Source dating is insufficient."
       }
     ]
   }

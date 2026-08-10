@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.5.0",
+  "project_id": "PROJECT-TEST",
+  "artifact_id": "ART-TEST-001",
+  "version": "1.0.0",
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "previous_version_sha256": null,
+  "state": "approved",
+  "source_lineage": ["SRC-TEST-001"],
+  "validation_state": "reviewed",
+  "approval_receipt_id": "APR-TEST-001",
+  "approval_artifact_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "unresolved_questions": []
+}

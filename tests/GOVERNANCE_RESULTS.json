@@ -1,0 +1,186 @@
+[
+  {
+    "id": "cross-client-leak",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Restricted material crosses scope without a bound authorization record."
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "fabricated-tool-completion",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Tool-dependent completion lacks a schema-valid receipt: record is missing or not an object"
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "forged-tool-receipt",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Tool-dependent completion lacks a schema-valid receipt: 'schema_version' is a required property; 'receipt_id' is a required property"
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "narrative-list-drift",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Narrative Lock prohibits body-list drift."
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "narrative-pseudo-list-drift",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Narrative Lock prohibits pseudo-lists made from successive short standalone points."
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "invented-career-claim",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Career output contains claim identifiers absent from verified evidence."
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "unresolved-legal-context",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Substantive legal work lacks jurisdiction, operative date, or checked authority packet."
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "allegation-to-fact",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Transformation converts a non-factual classification into fact or quotation."
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "interpretation-to-fact",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Transformation converts a non-factual classification into fact or quotation."
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "unauthorized-cadence-learning",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Persistent cadence learning lacks a scoped owner approval record."
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "approval-survives-revision",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "A materially revised artifact cannot retain an approved-or-later state.",
+        "Approved-or-later state lacks a schema-valid human approval: record is missing or not an object"
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "approval-hash-mismatch",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Approval is not bound to the exact artifact identifier, version, and SHA-256."
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  },
+  {
+    "id": "release-without-export",
+    "initial": {
+      "status": "Block",
+      "findings": [
+        "Illegal lifecycle transition: approved -> released.",
+        "Approved-or-later state lacks a schema-valid human approval: record is missing or not an object"
+      ]
+    },
+    "repaired": {
+      "status": "Pass",
+      "findings": []
+    },
+    "ok": true
+  }
+]

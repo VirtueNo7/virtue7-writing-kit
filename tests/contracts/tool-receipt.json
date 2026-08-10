@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.5.0",
+  "receipt_id": "TOOL-TEST-001",
+  "tool_name": "fixture-exporter",
+  "tool_version": "1.0.0",
+  "action": "export",
+  "authorization": {
+    "authorized": true,
+    "actor_id": "test-reviewer",
+    "scope": "test_fixture"
+  },
+  "started_at": "2026-08-09T20:01:00Z",
+  "completed_at": "2026-08-09T20:01:01Z",
+  "request_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+  "status": "completed",
+  "target": "fixture-output.pdf",
+  "result_reference": "fixture://export/001",
+  "side_effects": ["created fixture-output.pdf"]
+}
