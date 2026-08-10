@@ -2,8 +2,6 @@
 
 **Use AI without losing your voice, evidence, form, or control.**
 
-![Virtue7 Writing Kit: open-source, model-neutral, human-controlled AI writing](docs/assets/social-preview.png)
-
 Virtue7 Writing Kit is a lightweight, model-neutral writing runtime for **Chat, Content, and bounded Automation**. It combines task-first routing, selective context loading, evidence discipline, optional scoped personalization, output profiles, Form Lock, exact artifact approval, and tool-truth controls.
 
 This public release stays focused on governed writing, research, content creation, career materials, job search, legal preparation, continuation, review, and bounded automation.
