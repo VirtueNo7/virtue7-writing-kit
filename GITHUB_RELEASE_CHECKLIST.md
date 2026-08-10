@@ -1,18 +1,17 @@
-# GitHub Release Checklist — v0.4.0
+# GitHub Release Checklist - v0.5.0
 
-- [ ] `VERSION` is `0.4.0` and the ZIP root is `virtue7-writing-kit_v0.4.0`.
-- [ ] `python scripts/run_release_checks.py` passes.
-- [ ] Boot remains exactly three files and below the boot byte limit.
-- [ ] First-run, returning, and direct-task paths behave as documented.
-- [ ] Personal, role, organization, client, and project scopes remain isolated.
-- [ ] Optional names and handles are treated as authorized discovery keys, not identity proof.
-- [ ] Adaptive, Preserve Form, and Narrative Form Lock are available and tested.
-- [ ] The prompt library routes every card to an existing capability and profile.
-- [ ] Built-in reasoning is distinguished from browsing, transcription, editing, publishing, analytics, and action tools.
-- [ ] Every substantive artifact remains Draft until human approval.
-- [ ] No person-, client-, creator-, or organization-specific material appears in the distributable.
-- [ ] No imitation prompt, private fact, credential, or conversation residue appears in the distributable.
-- [ ] Whitepaper Markdown, AI-readable text, PDF, README, and implementation map describe v0.4.0.
-- [ ] PDF pages have been rendered and visually inspected.
-- [ ] No `__MACOSX`, `.DS_Store`, `._*`, cache, compiled, or Git metadata exists in the ZIP.
-- [ ] The final ZIP opens with one root directory and contains `FILE_MANIFEST.json`.
+- [ ] `VERSION` is `0.5.0`.
+- [ ] `python scripts/run_release_checks.py` passes from a clean checkout.
+- [ ] Generated packets, fixtures, indexes, examples, validation results, whitepaper artifacts, and file manifest are committed.
+- [ ] Boot contains exactly three files and stays within the declared byte budget.
+- [ ] Boot-only activation shows exactly Chat, Create content, and Automate a task.
+- [ ] All 24 profiles have passing and blocking fixtures.
+- [ ] All 13 governance cases block and repair as expected.
+- [ ] All 35 routes, 24 profiles, and 32 playbooks are represented in worked examples.
+- [ ] The public tree contains no removed autonomous-runtime or marketplace subsystem files.
+- [ ] Licence files agree on MIT.
+- [ ] `virtue7-writing-kit_v0.5.0.zip` opens under one versioned root.
+- [ ] The SHA-256 checksum file exists and matches the release ZIP.
+- [ ] Whitepaper Markdown, AI-readable text, PDF, and implementation map describe the three-mode v0.5.0 architecture.
+- [ ] Repository description, topics, homepage, social preview, and release notes are updated.
+- [ ] No private data, credentials, generated cache, or Git metadata appears in the release asset.

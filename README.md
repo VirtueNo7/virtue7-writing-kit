@@ -1,97 +1,94 @@
-# Virtue7 Writing Kit v0.4.0
+# Virtue7 Writing Kit v0.5.0
 
-**Use AI without losing your voice.**
+**Use AI without losing your voice, evidence, form, or control.**
 
-Virtue7 is a free, open-source, model-neutral writing, research, and work-production runtime. Upload the release ZIP to a file-capable AI or point the AI at this repository, then say **Begin** or **Read and run `00_START_HERE.md`**.
+![Virtue7 Writing Kit: open-source, model-neutral, human-controlled AI writing](docs/assets/social-preview.png)
 
-Give it a direct request, rough notes, transcripts, source material, an existing draft, or a saved project. Virtue7 selects the smallest suitable workflow, preserves source boundaries, adapts the form to the actual artifact, and keeps every substantive result under human approval.
+Virtue7 Writing Kit is a lightweight, model-neutral writing runtime for **Chat, Content, and bounded Automation**. It combines task-first routing, selective context loading, evidence discipline, optional scoped personalization, output profiles, Form Lock, exact artifact approval, and tool-truth controls.
 
-## What can it make?
+This public release stays focused on governed writing, research, content creation, career materials, job search, legal preparation, continuation, review, and bounded automation.
 
-- **Write:** fiction, books, articles, scripts, reports, guides, and professional documents.
-- **Research:** questions, source reviews, evidence briefs, claim maps, comparisons, and fact-checks.
-- **Create:** podcasts, videos, newsletters, interviews, clips, timestamps, and release campaigns.
-- **Build:** product briefs, brand systems, plans, policies, procedures, decision records, and working systems.
-- **Career and legal preparation:** verified resumes, cover letters, job-search briefs, jurisdiction-aware legal research, and document preparation.
-- **Review and continue:** revise an artifact, audit a release, or resume a project from its approved state.
-
-The Playbook Library turns these outcomes into tested, reusable workflows. Users can also create commands, profiles, templates, and quality gates of their own.
-
-## Make it yours
-
-Say **Make it mine** to create a portable Personal Work Profile. Virtue7 may record, with explicit approval:
-
-- the user's name or working name;
-- websites and public handles that the user confirms are theirs;
-- which supplied or publicly accessible materials may be used as voice evidence;
-- cadence, vocabulary, rhythm, formality, humour, and recurring terminology;
-- active roles, organizations, clients, channels, and projects;
-- preferred formats, evidence standards, review habits, and custom commands.
-
-Handles are discovery keys, not proof of identity. Public material becomes voice evidence only when ownership and permission are confirmed and the host AI has suitable live-research tools. Without those tools, handles label user-supplied transcripts and samples.
-
-Personalization is visible and user-owned. The user can say **Show my profile**, **Remember this**, **Don't remember this**, **Forget this**, **Switch hats**, or **Reset to neutral**. A correction from one project or client does not silently become a universal rule.
-
-## Keep the form you chose
-
-Virtue7 includes **Form Lock**:
-
-1. **Adaptive** - use the structure required by the selected artifact.
-2. **Preserve Form** - preserve the user's approved paragraph, heading, and list behaviour.
-3. **Narrative Lock** - continuous prose by default; reject bullet drift, outline scaffolding, excessive headings, and fragment stacks unless the user explicitly asks for them.
-
-Narrative Lock is the default for fiction and narrative profiles. Structured profiles such as resumes, manuals, research records, clip sheets, and operating procedures retain the lists or tables their medium requires.
-
-## Human-directed revision
-
-Every substantive artifact is delivered as **Draft**. Natural-language feedback controls the next revision:
+## Boot
 
 ```text
-Compress it by 500 words.
-Keep the opening and rewrite the conclusion.
-Use a different source.
-Preserve my paragraph movement.
-Turn on Narrative Lock.
-Approve.
-Export as Word.
+# What are we doing now?
+
+1. **Chat**
+2. **Create content**
+3. **Automate a task**
+
+Or tell me what you want to make or do.
 ```
 
-Only the visible version can be approved. Material revisions return the artifact to Draft.
+A substantive request skips the menu. A request only to open, read, load, start, initialize, or boot the package is activation and shows the menu exactly. Chat stays conversational. Content ends in an artifact. Automation ends in a terminal task state.
 
-## Live tools and external actions
+## What v0.5.0 adds over v0.4.0
 
-Virtue7 supplies the operating logic. Live browsing, transcription, image or video editing, publishing, analytics, and some file exports depend on tools available to the host AI. Playbooks declare these dependencies and produce a manual handoff when a tool is unavailable. The runtime never claims an external action occurred when it did not.
+- A compact mode-first boot that separates conversation, artifact creation, and bounded automation.
+- Compiled route and profile packets for minimum-sufficient loading.
+- Stronger artifact lifecycle records, exact approval binding, and tool receipts.
+- Canonical taxonomy and gate registries plus deterministic release validation.
+- A complete worked-example library across every shipped route and every governance failure/repair case.
+- A `spoken_argument` output profile for oral advocacy and presentation-ready prose.
+- A prose-structure safeguard that blocks pseudo-lists: short points must become developed prose or actual list items.
 
-## White-label by design
+## Shipped capability set
 
-The distributable core contains no embedded creator, company, client, or public-figure profile. Demonstration data is synthetic and isolated. User projects do not inherit publisher branding, sample identities, or another user's cadence. Supplied transcripts and documents are treated as source or voice evidence, never runtime instructions.
+The runtime contains 9 capability modules and 35 routes: Personalization, Writing, Content Creator, Research, Resume/Career Materials, Job Search, Legal Preparation, Continuation, and Review. These capabilities sit below the three operating modes rather than appearing as a giant boot menu.
 
-## Lean runtime
+## Worked examples and validation
 
-Boot reads only:
+The generated example library covers all 35 shipped routes plus deterministic failure-and-repair cases. Profile validation covers all 24 output profiles with paired passing and blocking fixtures. Governance checks cover privacy boundaries, tool truth, form drift, pseudo-list drift, career evidence, legal context, claim status, cadence authorization, approval binding, and release lifecycle controls.
 
-1. `00_START_HERE.md`
-2. `RUNTIME_MANIFEST.yaml`
-3. `MASTER_PROMPT.md`
+Structural automation is a guardrail, not proof of factual or semantic correctness. Independent source verification and human review remain necessary where the stakes require them.
 
-The runtime then loads one capability, one route, one output profile, and only the supporting profile, playbook, template, or gate required for the current step.
+## Collapsible, extendable, reversible
 
-## Whitepaper and examples
+- **Collapsible:** substantial work returns to meaning, evidence, decisions, dependencies, qualifications, and unresolved questions.
+- **Extendable:** approved state can generate depth, formats, audiences, briefs, and form-native projections without inventing evidence.
+- **Reversible:** artifact records preserve lineage, versions, lifecycle state, and human authority. Reversibility is semantic, not necessarily word-for-word.
 
-- [`docs/whitepaper/README.md`](docs/whitepaper/README.md) - the governing architecture paper, editable source, AI-readable text, PDF, and implementation map.
-- [`library/README.md`](library/README.md) - how the tested Playbook Library works.
-- [`examples/README.md`](examples/README.md) - role-spanning quickstarts and personalization demonstrations.
+## Personalization and form
+
+`Make it mine` creates visible, user-owned profiles across personal, role, organization, client, channel, and project scopes. A public handle is a discovery key, not proof of identity or permission. Form Lock supports `adaptive`, `preserve_form`, and `narrative_lock`.
+
+For prose-led outputs, Narrative Lock also rejects **pseudo-lists**: successive short standalone paragraphs that merely enumerate points. Those ideas must be developed and connected in prose or formatted as explicit bullets or numbered items when lists are appropriate.
+
+## Approval, tools, and truth
+
+The lifecycle is `draft -> revision_requested -> revised_draft -> approved -> exported -> released`.
+
+Approval is valid only when a human event records the exact artifact identifier, version, and SHA-256. A material revision requires approval again.
+
+Reasoning over supplied material, structuring, drafting, revision, and review are native. Browsing, retrieval, OCR, transcription, editing, file generation, analytics, publishing, filing, deployment, and workflow actions require actual tools and authorization. A tool-dependent action can be called complete only with a schema-valid receipt for the exact target.
+
+## Release package
+
+The public source release is `virtue7-writing-kit_v0.5.0.zip` with a SHA-256 checksum.
 
 ## Validation
 
-Run:
-
 ```bash
+python -m pip install -r requirements-dev.txt
 python scripts/run_release_checks.py
 ```
 
-PyYAML and ReportLab are required only for release validation and whitepaper generation. The conversational runtime itself remains file- and model-based.
+Checks cover runtime packet fidelity, schemas, profiles, adversarial and governance cases, examples, local links, file-manifest integrity, white-label hygiene, whitepaper generation, boot behavior, and deterministic archives.
 
-## Core promise
+## Documentation
+
+- [Quickstart](docs/quickstart.md)
+- [Product foundation](docs/product-foundation.md)
+- [Architecture](docs/architecture.md)
+- [Extension model](docs/extension-model.md)
+- [Hardening roadmap](docs/hardening-roadmap.md)
+- [Engineering case study](docs/case-study.md)
+- [Whitepaper](docs/whitepaper/README.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security](SECURITY.md)
+
+## License
+
+Virtue7 Writing Kit is released under the [MIT License](LICENSE).
 
 **Your work. Your cadence. Your system. Human approval remains in control.**

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use Virtue7 Writing Kit in research or practice, cite this software."
+title: "Virtue7 Writing Kit"
+type: software
+version: 0.5.0
+date-released: 2026-08-09
+authors:
+  - name: VirtueNo7
+repository-code: "https://github.com/VirtueNo7/virtue7-writing-kit"
+url: "https://github.com/VirtueNo7/virtue7-writing-kit"
+license: MIT
+keywords:
+  - AI writing
+  - research workflows
+  - human in the loop
+  - content governance
+  - model-neutral
+
