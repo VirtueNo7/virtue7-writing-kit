@@ -1,0 +1,6 @@
+id: 09-interpretation-to-fact
+kind: failure_repair
+governance_case: interpretation-to-fact
+gate: claim_drift
+expected_initial_status: Block
+expected_repaired_status: Pass

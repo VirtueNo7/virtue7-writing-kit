@@ -1,0 +1,6 @@
+id: 04-narrative-list-drift
+kind: failure_repair
+governance_case: narrative-list-drift
+gate: form_lock
+expected_initial_status: Block
+expected_repaired_status: Pass

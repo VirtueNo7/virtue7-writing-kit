@@ -1,0 +1,6 @@
+id: 08-allegation-to-fact
+kind: failure_repair
+governance_case: allegation-to-fact
+gate: claim_drift
+expected_initial_status: Block
+expected_repaired_status: Pass

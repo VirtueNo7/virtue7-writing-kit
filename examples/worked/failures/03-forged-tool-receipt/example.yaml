@@ -1,0 +1,6 @@
+id: 03-forged-tool-receipt
+kind: failure_repair
+governance_case: forged-tool-receipt
+gate: tool_truth
+expected_initial_status: Block
+expected_repaired_status: Pass

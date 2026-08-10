@@ -1,0 +1,6 @@
+id: 12-approval-hash-mismatch
+kind: failure_repair
+governance_case: approval-hash-mismatch
+gate: lifecycle_transition
+expected_initial_status: Block
+expected_repaired_status: Pass

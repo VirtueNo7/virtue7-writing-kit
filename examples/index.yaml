@@ -1,0 +1,537 @@
+version: 0.5.0
+generated: true
+counts:
+  worked_examples: 48
+  route_examples: 35
+  failure_repair_examples: 13
+examples:
+- id: 01-content-creator-campaign
+  kind: route
+  capability: content-creator
+  route: content-creator/campaign
+  profile: social_content_package
+  form_lock: adaptive
+  playbooks:
+  - creator/release-package
+  - brand/campaign-architecture
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Drafting is complete. Live research, transcription, editing, publishing,
+    and analytics require authorized tools.
+- id: 02-content-creator-clips
+  kind: route
+  capability: content-creator
+  route: content-creator/clips
+  profile: clip_sheet
+  form_lock: adaptive
+  playbooks:
+  - creator/clip-map
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Drafting is complete. Live research, transcription, editing, publishing,
+    and analytics require authorized tools.
+- id: 03-content-creator-episode-video-newsletter
+  kind: route
+  capability: content-creator
+  route: content-creator/episode-video-newsletter
+  profile: creator_episode
+  form_lock: adaptive
+  playbooks:
+  - creator/evidence-led-run-of-show
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Drafting is complete. Live research, transcription, editing, publishing,
+    and analytics require authorized tools.
+- id: 04-content-creator-interview
+  kind: route
+  capability: content-creator
+  route: content-creator/interview
+  profile: interview_dossier
+  form_lock: adaptive
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Drafting is complete. Live research, transcription, editing, publishing,
+    and analytics require authorized tools.
+- id: 05-content-creator-original-content
+  kind: route
+  capability: content-creator
+  route: content-creator/original-content
+  profile: essay_article
+  form_lock: narrative_lock
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Drafting is complete. Live research, transcription, editing, publishing,
+    and analytics require authorized tools.
+- id: 06-content-creator-repurpose
+  kind: route
+  capability: content-creator
+  route: content-creator/repurpose
+  profile: narrative_nonfiction
+  form_lock: narrative_lock
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Drafting is complete. Live research, transcription, editing, publishing,
+    and analytics require authorized tools.
+- id: 07-continuation-controlled-update
+  kind: route
+  capability: continuation
+  route: continuation/controlled-update
+  profile: meeting_decision_record
+  form_lock: preserve_form
+  playbooks:
+  - company_admin/meeting-to-decisions
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: State handling is complete. External synchronization or task updates
+    require an authorized host tool.
+- id: 08-continuation-load-state
+  kind: route
+  capability: continuation
+  route: continuation/load-state
+  profile: novel_chapter
+  form_lock: narrative_lock
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: State handling is complete. External synchronization or task updates
+    require an authorized host tool.
+- id: 09-continuation-next-gate
+  kind: route
+  capability: continuation
+  route: continuation/next-gate
+  profile: workbook_guide
+  form_lock: adaptive
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: State handling is complete. External synchronization or task updates
+    require an authorized host tool.
+- id: 10-job-search-evaluate
+  kind: route
+  capability: job-search
+  route: job-search/evaluate
+  profile: business_report
+  form_lock: adaptive
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The structure is complete. Current listing discovery and verification
+    require live browsing.
+- id: 11-job-search-handoff
+  kind: route
+  capability: job-search
+  route: job-search/handoff
+  profile: resume
+  form_lock: adaptive
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The structure is complete. Current listing discovery and verification
+    require live browsing.
+- id: 12-job-search-search
+  kind: route
+  capability: job-search
+  route: job-search/search
+  profile: job_search_brief
+  form_lock: adaptive
+  playbooks:
+  - career/opportunity-search
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The structure is complete. Current listing discovery and verification
+    require live browsing.
+- id: 13-legal-legal-research
+  kind: route
+  capability: legal
+  route: legal/legal-research
+  profile: research_paper
+  form_lock: adaptive
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Preparation from supplied material is complete. Currency checks,
+    citators, filing, and legal judgment require qualified tools or people.
+- id: 14-legal-prepare-document
+  kind: route
+  capability: legal
+  route: legal/prepare-document
+  profile: legal_memorandum
+  form_lock: adaptive
+  playbooks:
+  - legal/issue-and-authority-map
+  - legal/chronology-and-exhibits
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Preparation from supplied material is complete. Currency checks,
+    citators, filing, and legal judgment require qualified tools or people.
+- id: 15-legal-resolve-jurisdiction
+  kind: route
+  capability: legal
+  route: legal/resolve-jurisdiction
+  profile: legal_memorandum
+  form_lock: adaptive
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Preparation from supplied material is complete. Currency checks,
+    citators, filing, and legal judgment require qualified tools or people.
+- id: 16-legal-review-document
+  kind: route
+  capability: legal
+  route: legal/review-document
+  profile: fact_check_report
+  form_lock: preserve_form
+  playbooks:
+  - legal/contract-risk-pass
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Preparation from supplied material is complete. Currency checks,
+    citators, filing, and legal judgment require qualified tools or people.
+- id: 17-personalization-create-command
+  kind: route
+  capability: personalization
+  route: personalization/create-command
+  profile: standard_operating_procedure
+  form_lock: preserve_form
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The scoped record is complete. Public-source retrieval requires permission
+    and a live research tool.
+- id: 18-personalization-initialize
+  kind: route
+  capability: personalization
+  route: personalization/initialize
+  profile: brand_strategy
+  form_lock: preserve_form
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The scoped record is complete. Public-source retrieval requires permission
+    and a live research tool.
+- id: 19-personalization-learn-cadence
+  kind: route
+  capability: personalization
+  route: personalization/learn-cadence
+  profile: fiction_short_story
+  form_lock: narrative_lock
+  playbooks:
+  - brand/voice-system
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The scoped record is complete. Public-source retrieval requires permission
+    and a live research tool.
+- id: 20-personalization-manage-profile
+  kind: route
+  capability: personalization
+  route: personalization/manage-profile
+  profile: essay_article
+  form_lock: narrative_lock
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The scoped record is complete. Public-source retrieval requires permission
+    and a live research tool.
+- id: 21-personalization-switch-scope
+  kind: route
+  capability: personalization
+  route: personalization/switch-scope
+  profile: business_report
+  form_lock: adaptive
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The scoped record is complete. Public-source retrieval requires permission
+    and a live research tool.
+- id: 22-research-evidence-brief
+  kind: route
+  capability: research
+  route: research/evidence-brief
+  profile: business_report
+  form_lock: adaptive
+  playbooks:
+  - creator/topic-radar
+  - research/timeline-reconstruction
+  - research/decision-brief
+  - product/feedback-synthesis
+  - company_admin/incident-record
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Analysis of supplied sources is complete. Discovery and current verification
+    require live research.
+- id: 23-research-research-question
+  kind: route
+  capability: research
+  route: research/research-question
+  profile: research_paper
+  form_lock: adaptive
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Analysis of supplied sources is complete. Discovery and current verification
+    require live research.
+- id: 24-research-source-review
+  kind: route
+  capability: research
+  route: research/source-review
+  profile: fact_check_report
+  form_lock: preserve_form
+  playbooks:
+  - research/source-map
+  - research/claim-ledger
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: Analysis of supplied sources is complete. Discovery and current verification
+    require live research.
+- id: 25-resume-build-source
+  kind: route
+  capability: resume
+  route: resume/build-source
+  profile: resume
+  form_lock: adaptive
+  playbooks:
+  - career/evidence-inventory
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The document is complete from supplied evidence. Listing verification
+    and submission require external tools.
+- id: 26-resume-cover-letter
+  kind: route
+  capability: resume
+  route: resume/cover-letter
+  profile: cover_letter
+  form_lock: adaptive
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The document is complete from supplied evidence. Listing verification
+    and submission require external tools.
+- id: 27-resume-tailor-resume
+  kind: route
+  capability: resume
+  route: resume/tailor-resume
+  profile: resume
+  form_lock: adaptive
+  playbooks:
+  - career/targeted-resume
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The document is complete from supplied evidence. Listing verification
+    and submission require external tools.
+- id: 28-review-artifact-review
+  kind: route
+  capability: review
+  route: review/artifact-review
+  profile: technical_manual
+  form_lock: adaptive
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The review is complete. Deployment, publication, or filing remains
+    a human-approved external action.
+- id: 29-review-evaluation
+  kind: route
+  capability: review
+  route: review/evaluation
+  profile: fact_check_report
+  form_lock: preserve_form
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The review is complete. Deployment, publication, or filing remains
+    a human-approved external action.
+- id: 30-review-release-audit
+  kind: route
+  capability: review
+  route: review/release-audit
+  profile: product_brief
+  form_lock: preserve_form
+  playbooks:
+  - brand/claim-audit
+  - product/release-decision
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The review is complete. Deployment, publication, or filing remains
+    a human-approved external action.
+- id: 31-review-virtue7-demo
+  kind: route
+  capability: review
+  route: review/virtue7-demo
+  profile: children_picture_book
+  form_lock: narrative_lock
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The review is complete. Deployment, publication, or filing remains
+    a human-approved external action.
+- id: 32-writing-expand-collapse
+  kind: route
+  capability: writing
+  route: writing/expand-collapse
+  profile: narrative_nonfiction
+  form_lock: narrative_lock
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The draft and revision are native. Export or publication requires
+    a supported tool and approval.
+- id: 33-writing-freestyle
+  kind: route
+  capability: writing
+  route: writing/freestyle
+  profile: spoken_argument
+  form_lock: narrative_lock
+  playbooks: []
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The draft and revision are native. Export or publication requires
+    a supported tool and approval.
+- id: 34-writing-new-output
+  kind: route
+  capability: writing
+  route: writing/new-output
+  profile: children_chapter_book
+  form_lock: narrative_lock
+  playbooks:
+  - writer/story-engine
+  - writer/draft-next-scene
+  - writer/nonfiction-architecture
+  - legal/client-update
+  - brand/positioning-core
+  - product/opportunity-brief
+  - product/requirement-builder
+  - company_admin/sop-builder
+  - company_admin/policy-builder
+  - career/interview-evidence-bank
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The draft and revision are native. Export or publication requires
+    a supported tool and approval.
+- id: 35-writing-revise-output
+  kind: route
+  capability: writing
+  route: writing/revise-output
+  profile: fiction_short_story
+  form_lock: narrative_lock
+  playbooks:
+  - writer/revision-without-flattening
+  expected_structural_status: Pass
+  source_status: synthetic_fixture_not_independently_verified
+  complete_artifact: false
+  tool_boundary: The draft and revision are native. Export or publication requires
+    a supported tool and approval.
+- id: 01-cross-client-leak
+  kind: failure_repair
+  governance_case: cross-client-leak
+  gate: privacy_boundary
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 02-fabricated-tool-completion
+  kind: failure_repair
+  governance_case: fabricated-tool-completion
+  gate: tool_truth
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 03-forged-tool-receipt
+  kind: failure_repair
+  governance_case: forged-tool-receipt
+  gate: tool_truth
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 04-narrative-list-drift
+  kind: failure_repair
+  governance_case: narrative-list-drift
+  gate: form_lock
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 05-narrative-pseudo-list-drift
+  kind: failure_repair
+  governance_case: narrative-pseudo-list-drift
+  gate: form_lock
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 06-invented-career-claim
+  kind: failure_repair
+  governance_case: invented-career-claim
+  gate: career_evidence
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 07-unresolved-legal-context
+  kind: failure_repair
+  governance_case: unresolved-legal-context
+  gate: legal_context
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 08-allegation-to-fact
+  kind: failure_repair
+  governance_case: allegation-to-fact
+  gate: claim_drift
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 09-interpretation-to-fact
+  kind: failure_repair
+  governance_case: interpretation-to-fact
+  gate: claim_drift
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 10-unauthorized-cadence-learning
+  kind: failure_repair
+  governance_case: unauthorized-cadence-learning
+  gate: personalization_authorization
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 11-approval-survives-revision
+  kind: failure_repair
+  governance_case: approval-survives-revision
+  gate: lifecycle_transition
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 12-approval-hash-mismatch
+  kind: failure_repair
+  governance_case: approval-hash-mismatch
+  gate: lifecycle_transition
+  expected_initial_status: Block
+  expected_repaired_status: Pass
+- id: 13-release-without-export
+  kind: failure_repair
+  governance_case: release-without-export
+  gate: lifecycle_transition
+  expected_initial_status: Block
+  expected_repaired_status: Pass

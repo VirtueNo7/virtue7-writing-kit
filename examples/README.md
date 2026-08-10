@@ -1,17 +1,14 @@
-# Examples: One Kit, Different Work
+# Worked Examples
 
-These synthetic examples show how Virtue7 changes its process, structure, voice controls, evidence standard, and approval gates to fit the user. They contain no real people, organizations, clients, or private data.
+Virtue7 v0.5.0 includes executable documentation rather than outcome summaries alone.
 
-| Example | User need | What becomes personal |
-|---|---|---|
-| `01-solo-creator.md` | research-to-release workflow | spoken cadence, episode form, claims, clips |
-| `02-fiction-writer.md` | continue a novel | prose form, canon, point of view, continuity |
-| `03-researcher.md` | evaluate a disputed claim | source hierarchy, uncertainty, citation rules |
-| `04-legal-team.md` | prepare a matter record | jurisdiction, authority, confidentiality, approval |
-| `05-brand-lead.md` | turn evidence into positioning | audience, proof, brand voice, prohibited claims |
-| `06-product-owner.md` | move from feedback to requirements | decision criteria, non-goals, acceptance tests |
-| `07-company-admin.md` | convert practice into an SOP | roles, controls, exceptions, escalation |
-| `08-career-user.md` | target an application | verified evidence, role language, privacy |
-| `09-same-input-different-users.md` | prove personalization | role, outcome, structure, cadence, gates |
+## Coverage
 
-Each example identifies what Virtue7 can do natively and what depends on external tools.
+- 35 route-conformance illustrations: every shipped capability route.
+- 24 output profiles: every registered profile appears in a passing artifact.
+- 32 playbooks: every library card maps to at least one worked route.
+- 13 failure-and-repair examples: privacy, tools, Form Lock, pseudo-list drift, career evidence, legal context, claim drift, cadence authorization, approval binding, and lifecycle control.
+
+Use [`index.yaml`](index.yaml) to search by capability, route, profile, playbook, Form Lock, or failure gate. Each route pack contains the exact request, synthetic source boundary, runtime selection, active-context budget, full Draft, gate report, revision, revised artifact, lifecycle state, and tool handoff.
+
+The original numbered examples remain short role-based introductions. The generated `worked/` directory contains the complete testable collection. Examples are dormant at boot and load only when explicitly requested or used for evaluation.

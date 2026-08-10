@@ -1,0 +1,6 @@
+id: 07-unresolved-legal-context
+kind: failure_repair
+governance_case: unresolved-legal-context
+gate: legal_context
+expected_initial_status: Block
+expected_repaired_status: Pass
