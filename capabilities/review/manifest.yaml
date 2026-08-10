@@ -1,16 +1,19 @@
 id: review
-version: 0.4.0
-capability: "capabilities/review/CAPABILITY.md"
-load_policy: "manifest + one route + one selected profile; optional files only when activated"
+version: 0.5.0
+capability: capabilities/review/CAPABILITY.md
+load_policy: manifest + one route + one selected profile; optional files only when
+  activated
 routes:
   artifact-review:
-    file: "capabilities/review/routes/artifact-review.md"
+    file: capabilities/review/routes/artifact-review.md
   release-audit:
-    file: "capabilities/review/routes/release-audit.md"
+    file: capabilities/review/routes/release-audit.md
   evaluation:
-    file: "capabilities/review/routes/evaluation.md"
+    file: capabilities/review/routes/evaluation.md
   virtue7-demo:
-    file: "capabilities/review/routes/virtue7-demo.md"
+    file: capabilities/review/routes/virtue7-demo.md
 quality_defaults:
-  - quality/UNIVERSAL_GATE.md
-  - quality/SEMANTIC_FINISH_GATE.md
+- universal
+- evidence
+- semantic_finish
+- privacy_boundary

@@ -1,20 +1,24 @@
 id: content-creator
-version: 0.4.0
-capability: "capabilities/content-creator/CAPABILITY.md"
-load_policy: "manifest + one route + one selected profile; optional files only when activated"
+version: 0.5.0
+capability: capabilities/content-creator/CAPABILITY.md
+load_policy: manifest + one route + one selected profile; optional files only when
+  activated
 routes:
   original-content:
-    file: "capabilities/content-creator/routes/original-content.md"
+    file: capabilities/content-creator/routes/original-content.md
   episode-video-newsletter:
-    file: "capabilities/content-creator/routes/episode-video-newsletter.md"
+    file: capabilities/content-creator/routes/episode-video-newsletter.md
   repurpose:
-    file: "capabilities/content-creator/routes/repurpose.md"
+    file: capabilities/content-creator/routes/repurpose.md
   clips:
-    file: "capabilities/content-creator/routes/clips.md"
+    file: capabilities/content-creator/routes/clips.md
   interview:
-    file: "capabilities/content-creator/routes/interview.md"
+    file: capabilities/content-creator/routes/interview.md
   campaign:
-    file: "capabilities/content-creator/routes/campaign.md"
+    file: capabilities/content-creator/routes/campaign.md
 quality_defaults:
-  - quality/UNIVERSAL_GATE.md
-  - quality/SEMANTIC_FINISH_GATE.md
+- universal
+- evidence
+- semantic_finish
+- form_lock
+- publication_risk

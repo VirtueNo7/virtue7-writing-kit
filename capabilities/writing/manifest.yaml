@@ -1,16 +1,20 @@
 id: writing
-version: 0.4.0
-capability: "capabilities/writing/CAPABILITY.md"
-load_policy: "manifest + one route + one selected profile; optional files only when activated"
+version: 0.5.0
+capability: capabilities/writing/CAPABILITY.md
+load_policy: manifest + one route + one selected profile; optional files only when
+  activated
 routes:
   freestyle:
-    file: "capabilities/writing/routes/freestyle.md"
+    file: capabilities/writing/routes/freestyle.md
   new-output:
-    file: "capabilities/writing/routes/new-output.md"
+    file: capabilities/writing/routes/new-output.md
   revise-output:
-    file: "capabilities/writing/routes/revise-output.md"
+    file: capabilities/writing/routes/revise-output.md
   expand-collapse:
-    file: "capabilities/writing/routes/expand-collapse.md"
+    file: capabilities/writing/routes/expand-collapse.md
 quality_defaults:
-  - quality/UNIVERSAL_GATE.md
-  - quality/SEMANTIC_FINISH_GATE.md
+- universal
+- evidence
+- semantic_finish
+- form_lock
+- privacy_boundary

@@ -6,7 +6,7 @@ The kit separates the intellectual source from its published resolutions.
 
 ## Formal model
 
-`C = (K, U, E, R, V, P, Q)`
+`C = (K, U, E, P, Q)`
 
 - `K - Kernel`: the canonical meaning, transformation or central question, mechanism, reader value, and boundaries.
 - `U - Units`: modular content records such as chapters, principles, life periods, cases, methods, or questions.
